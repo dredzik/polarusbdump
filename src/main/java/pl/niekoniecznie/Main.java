@@ -16,6 +16,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         dumpDirectory(new PolarFile("/"));
         System.out.println("done");
+
+        System.exit(0);
     }
 
     private static void dumpDirectory(final PolarFile directory) throws IOException {
