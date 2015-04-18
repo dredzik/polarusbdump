@@ -2,6 +2,8 @@ package pl.niekoniecznie.polar.filesystem;
 
 import java.io.IOException;
 import java.nio.file.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by ak on 18.04.15.
@@ -19,11 +21,15 @@ public class PolarDataDumper {
         this.destination = destination;
     }
 
-    public void dump() throws IOException {
-        dumpUserDirectory(new PolarFile(USER_DIRECTORY_PREFIX));
+    public List<String> dump() throws IOException {
+        List<String> result = new ArrayList<>();
+
+        dumpUserDirectory(result, new PolarFile(USER_DIRECTORY_PREFIX));
+
+        return result;
     }
 
-    private void dumpUserDirectory(final PolarFile directory) throws IOException {
+    private void dumpUserDirectory(final List<String> result, final PolarFile directory) throws IOException {
         for (PolarFile child : directory.listFiles()) {
             if (!child.isDirectory()) {
                 continue;
@@ -35,11 +41,11 @@ public class PolarDataDumper {
                 continue;
             }
 
-            dumpDateDirectory(child);
+            dumpDateDirectory(result, child);
         }
     }
 
-    private void dumpDateDirectory(final PolarFile directory) throws IOException {
+    private void dumpDateDirectory(List<String> result, final PolarFile directory) throws IOException {
         PolarFile eDirectory = new PolarFile(directory.getPath() + "E/");
 
         for (PolarFile child : eDirectory.listFiles()) {
@@ -53,11 +59,11 @@ public class PolarDataDumper {
                 continue;
             }
 
-            dumpTimeDirectory(child);
+            dumpTimeDirectory(result, child);
         }
     }
 
-    private void dumpTimeDirectory(final PolarFile directory) throws IOException {
+    private void dumpTimeDirectory(List<String> result, final PolarFile directory) throws IOException {
         boolean dump = false;
 
         for (PolarFile child : directory.listFiles()) {
@@ -83,13 +89,14 @@ public class PolarDataDumper {
 
         }
 
+        result.add(output);
+
         for (PolarFile child : directory.listFiles()) {
             if (child.isDirectory()) {
                 continue;
             }
 
             String tmp = output + child.getPath().replaceFirst(TIME_DIRECTORY_REGEXP, "");
-            System.out.println(tmp);
 
             PolarFileInputStream is = new PolarFileInputStream(child);
             Files.copy(is, Paths.get(tmp), StandardCopyOption.REPLACE_EXISTING);

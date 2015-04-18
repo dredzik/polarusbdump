@@ -12,7 +12,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
         PolarDataDumper dumper = new PolarDataDumper(Files.createTempDirectory("polar"));
 
-        dumper.dump();
+        for (String session : dumper.dump()) {
+            System.out.println(session);
+        }
 
         System.exit(0);
     }
