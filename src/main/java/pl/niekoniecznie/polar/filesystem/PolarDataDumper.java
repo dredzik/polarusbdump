@@ -35,7 +35,7 @@ public class PolarDataDumper {
     }
 
     private void dumpUserDirectory(final List<String> result, final PolarFile directory) throws IOException {
-        logger.error("Entering " + directory.getPath());
+        logger.trace("Entering " + directory.getPath());
 
         for (PolarFile child : directory.listFiles()) {
             if (!child.isDirectory()) {
