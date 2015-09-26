@@ -1,5 +1,8 @@
 package pl.niekoniecznie.polar.filesystem;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.ArrayList;
@@ -14,6 +17,8 @@ public class PolarDataDumper {
     private final static String DATE_DIRECTORY_REGEXP = "/U/0/\\d{8,}/";
     private final static String TIME_DIRECTORY_REGEXP = "/U/0/(\\d{8,})/E/(\\d{6,})/";
     private final static String SAMPLES_FILE_REGEXP = "/U/0/\\d{8,}/E/\\d{6,}/SAMPLES.GZB";
+
+    private final static Logger logger = LogManager.getLogger(PolarDataDumper.class);
 
     private final Path destination;
 
@@ -30,6 +35,8 @@ public class PolarDataDumper {
     }
 
     private void dumpUserDirectory(final List<String> result, final PolarFile directory) throws IOException {
+        logger.error("Entering " + directory.getPath());
+
         for (PolarFile child : directory.listFiles()) {
             if (!child.isDirectory()) {
                 continue;
@@ -46,6 +53,8 @@ public class PolarDataDumper {
     }
 
     private void dumpDateDirectory(List<String> result, final PolarFile directory) throws IOException {
+        logger.trace("Entering " + directory.getPath());
+
         PolarFile eDirectory = new PolarFile(directory.getPath() + "E/");
 
         for (PolarFile child : eDirectory.listFiles()) {
@@ -64,6 +73,8 @@ public class PolarDataDumper {
     }
 
     private void dumpTimeDirectory(List<String> result, final PolarFile directory) throws IOException {
+        logger.trace("Entering " + directory.getPath());
+
         boolean dump = false;
 
         for (PolarFile child : directory.listFiles()) {
@@ -95,6 +106,8 @@ public class PolarDataDumper {
             if (child.isDirectory()) {
                 continue;
             }
+
+            logger.trace("Dumping " + child.getPath());
 
             String tmp = output + child.getPath().replaceFirst(TIME_DIRECTORY_REGEXP, "");
 
