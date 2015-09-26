@@ -35,8 +35,6 @@ public class PolarDataDumper {
     }
 
     private void dumpUserDirectory(final List<String> result, final PolarFile directory) throws IOException {
-        logger.trace("Entering " + directory.getPath());
-
         for (PolarFile child : directory.listFiles()) {
             if (!child.isDirectory()) {
                 continue;
@@ -53,8 +51,6 @@ public class PolarDataDumper {
     }
 
     private void dumpDateDirectory(List<String> result, final PolarFile directory) throws IOException {
-        logger.trace("Entering " + directory.getPath());
-
         PolarFile eDirectory = new PolarFile(directory.getPath() + "E/");
 
         for (PolarFile child : eDirectory.listFiles()) {
@@ -87,6 +83,7 @@ public class PolarDataDumper {
         }
 
         if (!dump) {
+            logger.trace("No samples file, skipping.");
             return;
         }
 
