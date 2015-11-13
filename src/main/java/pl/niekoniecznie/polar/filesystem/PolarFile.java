@@ -24,10 +24,6 @@ public class PolarFile {
         return fs.isDirectory(this);
     }
 
-    public List<String> list() throws IOException {
-        return fs.list(this);
-    }
-
     public List<PolarFile> listFiles() throws IOException {
         if (!isDirectory()) {
             return null;
@@ -35,9 +31,7 @@ public class PolarFile {
 
         List<PolarFile> result = new ArrayList<>();
 
-        for (String child : list()) {
-            result.add(new PolarFile(child));
-        }
+        fs.list(this).forEach((x) -> result.add(new PolarFile(x)));
 
         return result;
     }
