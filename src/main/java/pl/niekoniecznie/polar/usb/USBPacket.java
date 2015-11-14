@@ -2,9 +2,6 @@ package pl.niekoniecznie.polar.usb;
 
 import java.util.Arrays;
 
-/**
- * Created by ak on 05.04.15.
- */
 public class USBPacket {
 
     public static final int BUFFER_LENGTH = 64;
@@ -25,7 +22,7 @@ public class USBPacket {
 
         byte0 = packet[0];
         boolean0 = (packet[1] & 1) == 1;
-        boolean1 = (packet[1] & 2) == 1;
+        boolean1 = (packet[1] & 2) == 2;
 
         int size = (packet[1] & 0xff) >> 2;
         data = Arrays.copyOfRange(packet, 2, size + 2);

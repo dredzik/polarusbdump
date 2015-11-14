@@ -4,9 +4,6 @@ import pl.niekoniecznie.polar.usb.USBPacket;
 
 import java.nio.charset.Charset;
 
-/**
- * Created by ak on 05.04.15.
- */
 public class PolarRequest {
 
     private String url;

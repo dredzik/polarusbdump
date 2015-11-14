@@ -4,20 +4,16 @@ import pl.niekoniecznie.polar.service.PolarRequest;
 import pl.niekoniecznie.polar.service.PolarResponse;
 import pl.niekoniecznie.polar.service.PolarService;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by ak on 07.04.15.
- */
 public class PolarFileSystem {
     public boolean isDirectory(final PolarFile file) {
         return file.getPath().endsWith("/");
     }
 
 
-    public List<String> list(final PolarFile file) throws IOException {
+    public List<String> list(final PolarFile file) {
         if (!isDirectory(file)) {
             return null;
         }

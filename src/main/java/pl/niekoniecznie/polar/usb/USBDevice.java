@@ -4,35 +4,39 @@ import com.codeminders.hidapi.ClassPathLibraryLoader;
 import com.codeminders.hidapi.HIDDevice;
 import com.codeminders.hidapi.HIDManager;
 
-import java.io.Closeable;
 import java.io.IOException;
 
-/**
- * Created by ak on 05.04.15.
- */
-public class USBDevice implements Closeable {
+public class USBDevice {
 
     private HIDDevice device;
 
-    public USBDevice() throws IOException {
+    public USBDevice() {
         ClassPathLibraryLoader.loadNativeHIDLibrary();
 
-        device = HIDManager.getInstance().openById(0x0da4, 0x0008, null);
+        try {
+            device = HIDManager.getInstance().openById(0x0da4, 0x0008, null);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public void write(USBPacket packet) throws IOException {
-        device.write(packet.getBytes());
+    public void write(USBPacket packet) {
+        try {
+            device.write(packet.getBytes());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public USBPacket read() throws IOException {
+    public USBPacket read() {
         byte[] buffer = new byte[USBPacket.BUFFER_LENGTH];
 
-        device.read(buffer);
+        try {
+            device.read(buffer);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         return new USBPacket(buffer);
-    }
-
-    public void close() throws IOException {
-        device.close();
     }
 }

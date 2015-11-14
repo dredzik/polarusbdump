@@ -3,18 +3,12 @@ package pl.niekoniecznie.polar.service;
 import pl.niekoniecznie.polar.usb.USBDevice;
 import pl.niekoniecznie.polar.usb.USBPacket;
 
-import java.io.Closeable;
-import java.io.IOException;
-
-/**
- * Created by ak on 05.04.15.
- */
-public class PolarService implements Closeable {
+public class PolarService {
 
     private static PolarService instance;
     private USBDevice device;
 
-    public static PolarService getInstance() throws IOException {
+    public static PolarService getInstance() {
         if (instance == null) {
             instance = new PolarService();
         }
@@ -22,11 +16,11 @@ public class PolarService implements Closeable {
         return instance;
     }
 
-    private PolarService() throws IOException {
+    private PolarService() {
         device = new USBDevice();
     }
 
-    public PolarResponse doRequest(PolarRequest request) throws IOException {
+    public PolarResponse doRequest(PolarRequest request) {
         device.write(request.getPacket());
 
         PolarResponse response = new PolarResponse();
@@ -43,9 +37,5 @@ public class PolarService implements Closeable {
         }
 
         return response;
-    }
-
-    public void close() throws IOException {
-        device.close();
     }
 }

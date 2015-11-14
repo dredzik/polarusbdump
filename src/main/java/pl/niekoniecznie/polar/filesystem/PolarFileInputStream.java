@@ -4,12 +4,8 @@ import pl.niekoniecznie.polar.service.PolarRequest;
 import pl.niekoniecznie.polar.service.PolarResponse;
 import pl.niekoniecznie.polar.service.PolarService;
 
-import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * Created by ak on 07.04.15.
- */
 public class PolarFileInputStream extends InputStream {
 
     private final PolarFile file;
@@ -25,7 +21,7 @@ public class PolarFileInputStream extends InputStream {
     }
 
     @Override
-    public int read() throws IOException {
+    public int read() {
         if (buffer == null) {
             load();
         }
@@ -46,7 +42,7 @@ public class PolarFileInputStream extends InputStream {
         return buffer.length - pointer;
     }
 
-    private void load() throws IOException {
+    private void load() {
         String path = file.getPath();
 
         PolarRequest request = new PolarRequest(path);

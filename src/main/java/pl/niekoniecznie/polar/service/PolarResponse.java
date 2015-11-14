@@ -5,9 +5,6 @@ import pl.niekoniecznie.polar.usb.USBPacket;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by ak on 05.04.15.
- */
 public class PolarResponse {
 
     private byte lastSequenceNumber;

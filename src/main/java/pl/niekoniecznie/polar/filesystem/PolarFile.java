@@ -1,12 +1,8 @@
 package pl.niekoniecznie.polar.filesystem;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by ak on 07.04.15.
- */
 public class PolarFile {
 
     private final PolarFileSystem fs = new PolarFileSystem();
@@ -24,7 +20,7 @@ public class PolarFile {
         return fs.isDirectory(this);
     }
 
-    public List<PolarFile> listFiles() throws IOException {
+    public List<PolarFile> listFiles() {
         if (!isDirectory()) {
             return null;
         }
