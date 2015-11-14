@@ -4,15 +4,15 @@ import pl.niekoniecznie.polar.filesystem.PolarDataDumper;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class Main {
 
-    private static String root;
-
     public static void main(String[] args) throws IOException {
-        PolarDataDumper dumper = new PolarDataDumper(Files.createTempDirectory("polar"));
+        Path destination = Files.createTempDirectory("polar");
 
-        dumper.dump();
+        PolarDataDumper dumper = new PolarDataDumper();
+        dumper.dump(destination);
 
         System.exit(0);
     }
