@@ -1,7 +1,6 @@
 package pl.niekoniecznie;
 
 import pl.niekoniecznie.polar.filesystem.PolarDataDumper;
-import pl.niekoniecznie.polar.filesystem.PolarFile;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,7 +13,7 @@ public class Main {
 
         PolarDataDumper dumper = new PolarDataDumper();
 
-        dumper.dump(new PolarFile("/U/0/"), destination);
+        dumper.dump(destination, "/U/0/");
 
         System.exit(0);
     }

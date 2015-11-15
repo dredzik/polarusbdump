@@ -11,16 +11,18 @@ import java.nio.file.StandardCopyOption;
 
 public class PolarDataDumper {
 
+    PolarFileSystem fs = new PolarFileSystem();
+
     private final static Logger logger = LogManager.getLogger(PolarDataDumper.class);
 
-    public void dump(PolarFile source, Path root) {
-        Path destination = Paths.get(root.toString(), source.getPath());
+    public void dump(Path root, String source) {
+        Path destination = Paths.get(root.toString(), source);
 
         logger.trace("Creating " + destination);
 
-        if (source.isDirectory()) {
+        if (fs.isDirectory(source)) {
             mkdir(destination);
-            source.listFiles().forEach((child) -> dump(child, root));
+            fs.list(source).forEach((child) -> dump(root, child));
         } else {
             copy(destination, source);
         }
@@ -34,7 +36,7 @@ public class PolarDataDumper {
         }
     }
 
-    private void copy(Path destination, PolarFile source) {
+    private void copy(Path destination, String source) {
         try {
             PolarFileInputStream is = new PolarFileInputStream(source);
             Files.copy(is, destination, StandardCopyOption.REPLACE_EXISTING);

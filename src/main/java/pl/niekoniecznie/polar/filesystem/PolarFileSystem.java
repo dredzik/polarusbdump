@@ -9,16 +9,14 @@ import java.util.List;
 
 public class PolarFileSystem {
 
-    public boolean isDirectory(final PolarFile file) {
-        return file.getPath().endsWith("/");
+    public boolean isDirectory(final String path) {
+        return path.endsWith("/");
     }
 
-    public List<String> list(final PolarFile file) {
-        if (!isDirectory(file)) {
+    public List<String> list(final String path) {
+        if (!isDirectory(path)) {
             return null;
         }
-
-        String path = file.getPath();
 
         PolarRequest request = new PolarRequest(path);
         PolarResponse response = PolarService.getInstance().doRequest(request);

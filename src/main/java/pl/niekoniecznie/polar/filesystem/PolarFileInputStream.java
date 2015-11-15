@@ -8,16 +8,12 @@ import java.io.InputStream;
 
 public class PolarFileInputStream extends InputStream {
 
-    private final PolarFile file;
+    private final String path;
     private Object[] buffer;
     private int pointer;
 
-    public PolarFileInputStream(final PolarFile file) {
-        if (file.isDirectory()) {
-            throw new IllegalArgumentException("Cannot read directory as a file");
-        }
-
-        this.file = file;
+    public PolarFileInputStream(final String path) {
+        this.path = path;
     }
 
     @Override
@@ -43,8 +39,6 @@ public class PolarFileInputStream extends InputStream {
     }
 
     private void load() {
-        String path = file.getPath();
-
         PolarRequest request = new PolarRequest(path);
         PolarResponse response = PolarService.getInstance().doRequest(request);
 
