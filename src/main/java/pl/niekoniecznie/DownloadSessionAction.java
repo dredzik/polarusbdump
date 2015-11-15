@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class DownloadSessionAction {
+public class DownloadSessionAction implements Runnable {
 
     private final static int POLAR_VENDOR_ID = 0x0da4;
     private final static int POLAR_PRODUCT_ID = 0x0008;
@@ -24,7 +24,7 @@ public class DownloadSessionAction {
     private final PolarDownloader downloader;
     private final Path directory;
 
-    public DownloadSessionAction() throws IOException {
+    public DownloadSessionAction(final Path directory) throws IOException {
         ClassPathLibraryLoader.loadNativeHIDLibrary();
 
         HIDDevice hid = HIDManager.getInstance().openById(POLAR_VENDOR_ID, POLAR_PRODUCT_ID, null);
@@ -35,10 +35,11 @@ public class DownloadSessionAction {
         lister = new PolarLister(filesystem);
         downloader = new PolarDownloader(filesystem);
 
-        directory = Files.createTempDirectory("polar");
+        this.directory = directory;
     }
 
-    public void run() throws IOException {
+    @Override
+    public void run() {
         lister.list(POLAR_USER_DIRECTORY, POLAR_SESSION_REGEX).forEach(this::save);
     }
 

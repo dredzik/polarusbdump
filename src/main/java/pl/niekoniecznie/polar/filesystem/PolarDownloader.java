@@ -4,10 +4,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.zip.GZIPInputStream;
 
 public class PolarDownloader {
 
@@ -62,16 +64,23 @@ public class PolarDownloader {
     private void downloadFile(String source, Path destination, String root) {
         Path file = createPath(source, destination, root);
 
-        logger.trace("Saving file " + file);
-
         try {
-            Files.copy(filesystem.get(source), file, StandardCopyOption.REPLACE_EXISTING);
+            InputStream input = filesystem.get(source);
+
+            if (source.endsWith(".GZB")) {
+                logger.trace("Extracting file " + file);
+                input = new GZIPInputStream(input);
+            } else {
+                logger.trace("Saving file " + file);
+            }
+
+            Files.copy(input, file, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
     private Path createPath(String source, Path destination, String root) {
-        return Paths.get(destination.toString(), source.replaceFirst(root, "/"));
+        return Paths.get(destination.toString(), source.replaceFirst(root, "/").replaceFirst(".GZB", ".BPB"));
     }
 }
