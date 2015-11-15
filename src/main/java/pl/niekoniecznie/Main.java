@@ -28,7 +28,7 @@ public class Main {
         PolarFileSystem filesystem = new PolarFileSystem(service);
         PolarDownloader dumper = new PolarDownloader(filesystem);
 
-        dumper.download(destination, source);
+        dumper.download(source, destination);
 
         hid.close();
         System.exit(0);

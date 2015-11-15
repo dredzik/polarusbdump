@@ -19,45 +19,53 @@ public class PolarDownloader {
         this.filesystem = filesystem;
     }
 
-    public void download(Path root, String source) {
-        logger.trace("Downloading " + source + " to " + root);
+    public void download(String source, Path destination) {
+        download(source, destination, source);
+    }
+
+    private void download(String source, Path destination, String root) {
+        logger.trace("Downloading " + source + " to " + destination);
 
         if (source.endsWith("/")) {
-            downloadDirectory(root, source);
+            downloadDirectory(source, destination, root);
         } else {
-            downloadFile(root, source);
+            downloadFile(source, destination, root);
         }
     }
 
-    private void downloadDirectory(Path root, String source) {
-        Path destination = Paths.get(root.toString(), source);
+    private void downloadDirectory(String source, Path destination, String root) {
+        Path directory = createPath(source, destination, root);
 
-        logger.trace("Creating directory " + destination);
+        logger.trace("Creating directory " + directory);
 
         try {
-            Files.createDirectories(destination);
+            Files.createDirectories(directory);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
         filesystem.list(source).forEach((child) -> {
             if (child.endsWith("/")) {
-                downloadDirectory(root, child);
+                downloadDirectory(child, destination, root);
             } else {
-                downloadFile(root, child);
+                downloadFile(child, destination, root);
             }
         });
     }
 
-    private void downloadFile(Path root, String source) {
-        Path destination = Paths.get(root.toString(), source);
+    private void downloadFile(String source, Path destination, String root) {
+        Path file = createPath(source, destination, root);
 
-        logger.trace("Saving file " + destination);
+        logger.trace("Saving file " + file);
 
         try {
-            Files.copy(filesystem.get(source), destination, StandardCopyOption.REPLACE_EXISTING);
+            Files.copy(filesystem.get(source), file, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private Path createPath(String source, Path destination, String root) {
+        return Paths.get(destination.toString(), source.replaceFirst(root, "/"));
     }
 }
