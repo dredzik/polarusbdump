@@ -20,7 +20,7 @@ public class PolarService {
             USBPacket packet = device.read();
             response.append(packet);
 
-            if (packet.isBoolean0() ^ packet.isBoolean1()) {
+            if (packet.isContinuation()) {
                 device.write(response.getPacket());
             } else {
                 break;

@@ -35,7 +35,7 @@ public class PolarRequest {
 
         USBPacket result0 = new USBPacket();
 
-        result0.setByte0((byte) 0x01);
+        result0.setType((byte) 0x01);
         result0.setData(data);
 
         return result0;

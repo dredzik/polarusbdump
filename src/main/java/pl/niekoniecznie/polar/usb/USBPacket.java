@@ -7,9 +7,8 @@ public class USBPacket {
     public static final int BUFFER_LENGTH = 64;
     public static final int MAX_DATA_SIZE = 61;
 
-    private byte byte0;
-    private boolean boolean0;
-    private boolean boolean1;
+    private byte type;
+    private boolean continuation;
     private byte[] data;
 
     public USBPacket() {
@@ -20,36 +19,27 @@ public class USBPacket {
             throw new IllegalArgumentException("Packet size greater than BUFFER_LENGTH");
         }
 
-        byte0 = packet[0];
-        boolean0 = (packet[1] & 1) == 1;
-        boolean1 = (packet[1] & 2) == 2;
+        type = packet[0];
+        continuation = (packet[1] & 1) == 1;
 
         int size = (packet[1] & 0xff) >> 2;
         data = Arrays.copyOfRange(packet, 2, size + 2);
     }
 
-    public byte getByte0() {
-        return byte0;
+    public byte getType() {
+        return type;
     }
 
-    public void setByte0(byte byte0) {
-        this.byte0 = byte0;
+    public void setType(byte type) {
+        this.type = type;
     }
 
-    public boolean isBoolean0() {
-        return boolean0;
+    public boolean isContinuation() {
+        return continuation;
     }
 
-    public void setBoolean0(boolean boolean0) {
-        this.boolean0 = boolean0;
-    }
-
-    public boolean isBoolean1() {
-        return boolean1;
-    }
-
-    public void setBoolean1(boolean boolean1) {
-        this.boolean1 = boolean1;
+    public void setContinuation(boolean continuation) {
+        this.continuation = continuation;
     }
 
     public byte[] getData() {
@@ -68,8 +58,8 @@ public class USBPacket {
         byte[] result = new byte[BUFFER_LENGTH];
         Arrays.fill(result, (byte) 0x00);
 
-        result[0] = byte0;
-        result[1] = new Integer((data.length << 2) | (boolean1 ? 1 << 1 : 0) | (boolean0 ? 1 : 0)).byteValue();
+        result[0] = type;
+        result[1] = new Integer((data.length << 2) | (continuation ? 1 : 0)).byteValue();
 
         for (int i = 0; i < data.length; i++) {
             result[i + 2] = data[i];

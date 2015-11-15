@@ -16,8 +16,8 @@ public class PolarResponse {
 
         USBPacket result0 = new USBPacket();
 
-        result0.setByte0((byte) 0x01);
-        result0.setBoolean0(true);
+        result0.setType((byte) 0x01);
+        result0.setContinuation(true);
         result0.setData(data);
 
         return result0;
