@@ -11,9 +11,13 @@ import java.nio.file.StandardCopyOption;
 
 public class PolarDownloader {
 
-    PolarFileSystem fs = new PolarFileSystem();
+    private final PolarFileSystem filesystem;
 
     private final static Logger logger = LogManager.getLogger(PolarDownloader.class);
+
+    public PolarDownloader(PolarFileSystem filesystem) {
+        this.filesystem = filesystem;
+    }
 
     public void download(Path root, String source) {
         logger.trace("Downloading " + source + " to " + root);
@@ -36,7 +40,7 @@ public class PolarDownloader {
             throw new RuntimeException(e);
         }
 
-        fs.list(source).forEach((child) -> {
+        filesystem.list(source).forEach((child) -> {
             if (child.endsWith("/")) {
                 downloadDirectory(root, child);
             } else {
@@ -51,7 +55,7 @@ public class PolarDownloader {
         logger.trace("Saving file " + destination);
 
         try {
-            Files.copy(fs.get(source), destination, StandardCopyOption.REPLACE_EXISTING);
+            Files.copy(filesystem.get(source), destination, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
