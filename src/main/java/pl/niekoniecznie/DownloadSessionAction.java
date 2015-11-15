@@ -32,7 +32,7 @@ public class DownloadSessionAction {
         PolarLister lister = new PolarLister(filesystem);
         PolarDownloader dumper = new PolarDownloader(filesystem);
 
-        lister.list(POLAR_USER_DIRECTORY).forEach(System.out::println);
+        lister.list(POLAR_USER_DIRECTORY);
         dumper.download(POLAR_USER_DIRECTORY, destination);
 
         hid.close();
