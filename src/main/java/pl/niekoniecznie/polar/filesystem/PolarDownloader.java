@@ -20,7 +20,13 @@ public class PolarDownloader {
     }
 
     public void download(String source, Path destination) {
-        download(source, destination, source);
+        String root = source;
+
+        if (!root.endsWith("/")) {
+            root = root.substring(0, root.lastIndexOf("/") + 1);
+        }
+
+        download(source, destination, root);
     }
 
     private void download(String source, Path destination, String root) {
