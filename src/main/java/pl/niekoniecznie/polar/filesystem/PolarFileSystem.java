@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PolarFileSystem {
+
     public boolean isDirectory(final PolarFile file) {
         return file.getPath().endsWith("/");
     }
-
 
     public List<String> list(final PolarFile file) {
         if (!isDirectory(file)) {
