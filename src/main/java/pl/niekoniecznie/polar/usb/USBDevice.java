@@ -1,23 +1,15 @@
 package pl.niekoniecznie.polar.usb;
 
-import com.codeminders.hidapi.ClassPathLibraryLoader;
 import com.codeminders.hidapi.HIDDevice;
-import com.codeminders.hidapi.HIDManager;
 
 import java.io.IOException;
 
 public class USBDevice {
 
-    private HIDDevice device;
+    private final HIDDevice device;
 
-    public USBDevice() {
-        ClassPathLibraryLoader.loadNativeHIDLibrary();
-
-        try {
-            device = HIDManager.getInstance().openById(0x0da4, 0x0008, null);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public USBDevice(final HIDDevice device) {
+        this.device = device;
     }
 
     public void write(USBPacket packet) {

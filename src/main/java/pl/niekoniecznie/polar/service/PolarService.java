@@ -7,7 +7,7 @@ public class PolarService {
 
     private final USBDevice device;
 
-    public PolarService(USBDevice device) {
+    public PolarService(final USBDevice device) {
         this.device = device;
     }
 

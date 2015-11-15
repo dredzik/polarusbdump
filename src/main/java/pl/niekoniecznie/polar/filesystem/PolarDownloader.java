@@ -15,7 +15,7 @@ public class PolarDownloader {
 
     private final static Logger logger = LogManager.getLogger(PolarDownloader.class);
 
-    public PolarDownloader(PolarFileSystem filesystem) {
+    public PolarDownloader(final PolarFileSystem filesystem) {
         this.filesystem = filesystem;
     }
 
