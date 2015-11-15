@@ -9,22 +9,26 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
-public class PolarDataDumper {
+public class PolarDownloader {
 
     PolarFileSystem fs = new PolarFileSystem();
 
-    private final static Logger logger = LogManager.getLogger(PolarDataDumper.class);
+    private final static Logger logger = LogManager.getLogger(PolarDownloader.class);
 
-    public void dump(Path root, String source) {
+    public void download(Path root, String source) {
+        logger.trace("Downloading " + source + " to " + root);
+
         if (source.endsWith("/")) {
-            dumpDirectory(root, source);
+            downloadDirectory(root, source);
         } else {
-            dumpFile(root, source);
+            downloadFile(root, source);
         }
     }
 
-    private void dumpDirectory(Path root, String source) {
+    private void downloadDirectory(Path root, String source) {
         Path destination = Paths.get(root.toString(), source);
+
+        logger.trace("Creating directory " + destination);
 
         try {
             Files.createDirectories(destination);
@@ -34,15 +38,17 @@ public class PolarDataDumper {
 
         fs.list(source).forEach((child) -> {
             if (child.endsWith("/")) {
-                dumpDirectory(root, child);
+                downloadDirectory(root, child);
             } else {
-                dumpFile(root, child);
+                downloadFile(root, child);
             }
         });
     }
 
-    private void dumpFile(Path root, String source) {
+    private void downloadFile(Path root, String source) {
         Path destination = Paths.get(root.toString(), source);
+
+        logger.trace("Saving file " + destination);
 
         try {
             PolarFileInputStream is = new PolarFileInputStream(source);
