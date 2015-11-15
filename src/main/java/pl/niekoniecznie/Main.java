@@ -2,6 +2,7 @@ package pl.niekoniecznie;
 
 import pl.niekoniecznie.polar.filesystem.PolarDownloader;
 import pl.niekoniecznie.polar.filesystem.PolarFileSystem;
+import pl.niekoniecznie.polar.service.PolarService;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -13,7 +14,8 @@ public class Main {
         String source = "/U/0/";
         Path destination = Files.createTempDirectory("polar");
 
-        PolarFileSystem filesystem = new PolarFileSystem();
+        PolarService service = PolarService.getInstance();
+        PolarFileSystem filesystem = new PolarFileSystem(service);
         PolarDownloader dumper = new PolarDownloader(filesystem);
 
         dumper.download(destination, source);

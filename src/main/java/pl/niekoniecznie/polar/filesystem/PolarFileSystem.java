@@ -12,20 +12,15 @@ public class PolarFileSystem {
 
     private class PolarInputStream extends InputStream {
 
-        private final String path;
-        private Object[] buffer;
+        private final Object[] buffer;
         private int pointer;
 
-        public PolarInputStream(final String path) {
-            this.path = path;
+        public PolarInputStream(Object[] buffer) {
+            this.buffer = buffer;
         }
 
         @Override
         public int read() {
-            if (buffer == null) {
-                load();
-            }
-
             if (pointer >= buffer.length) {
                 return -1;
             }
@@ -41,22 +36,24 @@ public class PolarFileSystem {
 
             return buffer.length - pointer;
         }
+    }
 
-        private void load() {
-            PolarRequest request = new PolarRequest(path);
-            PolarResponse response = PolarService.getInstance().doRequest(request);
+    private final PolarService service;
 
-            buffer = response.getBody().toArray();
-        }
+    public PolarFileSystem(final PolarService service) {
+        this.service = service;
     }
 
     public InputStream get(final String path) {
-        return new PolarInputStream(path);
+        PolarRequest request = new PolarRequest(path);
+        PolarResponse response = service.doRequest(request);
+
+        return new PolarInputStream(response.getBody().toArray());
     }
 
     public List<String> list(final String path) {
         PolarRequest request = new PolarRequest(path);
-        PolarResponse response = PolarService.getInstance().doRequest(request);
+        PolarResponse response = service.doRequest(request);
 
         List<String> result = new ArrayList<>();
         List<Byte> body = response.getBody();
