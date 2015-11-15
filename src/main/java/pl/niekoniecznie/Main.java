@@ -3,6 +3,7 @@ package pl.niekoniecznie;
 import pl.niekoniecznie.polar.filesystem.PolarDownloader;
 import pl.niekoniecznie.polar.filesystem.PolarFileSystem;
 import pl.niekoniecznie.polar.service.PolarService;
+import pl.niekoniecznie.polar.usb.USBDevice;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,7 +15,8 @@ public class Main {
         String source = "/U/0/";
         Path destination = Files.createTempDirectory("polar");
 
-        PolarService service = PolarService.getInstance();
+        USBDevice device = new USBDevice();
+        PolarService service = new PolarService(device);
         PolarFileSystem filesystem = new PolarFileSystem(service);
         PolarDownloader dumper = new PolarDownloader(filesystem);
 

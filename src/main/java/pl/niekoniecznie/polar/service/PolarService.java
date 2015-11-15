@@ -5,19 +5,10 @@ import pl.niekoniecznie.polar.usb.USBPacket;
 
 public class PolarService {
 
-    private static PolarService instance;
-    private USBDevice device;
+    private final USBDevice device;
 
-    public static PolarService getInstance() {
-        if (instance == null) {
-            instance = new PolarService();
-        }
-
-        return instance;
-    }
-
-    private PolarService() {
-        device = new USBDevice();
+    public PolarService(USBDevice device) {
+        this.device = device;
     }
 
     public PolarResponse doRequest(PolarRequest request) {
