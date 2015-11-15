@@ -1,8 +1,8 @@
-package pl.niekoniecznie.polar.usb;
+package pl.niekoniecznie.polar.device;
 
 import java.util.Arrays;
 
-public class USBPacket {
+public class PolarPacket {
 
     public static final int BUFFER_LENGTH = 64;
     public static final int MAX_DATA_SIZE = 61;
@@ -11,10 +11,10 @@ public class USBPacket {
     private boolean continuation;
     private byte[] data;
 
-    public USBPacket() {
+    public PolarPacket() {
     }
 
-    public USBPacket(byte[] packet) {
+    public PolarPacket(byte[] packet) {
         if (packet.length > BUFFER_LENGTH) {
             throw new IllegalArgumentException("Packet size greater than BUFFER_LENGTH");
         }

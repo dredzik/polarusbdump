@@ -6,7 +6,7 @@ import com.codeminders.hidapi.HIDManager;
 import pl.niekoniecznie.polar.filesystem.PolarDownloader;
 import pl.niekoniecznie.polar.filesystem.PolarFileSystem;
 import pl.niekoniecznie.polar.service.PolarService;
-import pl.niekoniecznie.polar.usb.USBDevice;
+import pl.niekoniecznie.polar.device.PolarDevice;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -23,7 +23,7 @@ public class Main {
         Path destination = Files.createTempDirectory("polar");
 
         HIDDevice hid = HIDManager.getInstance().openById(vendorId, productId, null);
-        USBDevice device = new USBDevice(hid);
+        PolarDevice device = new PolarDevice(hid);
         PolarService service = new PolarService(device);
         PolarFileSystem filesystem = new PolarFileSystem(service);
         PolarDownloader dumper = new PolarDownloader(filesystem);

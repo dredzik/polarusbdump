@@ -1,6 +1,6 @@
 package pl.niekoniecznie.polar.service;
 
-import pl.niekoniecznie.polar.usb.USBPacket;
+import pl.niekoniecznie.polar.device.PolarPacket;
 
 import java.nio.charset.Charset;
 
@@ -12,7 +12,7 @@ public class PolarRequest {
         this.url = url;
     }
 
-    public USBPacket getPacket() {
+    public PolarPacket getPacket() {
         byte[] data = new byte[url.length() + 8];
         Integer length1 = url.length() + 4;
         Integer length2 = url.length();
@@ -33,7 +33,7 @@ public class PolarRequest {
 
         data[data.length - 1] = 0x00;
 
-        USBPacket result0 = new USBPacket();
+        PolarPacket result0 = new PolarPacket();
 
         result0.setType((byte) 0x01);
         result0.setData(data);

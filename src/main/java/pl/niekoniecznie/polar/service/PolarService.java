@@ -1,13 +1,13 @@
 package pl.niekoniecznie.polar.service;
 
-import pl.niekoniecznie.polar.usb.USBDevice;
-import pl.niekoniecznie.polar.usb.USBPacket;
+import pl.niekoniecznie.polar.device.PolarDevice;
+import pl.niekoniecznie.polar.device.PolarPacket;
 
 public class PolarService {
 
-    private final USBDevice device;
+    private final PolarDevice device;
 
-    public PolarService(final USBDevice device) {
+    public PolarService(final PolarDevice device) {
         this.device = device;
     }
 
@@ -17,7 +17,7 @@ public class PolarService {
         PolarResponse response = new PolarResponse();
 
         while (true) {
-            USBPacket packet = device.read();
+            PolarPacket packet = device.read();
             response.append(packet);
 
             if (packet.isContinuation()) {

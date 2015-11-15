@@ -1,18 +1,18 @@
-package pl.niekoniecznie.polar.usb;
+package pl.niekoniecznie.polar.device;
 
 import com.codeminders.hidapi.HIDDevice;
 
 import java.io.IOException;
 
-public class USBDevice {
+public class PolarDevice {
 
     private final HIDDevice device;
 
-    public USBDevice(final HIDDevice device) {
+    public PolarDevice(final HIDDevice device) {
         this.device = device;
     }
 
-    public void write(USBPacket packet) {
+    public void write(PolarPacket packet) {
         try {
             device.write(packet.getBytes());
         } catch (IOException e) {
@@ -20,8 +20,8 @@ public class USBDevice {
         }
     }
 
-    public USBPacket read() {
-        byte[] buffer = new byte[USBPacket.BUFFER_LENGTH];
+    public PolarPacket read() {
+        byte[] buffer = new byte[PolarPacket.BUFFER_LENGTH];
 
         try {
             device.read(buffer);
@@ -29,6 +29,6 @@ public class USBDevice {
             throw new RuntimeException(e);
         }
 
-        return new USBPacket(buffer);
+        return new PolarPacket(buffer);
     }
 }
