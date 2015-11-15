@@ -16,27 +16,34 @@ public class PolarDataDumper {
     private final static Logger logger = LogManager.getLogger(PolarDataDumper.class);
 
     public void dump(Path root, String source) {
-        Path destination = Paths.get(root.toString(), source);
-
-        logger.trace("Creating " + destination);
-
         if (fs.isDirectory(source)) {
-            mkdir(destination);
-            fs.list(source).forEach((child) -> dump(root, child));
+            dumpDirectory(root, source);
         } else {
-            copy(destination, source);
+            dumpFile(root, source);
         }
     }
 
-    private void mkdir(Path destination) {
+    private void dumpDirectory(Path root, String source) {
+        Path destination = Paths.get(root.toString(), source);
+
         try {
             Files.createDirectories(destination);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        fs.list(source).forEach((child) -> {
+            if (fs.isDirectory(child)) {
+                dumpDirectory(root, child);
+            } else {
+                dumpFile(root, child);
+            }
+        });
     }
 
-    private void copy(Path destination, String source) {
+    private void dumpFile(Path root, String source) {
+        Path destination = Paths.get(root.toString(), source);
+
         try {
             PolarFileInputStream is = new PolarFileInputStream(source);
             Files.copy(is, destination, StandardCopyOption.REPLACE_EXISTING);
