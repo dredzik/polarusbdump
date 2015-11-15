@@ -18,24 +18,40 @@ public class DownloadSessionAction {
     private final static int POLAR_VENDOR_ID = 0x0da4;
     private final static int POLAR_PRODUCT_ID = 0x0008;
     private final static String POLAR_USER_DIRECTORY = "/U/0/";
+    private final static String POLAR_SESSION_REGEX = "(/U/0/(\\d{8,})/E/(\\d{6,}))/00/SAMPLES.GZB";
 
-    public void run() throws IOException {
+    private final PolarLister lister;
+    private final PolarDownloader downloader;
+    private final Path directory;
+
+    public DownloadSessionAction() throws IOException {
         ClassPathLibraryLoader.loadNativeHIDLibrary();
-
-        Path destination = Files.createTempDirectory("polar");
 
         HIDDevice hid = HIDManager.getInstance().openById(POLAR_VENDOR_ID, POLAR_PRODUCT_ID, null);
         PolarDevice device = new PolarDevice(hid);
         PolarService service = new PolarService(device);
         PolarFileSystem filesystem = new PolarFileSystem(service);
 
-        PolarLister lister = new PolarLister(filesystem);
-        PolarDownloader dumper = new PolarDownloader(filesystem);
+        lister = new PolarLister(filesystem);
+        downloader = new PolarDownloader(filesystem);
 
-        lister.list(POLAR_USER_DIRECTORY);
-        dumper.download(POLAR_USER_DIRECTORY, destination);
+        directory = Files.createTempDirectory("polar");
+    }
 
-        hid.close();
+    public void run() throws IOException {
+        lister.list(POLAR_USER_DIRECTORY, POLAR_SESSION_REGEX).forEach(this::save);
+    }
 
+    private void save(String samples) {
+        String source = samples.replaceFirst(POLAR_SESSION_REGEX, "$1/");
+        Path destination = directory.resolve(samples.replaceFirst(POLAR_SESSION_REGEX, "$2_$3/"));
+
+        try {
+            Files.createDirectories(destination);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        downloader.download(source, destination);
     }
 }
