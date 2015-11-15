@@ -16,7 +16,7 @@ public class PolarDataDumper {
     private final static Logger logger = LogManager.getLogger(PolarDataDumper.class);
 
     public void dump(Path root, String source) {
-        if (fs.isDirectory(source)) {
+        if (source.endsWith("/")) {
             dumpDirectory(root, source);
         } else {
             dumpFile(root, source);
@@ -33,7 +33,7 @@ public class PolarDataDumper {
         }
 
         fs.list(source).forEach((child) -> {
-            if (fs.isDirectory(child)) {
+            if (child.endsWith("/")) {
                 dumpDirectory(root, child);
             } else {
                 dumpFile(root, child);
