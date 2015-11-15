@@ -51,8 +51,7 @@ public class PolarDownloader {
         logger.trace("Saving file " + destination);
 
         try {
-            PolarFileInputStream is = new PolarFileInputStream(source);
-            Files.copy(is, destination, StandardCopyOption.REPLACE_EXISTING);
+            Files.copy(fs.get(source), destination, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
