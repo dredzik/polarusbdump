@@ -7098,15 +7098,15 @@ public final class PolarModel {
     pl.niekoniecznie.polar.model.PolarModel.TrainingLoadOrBuilder getTrainingLoadOrBuilder();
 
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
      */
     boolean hasIndex();
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
      */
     pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex getIndex();
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
      */
     pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndexOrBuilder getIndexOrBuilder();
 
@@ -8429,19 +8429,19 @@ public final class PolarModel {
     public static final int INDEX_FIELD_NUMBER = 9;
     private pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex index_;
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
      */
     public boolean hasIndex() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
      */
     public pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex getIndex() {
       return index_;
     }
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
      */
     public pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndexOrBuilder getIndexOrBuilder() {
       return index_;
@@ -8518,10 +8518,6 @@ public final class PolarModel {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasIndex()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasAscent()) {
         memoizedIsInitialized = 0;
         return false;
@@ -8542,9 +8538,11 @@ public final class PolarModel {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!getIndex().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
+      if (hasIndex()) {
+        if (!getIndex().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
       memoizedIsInitialized = 1;
       return true;
@@ -8941,10 +8939,6 @@ public final class PolarModel {
           
           return false;
         }
-        if (!hasIndex()) {
-          
-          return false;
-        }
         if (!hasAscent()) {
           
           return false;
@@ -8965,9 +8959,11 @@ public final class PolarModel {
           
           return false;
         }
-        if (!getIndex().isInitialized()) {
-          
-          return false;
+        if (hasIndex()) {
+          if (!getIndex().isInitialized()) {
+            
+            return false;
+          }
         }
         return true;
       }
@@ -9523,13 +9519,13 @@ public final class PolarModel {
       private com.google.protobuf.SingleFieldBuilder<
           pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex, pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.Builder, pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndexOrBuilder> indexBuilder_;
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
        */
       public boolean hasIndex() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
        */
       public pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex getIndex() {
         if (indexBuilder_ == null) {
@@ -9539,7 +9535,7 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
        */
       public Builder setIndex(pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex value) {
         if (indexBuilder_ == null) {
@@ -9555,7 +9551,7 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
        */
       public Builder setIndex(
           pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.Builder builderForValue) {
@@ -9569,7 +9565,7 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
        */
       public Builder mergeIndex(pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex value) {
         if (indexBuilder_ == null) {
@@ -9588,7 +9584,7 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
        */
       public Builder clearIndex() {
         if (indexBuilder_ == null) {
@@ -9601,7 +9597,7 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
        */
       public pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.Builder getIndexBuilder() {
         bitField0_ |= 0x00000040;
@@ -9609,7 +9605,7 @@ public final class PolarModel {
         return getIndexFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
        */
       public pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndexOrBuilder getIndexOrBuilder() {
         if (indexBuilder_ != null) {
@@ -9619,7 +9615,7 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex, pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.Builder, pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndexOrBuilder> 
@@ -26166,7 +26162,7 @@ public final class PolarModel {
       ".Exercise.Sport\022\020\n\010distance\030\004 \002(\002\022\020\n\010cal" +
       "ories\030\005 \002(\r\022@\n\014trainingLoad\030\006 \002(\0132*.pl.n" +
       "iekoniecznie.polar.model.TrainingLoad\022B\n" +
-      "\005index\030\t \002(\01323.pl.niekoniecznie.polar.mo",
+      "\005index\030\t \001(\01323.pl.niekoniecznie.polar.mo",
       "del.Exercise.RunningIndex\022\016\n\006ascent\030\n \002(" +
       "\002\022\017\n\007descent\030\013 \002(\002\032\026\n\005Sport\022\r\n\005value\030\001 \002" +
       "(\004\032S\n\014RunningIndex\022\r\n\005value\030\001 \002(\r\0224\n\010dur" +

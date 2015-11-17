@@ -10,7 +10,7 @@ public class PolarLister {
 
     private final PolarFileSystem filesystem;
 
-    private final static Logger logger = LogManager.getLogger(PolarDownloader.class);
+    private final static Logger logger = LogManager.getLogger(PolarLister.class);
 
     public PolarLister(final PolarFileSystem filesystem) {
         this.filesystem = filesystem;

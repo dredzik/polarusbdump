@@ -69,7 +69,7 @@ message Exercise {
     required float distance = 4;
     required uint32 calories = 5;
     required TrainingLoad trainingLoad = 6;
-    required RunningIndex index = 9;
+    optional RunningIndex index = 9;
     required float ascent = 10;
     required float descent = 11;
 }
