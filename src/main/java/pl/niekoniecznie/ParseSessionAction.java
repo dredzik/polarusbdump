@@ -39,7 +39,10 @@ public class ParseSessionAction implements Runnable {
 
     @Override
     public void run() {
-        lister.list(POLAR_USER_DIRECTORY, POLAR_SESSION_REGEX).forEach(x -> parse(x.replaceFirst(POLAR_SESSION_REGEX, "$1/")));
+        lister.list(POLAR_USER_DIRECTORY, POLAR_SESSION_REGEX).forEach(x -> {
+            String source = x.replaceFirst(POLAR_SESSION_REGEX, "$1/");
+            new Thread(() -> parse(source)).start();
+        });
     }
 
     private void parse(String source) {
@@ -55,6 +58,8 @@ public class ParseSessionAction implements Runnable {
             PolarModel.Sample sample = PolarModel.Sample.parseFrom(new GZIPInputStream(filesystem.get(source + "00/SAMPLES.GZB")));
             PolarModel.Statistic statistic = PolarModel.Statistic.parseFrom(filesystem.get(source + "00/STATS.BPB"));
             PolarModel.Zone zone = PolarModel.Zone.parseFrom(filesystem.get(source + "00/ZONES.BPB"));
+
+            logger.trace("Parsed " + source);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

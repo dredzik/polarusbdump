@@ -11,7 +11,7 @@ public class PolarService {
         this.device = device;
     }
 
-    public PolarResponse doRequest(PolarRequest request) {
+    public synchronized PolarResponse doRequest(PolarRequest request) {
         device.write(request.getPacket());
 
         PolarResponse response = new PolarResponse();

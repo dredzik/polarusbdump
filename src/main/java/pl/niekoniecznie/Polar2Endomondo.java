@@ -2,7 +2,7 @@ package pl.niekoniecznie;
 
 import java.io.IOException;
 
-public class Main {
+public class Polar2Endomondo {
 
     public static void main(String[] args) throws IOException {
         new ParseSessionAction().run();
