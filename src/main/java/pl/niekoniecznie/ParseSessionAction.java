@@ -55,8 +55,6 @@ public class ParseSessionAction implements Runnable {
             PolarModel.Sample sample = PolarModel.Sample.parseFrom(new GZIPInputStream(filesystem.get(source + "00/SAMPLES.GZB")));
             PolarModel.Statistic statistic = PolarModel.Statistic.parseFrom(filesystem.get(source + "00/STATS.BPB"));
             PolarModel.Zone zone = PolarModel.Zone.parseFrom(filesystem.get(source + "00/ZONES.BPB"));
-
-            logger.trace("Parsed session " + session.getStart());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

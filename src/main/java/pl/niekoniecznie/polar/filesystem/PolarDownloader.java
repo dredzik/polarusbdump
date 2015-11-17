@@ -64,16 +64,10 @@ public class PolarDownloader {
     private void downloadFile(String source, Path destination, String root) {
         Path file = createPath(source, destination, root);
 
+        logger.trace("Saving file " + file);
+
         try {
             InputStream input = filesystem.get(source);
-
-            if (source.endsWith(".GZB")) {
-                logger.trace("Extracting file " + file);
-                input = new GZIPInputStream(input);
-            } else {
-                logger.trace("Saving file " + file);
-            }
-
             Files.copy(input, file, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -81,6 +75,6 @@ public class PolarDownloader {
     }
 
     private Path createPath(String source, Path destination, String root) {
-        return Paths.get(destination.toString(), source.replaceFirst(root, "/").replaceFirst(".GZB", ".BPB"));
+        return Paths.get(destination.toString(), source.replaceFirst(root, "/"));
     }
 }
