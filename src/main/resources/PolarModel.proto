@@ -1,0 +1,212 @@
+package pl.niekoniecznie.polar.model;
+
+option java_package = "pl.niekoniecznie.polar.model";
+
+option java_outer_classname = "PolarModel";
+
+message PhysicalInformation {
+    message Birthday {
+        required Date date = 1;
+        required DateTime modified = 2;
+    }
+
+    message Gender {
+        required Type type = 1;
+        required DateTime modified = 2;
+
+        enum Type {
+            MALE = 1;
+            FEMALE = 2;
+        }
+    }
+
+    required Birthday birthday = 1;
+    required Gender gender = 2;
+    required FloatM weight = 3;
+    required FloatM height = 4;
+    required UInt32M maximumHeartrate = 5;
+    required UInt32M restingHeartrate = 6;
+    required UInt32M aerobicThreshold = 8;
+    required UInt32M anaerobicThreshold = 9;
+    required UInt32M vo2max = 10;
+    required UInt32M unknown1 = 11;
+    required UInt32M unknown2 = 12;
+    required DateTime modified = 100;
+}
+
+message Session {
+    message Label {
+        required string name = 1;
+    }
+
+    required DateTime start = 1;
+    required DateTime end = 20;
+    required uint32 exerciseCount = 2;
+    required string device = 3;
+    required string model = 4;
+    required Time duration = 5;
+    required float distance = 6;
+    required uint32 calories = 7;
+    optional Heartrate heartrate = 8;
+    required Time heartrateDuration = 9;
+    required TrainingLoad trainingLoad = 10;
+    required Label label = 11;
+}
+
+message Exercise {
+    message Sport {
+        required uint64 value = 1;
+    }
+
+    message RunningIndex {
+        required uint32 value = 1;
+        required Time duration = 2;
+    }
+
+    required DateTime start = 1;
+    required Time duration = 2;
+    required Sport sport = 3;
+    required float distance = 4;
+    required uint32 calories = 5;
+    required TrainingLoad trainingLoad = 6;
+    required RunningIndex index = 9;
+    required float ascent = 10;
+    required float descent = 11;
+}
+
+message LapInfo {
+    message Lap {
+        message Header {
+            enum Type {
+                MANUAL = 0;
+                AUTO = 1;
+            }
+
+            required Time split = 1;
+            required Time duration = 2;
+            required float distance = 3;
+            optional float ascent = 4;
+            optional float descent = 5;
+            required Type type = 6;
+        }
+
+        required Header header = 1;
+        required Statistic statistic = 2;
+    }
+
+    message Summary {
+        required Time best = 1;
+        required Time average = 2;
+    }
+
+    repeated Lap lap = 1;
+    optional Summary summary = 2;
+}
+
+message Route {
+    repeated uint32 duration = 1;
+    repeated double latitude = 2;
+    repeated double longitude = 3;
+    repeated sint32 altitude = 4;
+    repeated uint32 satellites = 5;
+    required DateTime timestamp = 9;
+}
+
+message Sample {
+    required Time interval = 1;
+    repeated uint32 heartrate = 2;
+    repeated float altitude = 6;
+    repeated float speed = 9;
+    repeated float distance = 11;
+}
+
+message Statistic {
+    optional Heartrate heartrate = 1;
+    required Speed speed = 2;
+    optional Altitude altitude = 4;
+}
+
+message Zone {
+    enum HeartrateSource {
+        SENSOR = 0;
+    }
+
+    message HeartrateZone {
+        message Limit {
+            required uint32 low = 1;
+            required uint32 hight = 2;
+        }
+
+        required Limit limit = 1;
+        required Time duration = 2;
+    }
+
+    message SpeedZone {
+        message Limit {
+            required float low = 1;
+            required float high = 2;
+        }
+
+        required Limit limit = 1;
+        required Time duration = 2;
+        required float distance = 3;
+    }
+
+    repeated HeartrateZone heartrateZone = 1;
+    repeated SpeedZone speedZone = 4;
+    required HeartrateSource heartrateSource = 10;
+}
+
+message TrainingLoad {
+    required uint32 value = 1;
+    required Time recovery = 2;
+    optional uint32 carbs = 3;
+    optional uint32 protein = 4;
+    optional uint32 fat = 5;
+}
+
+message Speed {
+    required float average = 1;
+    required float maximum = 2;
+    optional float minimum = 3;
+}
+
+message Altitude {
+    required float average = 1;
+    required float maximum = 2;
+    required float minimum = 3;
+}
+
+message Heartrate {
+    required uint32 average = 1;
+    required uint32 maximum = 2;
+    optional uint32 minimum = 3;
+}
+
+message FloatM {
+    required float value = 1;
+    required DateTime modified = 2;
+}
+
+message UInt32M {
+    required uint32 value = 1;
+    required DateTime modified = 2;
+}
+
+message DateTime {
+    required Date date = 1;
+    required Time time = 2;
+}
+
+message Date {
+    required uint32 year = 1;
+    required uint32 month = 2;
+    required uint32 day = 3;
+}
+
+message Time {
+    optional uint32 hour = 1;
+    optional uint32 minute = 2;
+    optional uint32 second = 3;
+    optional uint32 milisecond = 4;
+}
