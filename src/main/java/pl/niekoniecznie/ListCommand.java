@@ -16,27 +16,25 @@ import pl.niekoniecznie.polar.service.PolarService;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import java.io.IOException;
-import java.math.BigInteger;
 import java.util.GregorianCalendar;
 import java.util.zip.GZIPInputStream;
 
-public class ParseSessionAction implements Runnable {
+public class ListCommand {
 
     private final static int POLAR_VENDOR_ID = 0x0da4;
     private final static int POLAR_PRODUCT_ID = 0x0008;
     private final static String POLAR_USER_DIRECTORY = "/U/0/";
     private final static String POLAR_SESSION_REGEX = "(/U/0/(\\d{8,})/E/(\\d{6,}))/00/SAMPLES.GZB";
 
-    private final static Logger logger = LogManager.getLogger(ParseSessionAction.class);
+    private final static Logger logger = LogManager.getLogger(ListCommand.class);
 
     private final PolarFileSystem filesystem;
     private final PolarLister lister;
 
-    public ParseSessionAction() throws IOException {
+    public ListCommand() throws IOException {
         ClassPathLibraryLoader.loadNativeHIDLibrary();
 
         HIDDevice hid = HIDManager.getInstance().openById(POLAR_VENDOR_ID, POLAR_PRODUCT_ID, null);
@@ -47,8 +45,7 @@ public class ParseSessionAction implements Runnable {
         lister = new PolarLister(filesystem);
     }
 
-    @Override
-    public void run() {
+    public void execute() {
         lister.list(POLAR_USER_DIRECTORY, POLAR_SESSION_REGEX).forEach(x -> {
             String source = x.replaceFirst(POLAR_SESSION_REGEX, "$1/");
             new Thread(() -> parse(source)).start();
