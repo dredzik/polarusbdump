@@ -51,8 +51,7 @@ public class ParseSessionAction implements Runnable {
     public void run() {
         lister.list(POLAR_USER_DIRECTORY, POLAR_SESSION_REGEX).forEach(x -> {
             String source = x.replaceFirst(POLAR_SESSION_REGEX, "$1/");
-            parse(source);
-            //new Thread(() -> parse(source)).start();
+            new Thread(() -> parse(source)).start();
         });
     }
 
