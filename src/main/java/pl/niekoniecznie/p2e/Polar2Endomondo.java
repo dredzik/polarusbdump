@@ -8,9 +8,12 @@ import pl.niekoniecznie.p2e.workflow.ListCommand;
 import pl.niekoniecznie.polar.device.PolarDevice;
 import pl.niekoniecznie.polar.filesystem.PolarFileSystem;
 import pl.niekoniecznie.polar.filesystem.PolarLister;
+import pl.niekoniecznie.polar.model.SessionFile;
 import pl.niekoniecznie.polar.service.PolarService;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Map;
 
 public class Polar2Endomondo {
 
@@ -26,10 +29,10 @@ public class Polar2Endomondo {
         PolarFileSystem filesystem = new PolarFileSystem(service);
         PolarLister lister = new PolarLister(filesystem);
 
-        new ListCommand(lister).execute().forEach(session -> {
-            new DownloadCommand(filesystem, session).execute();
-        });
+        new ListCommand(lister).execute().forEach(session -> new Thread(() -> {
+            Map<SessionFile, InputStream> files = new DownloadCommand(filesystem, session).execute();
+        }).start());
 
-        hid.close();
+//        hid.close();
     }
 }
