@@ -1,17 +1,12 @@
-package pl.niekoniecznie;
+package pl.niekoniecznie.p2e.workflow;
 
-import com.codeminders.hidapi.ClassPathLibraryLoader;
-import com.codeminders.hidapi.HIDDevice;
-import com.codeminders.hidapi.HIDManager;
 import com.garmin.xmlschemas.trainingcenterdatabase.v2.*;
 import com.sun.org.apache.xerces.internal.jaxp.datatype.XMLGregorianCalendarImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import pl.niekoniecznie.polar.device.PolarDevice;
 import pl.niekoniecznie.polar.filesystem.PolarFileSystem;
-import pl.niekoniecznie.polar.filesystem.PolarLister;
 import pl.niekoniecznie.polar.model.PolarModel;
-import pl.niekoniecznie.polar.service.PolarService;
+import pl.niekoniecznie.polar.model.SessionFile;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -19,37 +14,47 @@ import javax.xml.bind.Marshaller;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.EnumMap;
 import java.util.GregorianCalendar;
+import java.util.Map;
 import java.util.zip.GZIPInputStream;
 
-public class ListCommand {
+public class DownloadCommand implements Command<Map<SessionFile, InputStream>> {
 
-    private final static int POLAR_VENDOR_ID = 0x0da4;
-    private final static int POLAR_PRODUCT_ID = 0x0008;
-    private final static String POLAR_USER_DIRECTORY = "/U/0/";
-    private final static String POLAR_SESSION_REGEX = "(/U/0/(\\d{8,})/E/(\\d{6,}))/00/SAMPLES.GZB";
-
-    private final static Logger logger = LogManager.getLogger(ListCommand.class);
+    private final static Logger logger = LogManager.getLogger(DownloadCommand.class);
 
     private final PolarFileSystem filesystem;
-    private final PolarLister lister;
+    private final String session;
 
-    public ListCommand() throws IOException {
-        ClassPathLibraryLoader.loadNativeHIDLibrary();
-
-        HIDDevice hid = HIDManager.getInstance().openById(POLAR_VENDOR_ID, POLAR_PRODUCT_ID, null);
-        PolarDevice device = new PolarDevice(hid);
-        PolarService service = new PolarService(device);
-
-        filesystem = new PolarFileSystem(service);
-        lister = new PolarLister(filesystem);
+    public DownloadCommand(PolarFileSystem filesystem, String session) {
+        this.filesystem = filesystem;
+        this.session = session;
     }
 
-    public void execute() {
-        lister.list(POLAR_USER_DIRECTORY, POLAR_SESSION_REGEX).forEach(x -> {
-            String source = x.replaceFirst(POLAR_SESSION_REGEX, "$1/");
-            new Thread(() -> parse(source)).start();
-        });
+    @Override
+    public Map<SessionFile, InputStream> execute() {
+        Map<SessionFile, InputStream> result = new EnumMap<>(SessionFile.class);
+
+        for (SessionFile file : SessionFile.values()) {
+            String path = file.get(session);
+
+            logger.trace("Downloading session file from " + path);
+
+            InputStream stream = filesystem.get(path);
+
+            try {
+                if (path.endsWith(".GZB")) {
+                    stream = new GZIPInputStream(stream);
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            result.put(file, stream);
+        }
+
+        return result;
     }
 
     private void parse(String source) {

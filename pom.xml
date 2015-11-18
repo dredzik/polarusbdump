@@ -58,7 +58,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>pl.niekoniecznie.Polar2Endomondo</mainClass>
+                            <mainClass>pl.niekoniecznie.p2e.Polar2Endomondo</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
