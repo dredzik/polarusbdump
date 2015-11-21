@@ -1,7 +1,6 @@
 package pl.niekoniecznie.polar.model;
 
 option java_package = "pl.niekoniecznie.polar.model";
-
 option java_outer_classname = "PolarModel";
 
 message PhysicalInformation {
@@ -74,7 +73,7 @@ message Exercise {
     required float descent = 11;
 }
 
-message LapInfo {
+message LapInformation {
     message Lap {
         message Header {
             enum Type {
