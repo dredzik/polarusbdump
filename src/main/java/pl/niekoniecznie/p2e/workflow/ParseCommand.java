@@ -2,7 +2,7 @@ package pl.niekoniecznie.p2e.workflow;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import pl.niekoniecznie.polar.model.PolarModel;
+import pl.niekoniecznie.polar.model.PolarModel.*;
 import pl.niekoniecznie.polar.model.Session;
 import pl.niekoniecznie.polar.model.SessionFile;
 
@@ -26,31 +26,31 @@ public class ParseCommand implements Command<Session> {
             Session result = new Session();
 
             logger.trace("PhysicalData");
-            result.setPerson(PolarModel.PhysicalInformation.parseFrom(files.get(SessionFile.PHYSICAL)));
+            result.setPerson(PhysicalData.parseFrom(files.get(SessionFile.PHYSICAL)));
 
             logger.trace("SessionData");
-            result.setData(PolarModel.Session.parseFrom(files.get(SessionFile.SESSION)));
+            result.setData(SessionData.parseFrom(files.get(SessionFile.SESSION)));
 
             logger.trace("ExerciseData");
-            result.setExercise(PolarModel.Exercise.parseFrom(files.get(SessionFile.EXCERCISE)));
+            result.setExercise(ExerciseData.parseFrom(files.get(SessionFile.EXCERCISE)));
 
             logger.trace("RouteData");
-            result.setRoute(PolarModel.Route.parseFrom(files.get(SessionFile.ROUTE)));
+            result.setRoute(RouteData.parseFrom(files.get(SessionFile.ROUTE)));
 
             logger.trace("LapData");
-            result.setLaps(PolarModel.LapInformation.parseFrom(files.get(SessionFile.LAP)));
+            result.setLaps(LapData.parseFrom(files.get(SessionFile.LAP)));
 
             logger.trace("LapData - automatic");
-            result.setAutomaticLaps(PolarModel.LapInformation.parseFrom(files.get(SessionFile.LAP_AUTOMATIC)));
+            result.setAutomaticLaps(LapData.parseFrom(files.get(SessionFile.LAP_AUTOMATIC)));
 
             logger.trace("SampleData");
-            result.setSamples(PolarModel.Sample.parseFrom(files.get(SessionFile.SAMPLE)));
+            result.setSamples(SampleData.parseFrom(files.get(SessionFile.SAMPLE)));
 
             logger.trace("StatisticData");
-            result.setStatistics(PolarModel.Statistic.parseFrom(files.get(SessionFile.STATISTIC)));
+            result.setStatistics(StatisticData.parseFrom(files.get(SessionFile.STATISTIC)));
 
             logger.trace("ZoneData");
-            result.setZones(PolarModel.Zone.parseFrom(files.get(SessionFile.ZONE)));
+            result.setZones(ZoneData.parseFrom(files.get(SessionFile.ZONE)));
 
             return result;
         } catch (IOException e) {

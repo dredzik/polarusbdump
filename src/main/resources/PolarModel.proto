@@ -3,7 +3,7 @@ package pl.niekoniecznie.polar.model;
 option java_package = "pl.niekoniecznie.polar.model";
 option java_outer_classname = "PolarModel";
 
-message PhysicalInformation {
+message PhysicalData {
     message Birthday {
         required Date date = 1;
         required DateTime modified = 2;
@@ -33,7 +33,7 @@ message PhysicalInformation {
     required DateTime modified = 100;
 }
 
-message Session {
+message SessionData {
     message Label {
         required string name = 1;
     }
@@ -52,7 +52,7 @@ message Session {
     required Label label = 11;
 }
 
-message Exercise {
+message ExerciseData {
     message Sport {
         required uint64 value = 1;
     }
@@ -73,7 +73,7 @@ message Exercise {
     required float descent = 11;
 }
 
-message LapInformation {
+message LapData {
     message Lap {
         message Header {
             enum Type {
@@ -90,7 +90,7 @@ message LapInformation {
         }
 
         required Header header = 1;
-        required Statistic statistic = 2;
+        required StatisticData statistic = 2;
     }
 
     message Summary {
@@ -102,7 +102,7 @@ message LapInformation {
     optional Summary summary = 2;
 }
 
-message Route {
+message RouteData {
     repeated uint32 duration = 1;
     repeated double latitude = 2;
     repeated double longitude = 3;
@@ -111,7 +111,7 @@ message Route {
     required DateTime timestamp = 9;
 }
 
-message Sample {
+message SampleData {
     required Time interval = 1;
     repeated uint32 heartrate = 2;
     repeated float altitude = 6;
@@ -119,13 +119,13 @@ message Sample {
     repeated float distance = 11;
 }
 
-message Statistic {
+message StatisticData {
     optional Heartrate heartrate = 1;
     required Speed speed = 2;
     optional Altitude altitude = 4;
 }
 
-message Zone {
+message ZoneData {
     enum HeartrateSource {
         SENSOR = 0;
     }

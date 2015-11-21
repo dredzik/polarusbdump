@@ -1,86 +1,88 @@
 package pl.niekoniecznie.polar.model;
 
+import pl.niekoniecznie.polar.model.PolarModel.*;
+
 public class Session {
 
-    private PolarModel.PhysicalInformation person;
-    private PolarModel.Session data;
-    private PolarModel.Exercise exercise;
-    private PolarModel.Route route;
-    private PolarModel.LapInformation laps;
-    private PolarModel.LapInformation automaticLaps;
-    private PolarModel.Sample samples;
-    private PolarModel.Statistic statistics;
-    private PolarModel.Zone zones;
+    private PhysicalData person;
+    private SessionData data;
+    private ExerciseData exercise;
+    private RouteData route;
+    private LapData laps;
+    private LapData automaticLaps;
+    private SampleData samples;
+    private StatisticData statistics;
+    private ZoneData zones;
 
-    public PolarModel.PhysicalInformation getPerson() {
+    public PhysicalData getPerson() {
         return person;
     }
 
-    public void setPerson(PolarModel.PhysicalInformation person) {
+    public void setPerson(PhysicalData person) {
         this.person = person;
     }
 
-    public PolarModel.Session getData() {
+    public SessionData getData() {
         return data;
     }
 
-    public void setData(PolarModel.Session data) {
+    public void setData(SessionData data) {
         this.data = data;
     }
 
-    public PolarModel.Exercise getExercise() {
+    public ExerciseData getExercise() {
         return exercise;
     }
 
-    public void setExercise(PolarModel.Exercise exercise) {
+    public void setExercise(ExerciseData exercise) {
         this.exercise = exercise;
     }
 
-    public PolarModel.Route getRoute() {
+    public RouteData getRoute() {
         return route;
     }
 
-    public void setRoute(PolarModel.Route route) {
+    public void setRoute(RouteData route) {
         this.route = route;
     }
 
-    public PolarModel.LapInformation getLaps() {
+    public LapData getLaps() {
         return laps;
     }
 
-    public void setLaps(PolarModel.LapInformation laps) {
+    public void setLaps(LapData laps) {
         this.laps = laps;
     }
 
-    public PolarModel.LapInformation getAutomaticLaps() {
+    public LapData getAutomaticLaps() {
         return automaticLaps;
     }
 
-    public void setAutomaticLaps(PolarModel.LapInformation automaticLaps) {
+    public void setAutomaticLaps(LapData automaticLaps) {
         this.automaticLaps = automaticLaps;
     }
 
-    public PolarModel.Sample getSamples() {
+    public SampleData getSamples() {
         return samples;
     }
 
-    public void setSamples(PolarModel.Sample samples) {
+    public void setSamples(SampleData samples) {
         this.samples = samples;
     }
 
-    public PolarModel.Statistic getStatistics() {
+    public StatisticData getStatistics() {
         return statistics;
     }
 
-    public void setStatistics(PolarModel.Statistic statistics) {
+    public void setStatistics(StatisticData statistics) {
         this.statistics = statistics;
     }
 
-    public PolarModel.Zone getZones() {
+    public ZoneData getZones() {
         return zones;
     }
 
-    public void setZones(PolarModel.Zone zones) {
+    public void setZones(ZoneData zones) {
         this.zones = zones;
     }
 }

@@ -8,35 +8,35 @@ public final class PolarModel {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface PhysicalInformationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.PhysicalInformation)
+  public interface PhysicalDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.PhysicalData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+     * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
      */
     boolean hasBirthday();
     /**
-     * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+     * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday getBirthday();
+    pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday getBirthday();
     /**
-     * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+     * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.BirthdayOrBuilder getBirthdayOrBuilder();
+    pl.niekoniecznie.polar.model.PolarModel.PhysicalData.BirthdayOrBuilder getBirthdayOrBuilder();
 
     /**
-     * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+     * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
      */
     boolean hasGender();
     /**
-     * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+     * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender getGender();
+    pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender getGender();
     /**
-     * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+     * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.GenderOrBuilder getGenderOrBuilder();
+    pl.niekoniecznie.polar.model.PolarModel.PhysicalData.GenderOrBuilder getGenderOrBuilder();
 
     /**
      * <code>required .pl.niekoniecznie.polar.model.FloatM weight = 3;</code>
@@ -169,25 +169,25 @@ public final class PolarModel {
     pl.niekoniecznie.polar.model.PolarModel.DateTimeOrBuilder getModifiedOrBuilder();
   }
   /**
-   * Protobuf type {@code pl.niekoniecznie.polar.model.PhysicalInformation}
+   * Protobuf type {@code pl.niekoniecznie.polar.model.PhysicalData}
    */
-  public static final class PhysicalInformation extends
+  public static final class PhysicalData extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.PhysicalInformation)
-      PhysicalInformationOrBuilder {
-    // Use PhysicalInformation.newBuilder() to construct.
-    private PhysicalInformation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.PhysicalData)
+      PhysicalDataOrBuilder {
+    // Use PhysicalData.newBuilder() to construct.
+    private PhysicalData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private PhysicalInformation(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private PhysicalData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final PhysicalInformation defaultInstance;
-    public static PhysicalInformation getDefaultInstance() {
+    private static final PhysicalData defaultInstance;
+    public static PhysicalData getDefaultInstance() {
       return defaultInstance;
     }
 
-    public PhysicalInformation getDefaultInstanceForType() {
+    public PhysicalData getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -197,7 +197,7 @@ public final class PolarModel {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private PhysicalInformation(
+    private PhysicalData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -221,11 +221,11 @@ public final class PolarModel {
               break;
             }
             case 10: {
-              pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.Builder subBuilder = null;
+              pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = birthday_.toBuilder();
               }
-              birthday_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.PARSER, extensionRegistry);
+              birthday_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(birthday_);
                 birthday_ = subBuilder.buildPartial();
@@ -234,11 +234,11 @@ public final class PolarModel {
               break;
             }
             case 18: {
-              pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Builder subBuilder = null;
+              pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = gender_.toBuilder();
               }
-              gender_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.PARSER, extensionRegistry);
+              gender_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(gender_);
                 gender_ = subBuilder.buildPartial();
@@ -390,33 +390,33 @@ public final class PolarModel {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_descriptor;
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_fieldAccessorTable
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.class, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Builder.class);
+              pl.niekoniecznie.polar.model.PolarModel.PhysicalData.class, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<PhysicalInformation> PARSER =
-        new com.google.protobuf.AbstractParser<PhysicalInformation>() {
-      public PhysicalInformation parsePartialFrom(
+    public static com.google.protobuf.Parser<PhysicalData> PARSER =
+        new com.google.protobuf.AbstractParser<PhysicalData>() {
+      public PhysicalData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PhysicalInformation(input, extensionRegistry);
+        return new PhysicalData(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PhysicalInformation> getParserForType() {
+    public com.google.protobuf.Parser<PhysicalData> getParserForType() {
       return PARSER;
     }
 
     public interface BirthdayOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.PhysicalInformation.Birthday)
+        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.PhysicalData.Birthday)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -446,11 +446,11 @@ public final class PolarModel {
       pl.niekoniecznie.polar.model.PolarModel.DateTimeOrBuilder getModifiedOrBuilder();
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.PhysicalInformation.Birthday}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.PhysicalData.Birthday}
      */
     public static final class Birthday extends
         com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.PhysicalInformation.Birthday)
+        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.PhysicalData.Birthday)
         BirthdayOrBuilder {
       // Use Birthday.newBuilder() to construct.
       private Birthday(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -537,14 +537,14 @@ public final class PolarModel {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Birthday_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_Birthday_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Birthday_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_Birthday_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.class, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.class, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.Builder.class);
       }
 
       public static com.google.protobuf.Parser<Birthday> PARSER =
@@ -673,53 +673,53 @@ public final class PolarModel {
         return super.writeReplace();
       }
 
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday parseFrom(byte[] data)
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday parseFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday parseDelimitedFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday parseDelimitedFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -728,7 +728,7 @@ public final class PolarModel {
 
       public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday prototype) {
+      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday prototype) {
         return newBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() { return newBuilder(this); }
@@ -740,25 +740,25 @@ public final class PolarModel {
         return builder;
       }
       /**
-       * Protobuf type {@code pl.niekoniecznie.polar.model.PhysicalInformation.Birthday}
+       * Protobuf type {@code pl.niekoniecznie.polar.model.PhysicalData.Birthday}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.PhysicalInformation.Birthday)
-          pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.BirthdayOrBuilder {
+          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.PhysicalData.Birthday)
+          pl.niekoniecznie.polar.model.PolarModel.PhysicalData.BirthdayOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Birthday_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_Birthday_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Birthday_fieldAccessorTable
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_Birthday_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.class, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.Builder.class);
+                  pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.class, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.Builder.class);
         }
 
-        // Construct using pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.newBuilder()
+        // Construct using pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -801,23 +801,23 @@ public final class PolarModel {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Birthday_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_Birthday_descriptor;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday getDefaultInstanceForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.getDefaultInstance();
+        public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday getDefaultInstanceForType() {
+          return pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.getDefaultInstance();
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday build() {
-          pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday result = buildPartial();
+        public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday build() {
+          pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday buildPartial() {
-          pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday result = new pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday(this);
+        public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday buildPartial() {
+          pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday result = new pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -842,16 +842,16 @@ public final class PolarModel {
         }
 
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday) {
-            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday)other);
+          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday) {
+            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday other) {
-          if (other == pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.getDefaultInstance()) return this;
+        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday other) {
+          if (other == pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.getDefaultInstance()) return this;
           if (other.hasDate()) {
             mergeDate(other.getDate());
           }
@@ -886,11 +886,11 @@ public final class PolarModel {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday parsedMessage = null;
+          pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday) e.getUnfinishedMessage();
+            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday) e.getUnfinishedMessage();
             throw e;
           } finally {
             if (parsedMessage != null) {
@@ -1133,7 +1133,7 @@ public final class PolarModel {
           return modifiedBuilder_;
         }
 
-        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.PhysicalInformation.Birthday)
+        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.PhysicalData.Birthday)
       }
 
       static {
@@ -1141,21 +1141,21 @@ public final class PolarModel {
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.PhysicalInformation.Birthday)
+      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.PhysicalData.Birthday)
     }
 
     public interface GenderOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.PhysicalInformation.Gender)
+        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.PhysicalData.Gender)
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender.Type type = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender.Type type = 1;</code>
        */
       boolean hasType();
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender.Type type = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender.Type type = 1;</code>
        */
-      pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Type getType();
+      pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type getType();
 
       /**
        * <code>required .pl.niekoniecznie.polar.model.DateTime modified = 2;</code>
@@ -1171,11 +1171,11 @@ public final class PolarModel {
       pl.niekoniecznie.polar.model.PolarModel.DateTimeOrBuilder getModifiedOrBuilder();
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.PhysicalInformation.Gender}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.PhysicalData.Gender}
      */
     public static final class Gender extends
         com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.PhysicalInformation.Gender)
+        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.PhysicalData.Gender)
         GenderOrBuilder {
       // Use Gender.newBuilder() to construct.
       private Gender(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -1224,7 +1224,7 @@ public final class PolarModel {
               }
               case 8: {
                 int rawValue = input.readEnum();
-                pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Type value = pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Type.valueOf(rawValue);
+                pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type value = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(1, rawValue);
                 } else {
@@ -1260,14 +1260,14 @@ public final class PolarModel {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Gender_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_Gender_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Gender_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_Gender_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.class, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.class, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Builder.class);
       }
 
       public static com.google.protobuf.Parser<Gender> PARSER =
@@ -1286,7 +1286,7 @@ public final class PolarModel {
       }
 
       /**
-       * Protobuf enum {@code pl.niekoniecznie.polar.model.PhysicalInformation.Gender.Type}
+       * Protobuf enum {@code pl.niekoniecznie.polar.model.PhysicalData.Gender.Type}
        */
       public enum Type
           implements com.google.protobuf.ProtocolMessageEnum {
@@ -1342,7 +1342,7 @@ public final class PolarModel {
         }
         public static final com.google.protobuf.Descriptors.EnumDescriptor
             getDescriptor() {
-          return pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.getDescriptor().getEnumTypes().get(0);
+          return pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.getDescriptor().getEnumTypes().get(0);
         }
 
         private static final Type[] VALUES = values();
@@ -1364,22 +1364,22 @@ public final class PolarModel {
           this.value = value;
         }
 
-        // @@protoc_insertion_point(enum_scope:pl.niekoniecznie.polar.model.PhysicalInformation.Gender.Type)
+        // @@protoc_insertion_point(enum_scope:pl.niekoniecznie.polar.model.PhysicalData.Gender.Type)
       }
 
       private int bitField0_;
       public static final int TYPE_FIELD_NUMBER = 1;
-      private pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Type type_;
+      private pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type type_;
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender.Type type = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender.Type type = 1;</code>
        */
       public boolean hasType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender.Type type = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender.Type type = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Type getType() {
+      public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type getType() {
         return type_;
       }
 
@@ -1405,7 +1405,7 @@ public final class PolarModel {
       }
 
       private void initFields() {
-        type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Type.MALE;
+        type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type.MALE;
         modified_ = pl.niekoniecznie.polar.model.PolarModel.DateTime.getDefaultInstance();
       }
       private byte memoizedIsInitialized = -1;
@@ -1468,53 +1468,53 @@ public final class PolarModel {
         return super.writeReplace();
       }
 
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender parseFrom(byte[] data)
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender parseFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender parseDelimitedFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender parseDelimitedFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -1523,7 +1523,7 @@ public final class PolarModel {
 
       public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender prototype) {
+      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender prototype) {
         return newBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() { return newBuilder(this); }
@@ -1535,25 +1535,25 @@ public final class PolarModel {
         return builder;
       }
       /**
-       * Protobuf type {@code pl.niekoniecznie.polar.model.PhysicalInformation.Gender}
+       * Protobuf type {@code pl.niekoniecznie.polar.model.PhysicalData.Gender}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.PhysicalInformation.Gender)
-          pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.GenderOrBuilder {
+          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.PhysicalData.Gender)
+          pl.niekoniecznie.polar.model.PolarModel.PhysicalData.GenderOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Gender_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_Gender_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Gender_fieldAccessorTable
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_Gender_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.class, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Builder.class);
+                  pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.class, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Builder.class);
         }
 
-        // Construct using pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.newBuilder()
+        // Construct using pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -1574,7 +1574,7 @@ public final class PolarModel {
 
         public Builder clear() {
           super.clear();
-          type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Type.MALE;
+          type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type.MALE;
           bitField0_ = (bitField0_ & ~0x00000001);
           if (modifiedBuilder_ == null) {
             modified_ = pl.niekoniecznie.polar.model.PolarModel.DateTime.getDefaultInstance();
@@ -1591,23 +1591,23 @@ public final class PolarModel {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Gender_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_Gender_descriptor;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender getDefaultInstanceForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.getDefaultInstance();
+        public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender getDefaultInstanceForType() {
+          return pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.getDefaultInstance();
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender build() {
-          pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender result = buildPartial();
+        public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender build() {
+          pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender buildPartial() {
-          pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender result = new pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender(this);
+        public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender buildPartial() {
+          pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender result = new pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1628,16 +1628,16 @@ public final class PolarModel {
         }
 
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender) {
-            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender)other);
+          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender) {
+            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender other) {
-          if (other == pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.getDefaultInstance()) return this;
+        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender other) {
+          if (other == pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.getDefaultInstance()) return this;
           if (other.hasType()) {
             setType(other.getType());
           }
@@ -1668,11 +1668,11 @@ public final class PolarModel {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender parsedMessage = null;
+          pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender) e.getUnfinishedMessage();
+            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender) e.getUnfinishedMessage();
             throw e;
           } finally {
             if (parsedMessage != null) {
@@ -1683,23 +1683,23 @@ public final class PolarModel {
         }
         private int bitField0_;
 
-        private pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Type type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Type.MALE;
+        private pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type.MALE;
         /**
-         * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender.Type type = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender.Type type = 1;</code>
          */
         public boolean hasType() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender.Type type = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender.Type type = 1;</code>
          */
-        public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Type getType() {
+        public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type getType() {
           return type_;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender.Type type = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender.Type type = 1;</code>
          */
-        public Builder setType(pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Type value) {
+        public Builder setType(pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type value) {
           if (value == null) {
             throw new NullPointerException();
           }
@@ -1709,11 +1709,11 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender.Type type = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender.Type type = 1;</code>
          */
         public Builder clearType() {
           bitField0_ = (bitField0_ & ~0x00000001);
-          type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Type.MALE;
+          type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type.MALE;
           onChanged();
           return this;
         }
@@ -1834,7 +1834,7 @@ public final class PolarModel {
           return modifiedBuilder_;
         }
 
-        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.PhysicalInformation.Gender)
+        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.PhysicalData.Gender)
       }
 
       static {
@@ -1842,49 +1842,49 @@ public final class PolarModel {
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.PhysicalInformation.Gender)
+      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.PhysicalData.Gender)
     }
 
     private int bitField0_;
     public static final int BIRTHDAY_FIELD_NUMBER = 1;
-    private pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday birthday_;
+    private pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday birthday_;
     /**
-     * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+     * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
      */
     public boolean hasBirthday() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+     * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday getBirthday() {
+    public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday getBirthday() {
       return birthday_;
     }
     /**
-     * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+     * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.BirthdayOrBuilder getBirthdayOrBuilder() {
+    public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.BirthdayOrBuilder getBirthdayOrBuilder() {
       return birthday_;
     }
 
     public static final int GENDER_FIELD_NUMBER = 2;
-    private pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender gender_;
+    private pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender gender_;
     /**
-     * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+     * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
      */
     public boolean hasGender() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+     * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender getGender() {
+    public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender getGender() {
       return gender_;
     }
     /**
-     * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+     * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.GenderOrBuilder getGenderOrBuilder() {
+    public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.GenderOrBuilder getGenderOrBuilder() {
       return gender_;
     }
 
@@ -2099,8 +2099,8 @@ public final class PolarModel {
     }
 
     private void initFields() {
-      birthday_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.getDefaultInstance();
-      gender_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.getDefaultInstance();
+      birthday_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.getDefaultInstance();
+      gender_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.getDefaultInstance();
       weight_ = pl.niekoniecznie.polar.model.PolarModel.FloatM.getDefaultInstance();
       height_ = pl.niekoniecznie.polar.model.PolarModel.FloatM.getDefaultInstance();
       maximumHeartrate_ = pl.niekoniecznie.polar.model.PolarModel.UInt32M.getDefaultInstance();
@@ -2326,53 +2326,53 @@ public final class PolarModel {
       return super.writeReplace();
     }
 
-    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation parseFrom(byte[] data)
+    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation parseFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation parseDelimitedFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation parseDelimitedFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.PhysicalData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2381,7 +2381,7 @@ public final class PolarModel {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation prototype) {
+    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.PhysicalData prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -2393,25 +2393,25 @@ public final class PolarModel {
       return builder;
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.PhysicalInformation}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.PhysicalData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.PhysicalInformation)
-        pl.niekoniecznie.polar.model.PolarModel.PhysicalInformationOrBuilder {
+        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.PhysicalData)
+        pl.niekoniecznie.polar.model.PolarModel.PhysicalDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.class, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.PhysicalData.class, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Builder.class);
       }
 
-      // Construct using pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.newBuilder()
+      // Construct using pl.niekoniecznie.polar.model.PolarModel.PhysicalData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2444,13 +2444,13 @@ public final class PolarModel {
       public Builder clear() {
         super.clear();
         if (birthdayBuilder_ == null) {
-          birthday_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.getDefaultInstance();
+          birthday_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.getDefaultInstance();
         } else {
           birthdayBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (genderBuilder_ == null) {
-          gender_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.getDefaultInstance();
+          gender_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.getDefaultInstance();
         } else {
           genderBuilder_.clear();
         }
@@ -2524,23 +2524,23 @@ public final class PolarModel {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_PhysicalData_descriptor;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation getDefaultInstanceForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.getDefaultInstance();
+      public pl.niekoniecznie.polar.model.PolarModel.PhysicalData getDefaultInstanceForType() {
+        return pl.niekoniecznie.polar.model.PolarModel.PhysicalData.getDefaultInstance();
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation build() {
-        pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation result = buildPartial();
+      public pl.niekoniecznie.polar.model.PolarModel.PhysicalData build() {
+        pl.niekoniecznie.polar.model.PolarModel.PhysicalData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation buildPartial() {
-        pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation result = new pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation(this);
+      public pl.niekoniecznie.polar.model.PolarModel.PhysicalData buildPartial() {
+        pl.niekoniecznie.polar.model.PolarModel.PhysicalData result = new pl.niekoniecznie.polar.model.PolarModel.PhysicalData(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2645,16 +2645,16 @@ public final class PolarModel {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation) {
-          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation)other);
+        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.PhysicalData) {
+          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.PhysicalData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation other) {
-        if (other == pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.getDefaultInstance()) return this;
+      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.PhysicalData other) {
+        if (other == pl.niekoniecznie.polar.model.PolarModel.PhysicalData.getDefaultInstance()) return this;
         if (other.hasBirthday()) {
           mergeBirthday(other.getBirthday());
         }
@@ -2799,11 +2799,11 @@ public final class PolarModel {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation parsedMessage = null;
+        pl.niekoniecznie.polar.model.PolarModel.PhysicalData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation) e.getUnfinishedMessage();
+          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.PhysicalData) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2814,19 +2814,19 @@ public final class PolarModel {
       }
       private int bitField0_;
 
-      private pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday birthday_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.getDefaultInstance();
+      private pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday birthday_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.Builder, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.BirthdayOrBuilder> birthdayBuilder_;
+          pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.Builder, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.BirthdayOrBuilder> birthdayBuilder_;
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
        */
       public boolean hasBirthday() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday getBirthday() {
+      public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday getBirthday() {
         if (birthdayBuilder_ == null) {
           return birthday_;
         } else {
@@ -2834,9 +2834,9 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
        */
-      public Builder setBirthday(pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday value) {
+      public Builder setBirthday(pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday value) {
         if (birthdayBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2850,10 +2850,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
        */
       public Builder setBirthday(
-          pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.Builder builderForValue) {
+          pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.Builder builderForValue) {
         if (birthdayBuilder_ == null) {
           birthday_ = builderForValue.build();
           onChanged();
@@ -2864,14 +2864,14 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
        */
-      public Builder mergeBirthday(pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday value) {
+      public Builder mergeBirthday(pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday value) {
         if (birthdayBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              birthday_ != pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.getDefaultInstance()) {
+              birthday_ != pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.getDefaultInstance()) {
             birthday_ =
-              pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.newBuilder(birthday_).mergeFrom(value).buildPartial();
+              pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.newBuilder(birthday_).mergeFrom(value).buildPartial();
           } else {
             birthday_ = value;
           }
@@ -2883,11 +2883,11 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
        */
       public Builder clearBirthday() {
         if (birthdayBuilder_ == null) {
-          birthday_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.getDefaultInstance();
+          birthday_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.getDefaultInstance();
           onChanged();
         } else {
           birthdayBuilder_.clear();
@@ -2896,17 +2896,17 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.Builder getBirthdayBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.Builder getBirthdayBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getBirthdayFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.BirthdayOrBuilder getBirthdayOrBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.BirthdayOrBuilder getBirthdayOrBuilder() {
         if (birthdayBuilder_ != null) {
           return birthdayBuilder_.getMessageOrBuilder();
         } else {
@@ -2914,14 +2914,14 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Birthday birthday = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Birthday birthday = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.Builder, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.BirthdayOrBuilder> 
+          pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.Builder, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.BirthdayOrBuilder> 
           getBirthdayFieldBuilder() {
         if (birthdayBuilder_ == null) {
           birthdayBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Birthday.Builder, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.BirthdayOrBuilder>(
+              pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Birthday.Builder, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.BirthdayOrBuilder>(
                   getBirthday(),
                   getParentForChildren(),
                   isClean());
@@ -2930,19 +2930,19 @@ public final class PolarModel {
         return birthdayBuilder_;
       }
 
-      private pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender gender_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.getDefaultInstance();
+      private pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender gender_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Builder, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.GenderOrBuilder> genderBuilder_;
+          pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Builder, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.GenderOrBuilder> genderBuilder_;
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
        */
       public boolean hasGender() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender getGender() {
+      public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender getGender() {
         if (genderBuilder_ == null) {
           return gender_;
         } else {
@@ -2950,9 +2950,9 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
        */
-      public Builder setGender(pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender value) {
+      public Builder setGender(pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender value) {
         if (genderBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2966,10 +2966,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
        */
       public Builder setGender(
-          pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Builder builderForValue) {
+          pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Builder builderForValue) {
         if (genderBuilder_ == null) {
           gender_ = builderForValue.build();
           onChanged();
@@ -2980,14 +2980,14 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
        */
-      public Builder mergeGender(pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender value) {
+      public Builder mergeGender(pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender value) {
         if (genderBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              gender_ != pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.getDefaultInstance()) {
+              gender_ != pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.getDefaultInstance()) {
             gender_ =
-              pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.newBuilder(gender_).mergeFrom(value).buildPartial();
+              pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.newBuilder(gender_).mergeFrom(value).buildPartial();
           } else {
             gender_ = value;
           }
@@ -2999,11 +2999,11 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
        */
       public Builder clearGender() {
         if (genderBuilder_ == null) {
-          gender_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.getDefaultInstance();
+          gender_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.getDefaultInstance();
           onChanged();
         } else {
           genderBuilder_.clear();
@@ -3012,17 +3012,17 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Builder getGenderBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Builder getGenderBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getGenderFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.GenderOrBuilder getGenderOrBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.PhysicalData.GenderOrBuilder getGenderOrBuilder() {
         if (genderBuilder_ != null) {
           return genderBuilder_.getMessageOrBuilder();
         } else {
@@ -3030,14 +3030,14 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.PhysicalInformation.Gender gender = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender gender = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Builder, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.GenderOrBuilder> 
+          pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Builder, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.GenderOrBuilder> 
           getGenderFieldBuilder() {
         if (genderBuilder_ == null) {
           genderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.Gender.Builder, pl.niekoniecznie.polar.model.PolarModel.PhysicalInformation.GenderOrBuilder>(
+              pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Builder, pl.niekoniecznie.polar.model.PolarModel.PhysicalData.GenderOrBuilder>(
                   getGender(),
                   getParentForChildren(),
                   isClean());
@@ -4206,19 +4206,19 @@ public final class PolarModel {
         return modifiedBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.PhysicalInformation)
+      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.PhysicalData)
     }
 
     static {
-      defaultInstance = new PhysicalInformation(true);
+      defaultInstance = new PhysicalData(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.PhysicalInformation)
+    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.PhysicalData)
   }
 
-  public interface SessionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.Session)
+  public interface SessionDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.SessionData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4355,38 +4355,38 @@ public final class PolarModel {
     pl.niekoniecznie.polar.model.PolarModel.TrainingLoadOrBuilder getTrainingLoadOrBuilder();
 
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+     * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
      */
     boolean hasLabel();
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+     * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.Session.Label getLabel();
+    pl.niekoniecznie.polar.model.PolarModel.SessionData.Label getLabel();
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+     * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.Session.LabelOrBuilder getLabelOrBuilder();
+    pl.niekoniecznie.polar.model.PolarModel.SessionData.LabelOrBuilder getLabelOrBuilder();
   }
   /**
-   * Protobuf type {@code pl.niekoniecznie.polar.model.Session}
+   * Protobuf type {@code pl.niekoniecznie.polar.model.SessionData}
    */
-  public static final class Session extends
+  public static final class SessionData extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.Session)
-      SessionOrBuilder {
-    // Use Session.newBuilder() to construct.
-    private Session(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.SessionData)
+      SessionDataOrBuilder {
+    // Use SessionData.newBuilder() to construct.
+    private SessionData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private Session(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private SessionData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final Session defaultInstance;
-    public static Session getDefaultInstance() {
+    private static final SessionData defaultInstance;
+    public static SessionData getDefaultInstance() {
       return defaultInstance;
     }
 
-    public Session getDefaultInstanceForType() {
+    public SessionData getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -4396,7 +4396,7 @@ public final class PolarModel {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private Session(
+    private SessionData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4512,11 +4512,11 @@ public final class PolarModel {
               break;
             }
             case 90: {
-              pl.niekoniecznie.polar.model.PolarModel.Session.Label.Builder subBuilder = null;
+              pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.Builder subBuilder = null;
               if (((bitField0_ & 0x00000800) == 0x00000800)) {
                 subBuilder = label_.toBuilder();
               }
-              label_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.Session.Label.PARSER, extensionRegistry);
+              label_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(label_);
                 label_ = subBuilder.buildPartial();
@@ -4551,33 +4551,33 @@ public final class PolarModel {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Session_descriptor;
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SessionData_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Session_fieldAccessorTable
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SessionData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              pl.niekoniecznie.polar.model.PolarModel.Session.class, pl.niekoniecznie.polar.model.PolarModel.Session.Builder.class);
+              pl.niekoniecznie.polar.model.PolarModel.SessionData.class, pl.niekoniecznie.polar.model.PolarModel.SessionData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<Session> PARSER =
-        new com.google.protobuf.AbstractParser<Session>() {
-      public Session parsePartialFrom(
+    public static com.google.protobuf.Parser<SessionData> PARSER =
+        new com.google.protobuf.AbstractParser<SessionData>() {
+      public SessionData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Session(input, extensionRegistry);
+        return new SessionData(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Session> getParserForType() {
+    public com.google.protobuf.Parser<SessionData> getParserForType() {
       return PARSER;
     }
 
     public interface LabelOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.Session.Label)
+        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.SessionData.Label)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -4595,11 +4595,11 @@ public final class PolarModel {
           getNameBytes();
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.Session.Label}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.SessionData.Label}
      */
     public static final class Label extends
         com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.Session.Label)
+        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.SessionData.Label)
         LabelOrBuilder {
       // Use Label.newBuilder() to construct.
       private Label(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -4666,14 +4666,14 @@ public final class PolarModel {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Session_Label_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SessionData_Label_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Session_Label_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SessionData_Label_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.Session.Label.class, pl.niekoniecznie.polar.model.PolarModel.Session.Label.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.class, pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.Builder.class);
       }
 
       public static com.google.protobuf.Parser<Label> PARSER =
@@ -4782,53 +4782,53 @@ public final class PolarModel {
         return super.writeReplace();
       }
 
-      public static pl.niekoniecznie.polar.model.PolarModel.Session.Label parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.SessionData.Label parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Session.Label parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.SessionData.Label parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Session.Label parseFrom(byte[] data)
+      public static pl.niekoniecznie.polar.model.PolarModel.SessionData.Label parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Session.Label parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.SessionData.Label parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Session.Label parseFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.SessionData.Label parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Session.Label parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.SessionData.Label parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Session.Label parseDelimitedFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.SessionData.Label parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Session.Label parseDelimitedFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.SessionData.Label parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Session.Label parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.SessionData.Label parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Session.Label parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.SessionData.Label parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -4837,7 +4837,7 @@ public final class PolarModel {
 
       public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.Session.Label prototype) {
+      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.SessionData.Label prototype) {
         return newBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() { return newBuilder(this); }
@@ -4849,25 +4849,25 @@ public final class PolarModel {
         return builder;
       }
       /**
-       * Protobuf type {@code pl.niekoniecznie.polar.model.Session.Label}
+       * Protobuf type {@code pl.niekoniecznie.polar.model.SessionData.Label}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.Session.Label)
-          pl.niekoniecznie.polar.model.PolarModel.Session.LabelOrBuilder {
+          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.SessionData.Label)
+          pl.niekoniecznie.polar.model.PolarModel.SessionData.LabelOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Session_Label_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SessionData_Label_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Session_Label_fieldAccessorTable
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SessionData_Label_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  pl.niekoniecznie.polar.model.PolarModel.Session.Label.class, pl.niekoniecznie.polar.model.PolarModel.Session.Label.Builder.class);
+                  pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.class, pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.Builder.class);
         }
 
-        // Construct using pl.niekoniecznie.polar.model.PolarModel.Session.Label.newBuilder()
+        // Construct using pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -4898,23 +4898,23 @@ public final class PolarModel {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Session_Label_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SessionData_Label_descriptor;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Session.Label getDefaultInstanceForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.Session.Label.getDefaultInstance();
+        public pl.niekoniecznie.polar.model.PolarModel.SessionData.Label getDefaultInstanceForType() {
+          return pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.getDefaultInstance();
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Session.Label build() {
-          pl.niekoniecznie.polar.model.PolarModel.Session.Label result = buildPartial();
+        public pl.niekoniecznie.polar.model.PolarModel.SessionData.Label build() {
+          pl.niekoniecznie.polar.model.PolarModel.SessionData.Label result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Session.Label buildPartial() {
-          pl.niekoniecznie.polar.model.PolarModel.Session.Label result = new pl.niekoniecznie.polar.model.PolarModel.Session.Label(this);
+        public pl.niekoniecznie.polar.model.PolarModel.SessionData.Label buildPartial() {
+          pl.niekoniecznie.polar.model.PolarModel.SessionData.Label result = new pl.niekoniecznie.polar.model.PolarModel.SessionData.Label(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4927,16 +4927,16 @@ public final class PolarModel {
         }
 
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.Session.Label) {
-            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.Session.Label)other);
+          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.SessionData.Label) {
+            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.SessionData.Label)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.Session.Label other) {
-          if (other == pl.niekoniecznie.polar.model.PolarModel.Session.Label.getDefaultInstance()) return this;
+        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.SessionData.Label other) {
+          if (other == pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.getDefaultInstance()) return this;
           if (other.hasName()) {
             bitField0_ |= 0x00000001;
             name_ = other.name_;
@@ -4958,11 +4958,11 @@ public final class PolarModel {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          pl.niekoniecznie.polar.model.PolarModel.Session.Label parsedMessage = null;
+          pl.niekoniecznie.polar.model.PolarModel.SessionData.Label parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.Session.Label) e.getUnfinishedMessage();
+            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.SessionData.Label) e.getUnfinishedMessage();
             throw e;
           } finally {
             if (parsedMessage != null) {
@@ -5049,7 +5049,7 @@ public final class PolarModel {
           return this;
         }
 
-        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.Session.Label)
+        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.SessionData.Label)
       }
 
       static {
@@ -5057,7 +5057,7 @@ public final class PolarModel {
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.Session.Label)
+      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.SessionData.Label)
     }
 
     private int bitField0_;
@@ -5317,23 +5317,23 @@ public final class PolarModel {
     }
 
     public static final int LABEL_FIELD_NUMBER = 11;
-    private pl.niekoniecznie.polar.model.PolarModel.Session.Label label_;
+    private pl.niekoniecznie.polar.model.PolarModel.SessionData.Label label_;
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+     * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
      */
     public boolean hasLabel() {
       return ((bitField0_ & 0x00000800) == 0x00000800);
     }
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+     * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.Session.Label getLabel() {
+    public pl.niekoniecznie.polar.model.PolarModel.SessionData.Label getLabel() {
       return label_;
     }
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+     * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.Session.LabelOrBuilder getLabelOrBuilder() {
+    public pl.niekoniecznie.polar.model.PolarModel.SessionData.LabelOrBuilder getLabelOrBuilder() {
       return label_;
     }
 
@@ -5349,7 +5349,7 @@ public final class PolarModel {
       heartrate_ = pl.niekoniecznie.polar.model.PolarModel.Heartrate.getDefaultInstance();
       heartrateDuration_ = pl.niekoniecznie.polar.model.PolarModel.Time.getDefaultInstance();
       trainingLoad_ = pl.niekoniecznie.polar.model.PolarModel.TrainingLoad.getDefaultInstance();
-      label_ = pl.niekoniecznie.polar.model.PolarModel.Session.Label.getDefaultInstance();
+      label_ = pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -5535,53 +5535,53 @@ public final class PolarModel {
       return super.writeReplace();
     }
 
-    public static pl.niekoniecznie.polar.model.PolarModel.Session parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.SessionData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Session parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.SessionData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Session parseFrom(byte[] data)
+    public static pl.niekoniecznie.polar.model.PolarModel.SessionData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Session parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.SessionData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Session parseFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.SessionData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Session parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.SessionData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Session parseDelimitedFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.SessionData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Session parseDelimitedFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.SessionData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Session parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.SessionData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Session parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.SessionData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5590,7 +5590,7 @@ public final class PolarModel {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.Session prototype) {
+    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.SessionData prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -5602,25 +5602,25 @@ public final class PolarModel {
       return builder;
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.Session}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.SessionData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.Session)
-        pl.niekoniecznie.polar.model.PolarModel.SessionOrBuilder {
+        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.SessionData)
+        pl.niekoniecznie.polar.model.PolarModel.SessionDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Session_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SessionData_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Session_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SessionData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.Session.class, pl.niekoniecznie.polar.model.PolarModel.Session.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.SessionData.class, pl.niekoniecznie.polar.model.PolarModel.SessionData.Builder.class);
       }
 
-      // Construct using pl.niekoniecznie.polar.model.PolarModel.Session.newBuilder()
+      // Construct using pl.niekoniecznie.polar.model.PolarModel.SessionData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5694,7 +5694,7 @@ public final class PolarModel {
         }
         bitField0_ = (bitField0_ & ~0x00000400);
         if (labelBuilder_ == null) {
-          label_ = pl.niekoniecznie.polar.model.PolarModel.Session.Label.getDefaultInstance();
+          label_ = pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.getDefaultInstance();
         } else {
           labelBuilder_.clear();
         }
@@ -5708,23 +5708,23 @@ public final class PolarModel {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Session_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SessionData_descriptor;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Session getDefaultInstanceForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.Session.getDefaultInstance();
+      public pl.niekoniecznie.polar.model.PolarModel.SessionData getDefaultInstanceForType() {
+        return pl.niekoniecznie.polar.model.PolarModel.SessionData.getDefaultInstance();
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Session build() {
-        pl.niekoniecznie.polar.model.PolarModel.Session result = buildPartial();
+      public pl.niekoniecznie.polar.model.PolarModel.SessionData build() {
+        pl.niekoniecznie.polar.model.PolarModel.SessionData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Session buildPartial() {
-        pl.niekoniecznie.polar.model.PolarModel.Session result = new pl.niekoniecznie.polar.model.PolarModel.Session(this);
+      public pl.niekoniecznie.polar.model.PolarModel.SessionData buildPartial() {
+        pl.niekoniecznie.polar.model.PolarModel.SessionData result = new pl.niekoniecznie.polar.model.PolarModel.SessionData(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -5809,16 +5809,16 @@ public final class PolarModel {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.Session) {
-          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.Session)other);
+        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.SessionData) {
+          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.SessionData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.Session other) {
-        if (other == pl.niekoniecznie.polar.model.PolarModel.Session.getDefaultInstance()) return this;
+      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.SessionData other) {
+        if (other == pl.niekoniecznie.polar.model.PolarModel.SessionData.getDefaultInstance()) return this;
         if (other.hasStart()) {
           mergeStart(other.getStart());
         }
@@ -5937,11 +5937,11 @@ public final class PolarModel {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        pl.niekoniecznie.polar.model.PolarModel.Session parsedMessage = null;
+        pl.niekoniecznie.polar.model.PolarModel.SessionData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.Session) e.getUnfinishedMessage();
+          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.SessionData) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -6896,19 +6896,19 @@ public final class PolarModel {
         return trainingLoadBuilder_;
       }
 
-      private pl.niekoniecznie.polar.model.PolarModel.Session.Label label_ = pl.niekoniecznie.polar.model.PolarModel.Session.Label.getDefaultInstance();
+      private pl.niekoniecznie.polar.model.PolarModel.SessionData.Label label_ = pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.Session.Label, pl.niekoniecznie.polar.model.PolarModel.Session.Label.Builder, pl.niekoniecznie.polar.model.PolarModel.Session.LabelOrBuilder> labelBuilder_;
+          pl.niekoniecznie.polar.model.PolarModel.SessionData.Label, pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.Builder, pl.niekoniecznie.polar.model.PolarModel.SessionData.LabelOrBuilder> labelBuilder_;
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+       * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
        */
       public boolean hasLabel() {
         return ((bitField0_ & 0x00000800) == 0x00000800);
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+       * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Session.Label getLabel() {
+      public pl.niekoniecznie.polar.model.PolarModel.SessionData.Label getLabel() {
         if (labelBuilder_ == null) {
           return label_;
         } else {
@@ -6916,9 +6916,9 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+       * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
        */
-      public Builder setLabel(pl.niekoniecznie.polar.model.PolarModel.Session.Label value) {
+      public Builder setLabel(pl.niekoniecznie.polar.model.PolarModel.SessionData.Label value) {
         if (labelBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6932,10 +6932,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+       * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
        */
       public Builder setLabel(
-          pl.niekoniecznie.polar.model.PolarModel.Session.Label.Builder builderForValue) {
+          pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.Builder builderForValue) {
         if (labelBuilder_ == null) {
           label_ = builderForValue.build();
           onChanged();
@@ -6946,14 +6946,14 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+       * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
        */
-      public Builder mergeLabel(pl.niekoniecznie.polar.model.PolarModel.Session.Label value) {
+      public Builder mergeLabel(pl.niekoniecznie.polar.model.PolarModel.SessionData.Label value) {
         if (labelBuilder_ == null) {
           if (((bitField0_ & 0x00000800) == 0x00000800) &&
-              label_ != pl.niekoniecznie.polar.model.PolarModel.Session.Label.getDefaultInstance()) {
+              label_ != pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.getDefaultInstance()) {
             label_ =
-              pl.niekoniecznie.polar.model.PolarModel.Session.Label.newBuilder(label_).mergeFrom(value).buildPartial();
+              pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.newBuilder(label_).mergeFrom(value).buildPartial();
           } else {
             label_ = value;
           }
@@ -6965,11 +6965,11 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+       * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
        */
       public Builder clearLabel() {
         if (labelBuilder_ == null) {
-          label_ = pl.niekoniecznie.polar.model.PolarModel.Session.Label.getDefaultInstance();
+          label_ = pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.getDefaultInstance();
           onChanged();
         } else {
           labelBuilder_.clear();
@@ -6978,17 +6978,17 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+       * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Session.Label.Builder getLabelBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.Builder getLabelBuilder() {
         bitField0_ |= 0x00000800;
         onChanged();
         return getLabelFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+       * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Session.LabelOrBuilder getLabelOrBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.SessionData.LabelOrBuilder getLabelOrBuilder() {
         if (labelBuilder_ != null) {
           return labelBuilder_.getMessageOrBuilder();
         } else {
@@ -6996,14 +6996,14 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Session.Label label = 11;</code>
+       * <code>required .pl.niekoniecznie.polar.model.SessionData.Label label = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.Session.Label, pl.niekoniecznie.polar.model.PolarModel.Session.Label.Builder, pl.niekoniecznie.polar.model.PolarModel.Session.LabelOrBuilder> 
+          pl.niekoniecznie.polar.model.PolarModel.SessionData.Label, pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.Builder, pl.niekoniecznie.polar.model.PolarModel.SessionData.LabelOrBuilder> 
           getLabelFieldBuilder() {
         if (labelBuilder_ == null) {
           labelBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              pl.niekoniecznie.polar.model.PolarModel.Session.Label, pl.niekoniecznie.polar.model.PolarModel.Session.Label.Builder, pl.niekoniecznie.polar.model.PolarModel.Session.LabelOrBuilder>(
+              pl.niekoniecznie.polar.model.PolarModel.SessionData.Label, pl.niekoniecznie.polar.model.PolarModel.SessionData.Label.Builder, pl.niekoniecznie.polar.model.PolarModel.SessionData.LabelOrBuilder>(
                   getLabel(),
                   getParentForChildren(),
                   isClean());
@@ -7012,19 +7012,19 @@ public final class PolarModel {
         return labelBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.Session)
+      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.SessionData)
     }
 
     static {
-      defaultInstance = new Session(true);
+      defaultInstance = new SessionData(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.Session)
+    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.SessionData)
   }
 
-  public interface ExerciseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.Exercise)
+  public interface ExerciseDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.ExerciseData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -7054,17 +7054,17 @@ public final class PolarModel {
     pl.niekoniecznie.polar.model.PolarModel.TimeOrBuilder getDurationOrBuilder();
 
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+     * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
      */
     boolean hasSport();
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+     * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport getSport();
+    pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport getSport();
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+     * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.Exercise.SportOrBuilder getSportOrBuilder();
+    pl.niekoniecznie.polar.model.PolarModel.ExerciseData.SportOrBuilder getSportOrBuilder();
 
     /**
      * <code>required float distance = 4;</code>
@@ -7098,17 +7098,17 @@ public final class PolarModel {
     pl.niekoniecznie.polar.model.PolarModel.TrainingLoadOrBuilder getTrainingLoadOrBuilder();
 
     /**
-     * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
      */
     boolean hasIndex();
     /**
-     * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex getIndex();
+    pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex getIndex();
     /**
-     * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndexOrBuilder getIndexOrBuilder();
+    pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndexOrBuilder getIndexOrBuilder();
 
     /**
      * <code>required float ascent = 10;</code>
@@ -7129,25 +7129,25 @@ public final class PolarModel {
     float getDescent();
   }
   /**
-   * Protobuf type {@code pl.niekoniecznie.polar.model.Exercise}
+   * Protobuf type {@code pl.niekoniecznie.polar.model.ExerciseData}
    */
-  public static final class Exercise extends
+  public static final class ExerciseData extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.Exercise)
-      ExerciseOrBuilder {
-    // Use Exercise.newBuilder() to construct.
-    private Exercise(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.ExerciseData)
+      ExerciseDataOrBuilder {
+    // Use ExerciseData.newBuilder() to construct.
+    private ExerciseData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private Exercise(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private ExerciseData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final Exercise defaultInstance;
-    public static Exercise getDefaultInstance() {
+    private static final ExerciseData defaultInstance;
+    public static ExerciseData getDefaultInstance() {
       return defaultInstance;
     }
 
-    public Exercise getDefaultInstanceForType() {
+    public ExerciseData getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -7157,7 +7157,7 @@ public final class PolarModel {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private Exercise(
+    private ExerciseData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -7207,11 +7207,11 @@ public final class PolarModel {
               break;
             }
             case 26: {
-              pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.Builder subBuilder = null;
+              pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.Builder subBuilder = null;
               if (((bitField0_ & 0x00000004) == 0x00000004)) {
                 subBuilder = sport_.toBuilder();
               }
-              sport_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.PARSER, extensionRegistry);
+              sport_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(sport_);
                 sport_ = subBuilder.buildPartial();
@@ -7243,11 +7243,11 @@ public final class PolarModel {
               break;
             }
             case 74: {
-              pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.Builder subBuilder = null;
+              pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.Builder subBuilder = null;
               if (((bitField0_ & 0x00000040) == 0x00000040)) {
                 subBuilder = index_.toBuilder();
               }
-              index_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.PARSER, extensionRegistry);
+              index_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(index_);
                 index_ = subBuilder.buildPartial();
@@ -7279,33 +7279,33 @@ public final class PolarModel {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_descriptor;
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_fieldAccessorTable
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              pl.niekoniecznie.polar.model.PolarModel.Exercise.class, pl.niekoniecznie.polar.model.PolarModel.Exercise.Builder.class);
+              pl.niekoniecznie.polar.model.PolarModel.ExerciseData.class, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<Exercise> PARSER =
-        new com.google.protobuf.AbstractParser<Exercise>() {
-      public Exercise parsePartialFrom(
+    public static com.google.protobuf.Parser<ExerciseData> PARSER =
+        new com.google.protobuf.AbstractParser<ExerciseData>() {
+      public ExerciseData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Exercise(input, extensionRegistry);
+        return new ExerciseData(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Exercise> getParserForType() {
+    public com.google.protobuf.Parser<ExerciseData> getParserForType() {
       return PARSER;
     }
 
     public interface SportOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.Exercise.Sport)
+        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.ExerciseData.Sport)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -7318,11 +7318,11 @@ public final class PolarModel {
       long getValue();
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.Exercise.Sport}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.ExerciseData.Sport}
      */
     public static final class Sport extends
         com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.Exercise.Sport)
+        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.ExerciseData.Sport)
         SportOrBuilder {
       // Use Sport.newBuilder() to construct.
       private Sport(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -7388,14 +7388,14 @@ public final class PolarModel {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_Sport_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_Sport_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_Sport_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_Sport_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.class, pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.class, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.Builder.class);
       }
 
       public static com.google.protobuf.Parser<Sport> PARSER =
@@ -7477,53 +7477,53 @@ public final class PolarModel {
         return super.writeReplace();
       }
 
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport parseFrom(byte[] data)
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport parseFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport parseDelimitedFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport parseDelimitedFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -7532,7 +7532,7 @@ public final class PolarModel {
 
       public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport prototype) {
+      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport prototype) {
         return newBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() { return newBuilder(this); }
@@ -7544,25 +7544,25 @@ public final class PolarModel {
         return builder;
       }
       /**
-       * Protobuf type {@code pl.niekoniecznie.polar.model.Exercise.Sport}
+       * Protobuf type {@code pl.niekoniecznie.polar.model.ExerciseData.Sport}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.Exercise.Sport)
-          pl.niekoniecznie.polar.model.PolarModel.Exercise.SportOrBuilder {
+          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.ExerciseData.Sport)
+          pl.niekoniecznie.polar.model.PolarModel.ExerciseData.SportOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_Sport_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_Sport_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_Sport_fieldAccessorTable
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_Sport_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.class, pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.Builder.class);
+                  pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.class, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.Builder.class);
         }
 
-        // Construct using pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.newBuilder()
+        // Construct using pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -7593,23 +7593,23 @@ public final class PolarModel {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_Sport_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_Sport_descriptor;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport getDefaultInstanceForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.getDefaultInstance();
+        public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport getDefaultInstanceForType() {
+          return pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.getDefaultInstance();
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport build() {
-          pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport result = buildPartial();
+        public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport build() {
+          pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport buildPartial() {
-          pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport result = new pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport(this);
+        public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport buildPartial() {
+          pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport result = new pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -7622,16 +7622,16 @@ public final class PolarModel {
         }
 
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport) {
-            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport)other);
+          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport) {
+            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport other) {
-          if (other == pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.getDefaultInstance()) return this;
+        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport other) {
+          if (other == pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.getDefaultInstance()) return this;
           if (other.hasValue()) {
             setValue(other.getValue());
           }
@@ -7651,11 +7651,11 @@ public final class PolarModel {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport parsedMessage = null;
+          pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport) e.getUnfinishedMessage();
+            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport) e.getUnfinishedMessage();
             throw e;
           } finally {
             if (parsedMessage != null) {
@@ -7698,7 +7698,7 @@ public final class PolarModel {
           return this;
         }
 
-        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.Exercise.Sport)
+        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.ExerciseData.Sport)
       }
 
       static {
@@ -7706,11 +7706,11 @@ public final class PolarModel {
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.Exercise.Sport)
+      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.ExerciseData.Sport)
     }
 
     public interface RunningIndexOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.Exercise.RunningIndex)
+        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.ExerciseData.RunningIndex)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -7736,11 +7736,11 @@ public final class PolarModel {
       pl.niekoniecznie.polar.model.PolarModel.TimeOrBuilder getDurationOrBuilder();
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.Exercise.RunningIndex}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.ExerciseData.RunningIndex}
      */
     public static final class RunningIndex extends
         com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.Exercise.RunningIndex)
+        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.ExerciseData.RunningIndex)
         RunningIndexOrBuilder {
       // Use RunningIndex.newBuilder() to construct.
       private RunningIndex(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -7819,14 +7819,14 @@ public final class PolarModel {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_RunningIndex_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_RunningIndex_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_RunningIndex_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_RunningIndex_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.class, pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.class, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.Builder.class);
       }
 
       public static com.google.protobuf.Parser<RunningIndex> PARSER =
@@ -7941,53 +7941,53 @@ public final class PolarModel {
         return super.writeReplace();
       }
 
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex parseFrom(byte[] data)
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex parseFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex parseDelimitedFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex parseDelimitedFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -7996,7 +7996,7 @@ public final class PolarModel {
 
       public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex prototype) {
+      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex prototype) {
         return newBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() { return newBuilder(this); }
@@ -8008,25 +8008,25 @@ public final class PolarModel {
         return builder;
       }
       /**
-       * Protobuf type {@code pl.niekoniecznie.polar.model.Exercise.RunningIndex}
+       * Protobuf type {@code pl.niekoniecznie.polar.model.ExerciseData.RunningIndex}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.Exercise.RunningIndex)
-          pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndexOrBuilder {
+          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.ExerciseData.RunningIndex)
+          pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndexOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_RunningIndex_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_RunningIndex_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_RunningIndex_fieldAccessorTable
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_RunningIndex_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.class, pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.Builder.class);
+                  pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.class, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.Builder.class);
         }
 
-        // Construct using pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.newBuilder()
+        // Construct using pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -8064,23 +8064,23 @@ public final class PolarModel {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_RunningIndex_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_RunningIndex_descriptor;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex getDefaultInstanceForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.getDefaultInstance();
+        public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex getDefaultInstanceForType() {
+          return pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.getDefaultInstance();
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex build() {
-          pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex result = buildPartial();
+        public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex build() {
+          pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex buildPartial() {
-          pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex result = new pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex(this);
+        public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex buildPartial() {
+          pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex result = new pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -8101,16 +8101,16 @@ public final class PolarModel {
         }
 
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex) {
-            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex)other);
+          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex) {
+            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex other) {
-          if (other == pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.getDefaultInstance()) return this;
+        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex other) {
+          if (other == pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.getDefaultInstance()) return this;
           if (other.hasValue()) {
             setValue(other.getValue());
           }
@@ -8137,11 +8137,11 @@ public final class PolarModel {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex parsedMessage = null;
+          pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex) e.getUnfinishedMessage();
+            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex) e.getUnfinishedMessage();
             throw e;
           } finally {
             if (parsedMessage != null) {
@@ -8300,7 +8300,7 @@ public final class PolarModel {
           return durationBuilder_;
         }
 
-        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.Exercise.RunningIndex)
+        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.ExerciseData.RunningIndex)
       }
 
       static {
@@ -8308,7 +8308,7 @@ public final class PolarModel {
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.Exercise.RunningIndex)
+      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.ExerciseData.RunningIndex)
     }
 
     private int bitField0_;
@@ -8355,23 +8355,23 @@ public final class PolarModel {
     }
 
     public static final int SPORT_FIELD_NUMBER = 3;
-    private pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport sport_;
+    private pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport sport_;
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+     * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
      */
     public boolean hasSport() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+     * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport getSport() {
+    public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport getSport() {
       return sport_;
     }
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+     * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.Exercise.SportOrBuilder getSportOrBuilder() {
+    public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.SportOrBuilder getSportOrBuilder() {
       return sport_;
     }
 
@@ -8427,23 +8427,23 @@ public final class PolarModel {
     }
 
     public static final int INDEX_FIELD_NUMBER = 9;
-    private pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex index_;
+    private pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex index_;
     /**
-     * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
      */
     public boolean hasIndex() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex getIndex() {
+    public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex getIndex() {
       return index_;
     }
     /**
-     * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndexOrBuilder getIndexOrBuilder() {
+    public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndexOrBuilder getIndexOrBuilder() {
       return index_;
     }
 
@@ -8480,11 +8480,11 @@ public final class PolarModel {
     private void initFields() {
       start_ = pl.niekoniecznie.polar.model.PolarModel.DateTime.getDefaultInstance();
       duration_ = pl.niekoniecznie.polar.model.PolarModel.Time.getDefaultInstance();
-      sport_ = pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.getDefaultInstance();
+      sport_ = pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.getDefaultInstance();
       distance_ = 0F;
       calories_ = 0;
       trainingLoad_ = pl.niekoniecznie.polar.model.PolarModel.TrainingLoad.getDefaultInstance();
-      index_ = pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.getDefaultInstance();
+      index_ = pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.getDefaultInstance();
       ascent_ = 0F;
       descent_ = 0F;
     }
@@ -8635,53 +8635,53 @@ public final class PolarModel {
       return super.writeReplace();
     }
 
-    public static pl.niekoniecznie.polar.model.PolarModel.Exercise parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Exercise parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Exercise parseFrom(byte[] data)
+    public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Exercise parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Exercise parseFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Exercise parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Exercise parseDelimitedFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Exercise parseDelimitedFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Exercise parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Exercise parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.ExerciseData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8690,7 +8690,7 @@ public final class PolarModel {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.Exercise prototype) {
+    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.ExerciseData prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -8702,25 +8702,25 @@ public final class PolarModel {
       return builder;
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.Exercise}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.ExerciseData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.Exercise)
-        pl.niekoniecznie.polar.model.PolarModel.ExerciseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.ExerciseData)
+        pl.niekoniecznie.polar.model.PolarModel.ExerciseDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.Exercise.class, pl.niekoniecznie.polar.model.PolarModel.Exercise.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.ExerciseData.class, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Builder.class);
       }
 
-      // Construct using pl.niekoniecznie.polar.model.PolarModel.Exercise.newBuilder()
+      // Construct using pl.niekoniecznie.polar.model.PolarModel.ExerciseData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -8758,7 +8758,7 @@ public final class PolarModel {
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         if (sportBuilder_ == null) {
-          sport_ = pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.getDefaultInstance();
+          sport_ = pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.getDefaultInstance();
         } else {
           sportBuilder_.clear();
         }
@@ -8774,7 +8774,7 @@ public final class PolarModel {
         }
         bitField0_ = (bitField0_ & ~0x00000020);
         if (indexBuilder_ == null) {
-          index_ = pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.getDefaultInstance();
+          index_ = pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.getDefaultInstance();
         } else {
           indexBuilder_.clear();
         }
@@ -8792,23 +8792,23 @@ public final class PolarModel {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Exercise_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ExerciseData_descriptor;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Exercise getDefaultInstanceForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.Exercise.getDefaultInstance();
+      public pl.niekoniecznie.polar.model.PolarModel.ExerciseData getDefaultInstanceForType() {
+        return pl.niekoniecznie.polar.model.PolarModel.ExerciseData.getDefaultInstance();
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Exercise build() {
-        pl.niekoniecznie.polar.model.PolarModel.Exercise result = buildPartial();
+      public pl.niekoniecznie.polar.model.PolarModel.ExerciseData build() {
+        pl.niekoniecznie.polar.model.PolarModel.ExerciseData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Exercise buildPartial() {
-        pl.niekoniecznie.polar.model.PolarModel.Exercise result = new pl.niekoniecznie.polar.model.PolarModel.Exercise(this);
+      public pl.niekoniecznie.polar.model.PolarModel.ExerciseData buildPartial() {
+        pl.niekoniecznie.polar.model.PolarModel.ExerciseData result = new pl.niekoniecznie.polar.model.PolarModel.ExerciseData(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -8873,16 +8873,16 @@ public final class PolarModel {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.Exercise) {
-          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.Exercise)other);
+        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.ExerciseData) {
+          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.ExerciseData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.Exercise other) {
-        if (other == pl.niekoniecznie.polar.model.PolarModel.Exercise.getDefaultInstance()) return this;
+      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.ExerciseData other) {
+        if (other == pl.niekoniecznie.polar.model.PolarModel.ExerciseData.getDefaultInstance()) return this;
         if (other.hasStart()) {
           mergeStart(other.getStart());
         }
@@ -8972,11 +8972,11 @@ public final class PolarModel {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        pl.niekoniecznie.polar.model.PolarModel.Exercise parsedMessage = null;
+        pl.niekoniecznie.polar.model.PolarModel.ExerciseData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.Exercise) e.getUnfinishedMessage();
+          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.ExerciseData) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -9219,19 +9219,19 @@ public final class PolarModel {
         return durationBuilder_;
       }
 
-      private pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport sport_ = pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.getDefaultInstance();
+      private pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport sport_ = pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport, pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.Builder, pl.niekoniecznie.polar.model.PolarModel.Exercise.SportOrBuilder> sportBuilder_;
+          pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.Builder, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.SportOrBuilder> sportBuilder_;
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
        */
       public boolean hasSport() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport getSport() {
+      public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport getSport() {
         if (sportBuilder_ == null) {
           return sport_;
         } else {
@@ -9239,9 +9239,9 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
        */
-      public Builder setSport(pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport value) {
+      public Builder setSport(pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport value) {
         if (sportBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9255,10 +9255,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
        */
       public Builder setSport(
-          pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.Builder builderForValue) {
+          pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.Builder builderForValue) {
         if (sportBuilder_ == null) {
           sport_ = builderForValue.build();
           onChanged();
@@ -9269,14 +9269,14 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
        */
-      public Builder mergeSport(pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport value) {
+      public Builder mergeSport(pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport value) {
         if (sportBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              sport_ != pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.getDefaultInstance()) {
+              sport_ != pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.getDefaultInstance()) {
             sport_ =
-              pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.newBuilder(sport_).mergeFrom(value).buildPartial();
+              pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.newBuilder(sport_).mergeFrom(value).buildPartial();
           } else {
             sport_ = value;
           }
@@ -9288,11 +9288,11 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
        */
       public Builder clearSport() {
         if (sportBuilder_ == null) {
-          sport_ = pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.getDefaultInstance();
+          sport_ = pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.getDefaultInstance();
           onChanged();
         } else {
           sportBuilder_.clear();
@@ -9301,17 +9301,17 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.Builder getSportBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.Builder getSportBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getSportFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Exercise.SportOrBuilder getSportOrBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.SportOrBuilder getSportOrBuilder() {
         if (sportBuilder_ != null) {
           return sportBuilder_.getMessageOrBuilder();
         } else {
@@ -9319,14 +9319,14 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Exercise.Sport sport = 3;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ExerciseData.Sport sport = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport, pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.Builder, pl.niekoniecznie.polar.model.PolarModel.Exercise.SportOrBuilder> 
+          pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.Builder, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.SportOrBuilder> 
           getSportFieldBuilder() {
         if (sportBuilder_ == null) {
           sportBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport, pl.niekoniecznie.polar.model.PolarModel.Exercise.Sport.Builder, pl.niekoniecznie.polar.model.PolarModel.Exercise.SportOrBuilder>(
+              pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.Sport.Builder, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.SportOrBuilder>(
                   getSport(),
                   getParentForChildren(),
                   isClean());
@@ -9515,19 +9515,19 @@ public final class PolarModel {
         return trainingLoadBuilder_;
       }
 
-      private pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex index_ = pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.getDefaultInstance();
+      private pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex index_ = pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex, pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.Builder, pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndexOrBuilder> indexBuilder_;
+          pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.Builder, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndexOrBuilder> indexBuilder_;
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
        */
       public boolean hasIndex() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex getIndex() {
+      public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex getIndex() {
         if (indexBuilder_ == null) {
           return index_;
         } else {
@@ -9535,9 +9535,9 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
        */
-      public Builder setIndex(pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex value) {
+      public Builder setIndex(pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex value) {
         if (indexBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9551,10 +9551,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
        */
       public Builder setIndex(
-          pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.Builder builderForValue) {
+          pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.Builder builderForValue) {
         if (indexBuilder_ == null) {
           index_ = builderForValue.build();
           onChanged();
@@ -9565,14 +9565,14 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
        */
-      public Builder mergeIndex(pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex value) {
+      public Builder mergeIndex(pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex value) {
         if (indexBuilder_ == null) {
           if (((bitField0_ & 0x00000040) == 0x00000040) &&
-              index_ != pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.getDefaultInstance()) {
+              index_ != pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.getDefaultInstance()) {
             index_ =
-              pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.newBuilder(index_).mergeFrom(value).buildPartial();
+              pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.newBuilder(index_).mergeFrom(value).buildPartial();
           } else {
             index_ = value;
           }
@@ -9584,11 +9584,11 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
        */
       public Builder clearIndex() {
         if (indexBuilder_ == null) {
-          index_ = pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.getDefaultInstance();
+          index_ = pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.getDefaultInstance();
           onChanged();
         } else {
           indexBuilder_.clear();
@@ -9597,17 +9597,17 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.Builder getIndexBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.Builder getIndexBuilder() {
         bitField0_ |= 0x00000040;
         onChanged();
         return getIndexFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndexOrBuilder getIndexOrBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndexOrBuilder getIndexOrBuilder() {
         if (indexBuilder_ != null) {
           return indexBuilder_.getMessageOrBuilder();
         } else {
@@ -9615,14 +9615,14 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.Exercise.RunningIndex index = 9;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.ExerciseData.RunningIndex index = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex, pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.Builder, pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndexOrBuilder> 
+          pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.Builder, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndexOrBuilder> 
           getIndexFieldBuilder() {
         if (indexBuilder_ == null) {
           indexBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex, pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndex.Builder, pl.niekoniecznie.polar.model.PolarModel.Exercise.RunningIndexOrBuilder>(
+              pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndex.Builder, pl.niekoniecznie.polar.model.PolarModel.ExerciseData.RunningIndexOrBuilder>(
                   getIndex(),
                   getParentForChildren(),
                   isClean());
@@ -9695,78 +9695,78 @@ public final class PolarModel {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.Exercise)
+      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.ExerciseData)
     }
 
     static {
-      defaultInstance = new Exercise(true);
+      defaultInstance = new ExerciseData(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.Exercise)
+    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.ExerciseData)
   }
 
-  public interface LapInformationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.LapInformation)
+  public interface LapDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.LapData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
      */
-    java.util.List<pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap> 
+    java.util.List<pl.niekoniecznie.polar.model.PolarModel.LapData.Lap> 
         getLapList();
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap getLap(int index);
+    pl.niekoniecznie.polar.model.PolarModel.LapData.Lap getLap(int index);
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
      */
     int getLapCount();
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
      */
-    java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.LapInformation.LapOrBuilder> 
+    java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.LapData.LapOrBuilder> 
         getLapOrBuilderList();
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.LapInformation.LapOrBuilder getLapOrBuilder(
+    pl.niekoniecznie.polar.model.PolarModel.LapData.LapOrBuilder getLapOrBuilder(
         int index);
 
     /**
-     * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
      */
     boolean hasSummary();
     /**
-     * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary getSummary();
+    pl.niekoniecznie.polar.model.PolarModel.LapData.Summary getSummary();
     /**
-     * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.LapInformation.SummaryOrBuilder getSummaryOrBuilder();
+    pl.niekoniecznie.polar.model.PolarModel.LapData.SummaryOrBuilder getSummaryOrBuilder();
   }
   /**
-   * Protobuf type {@code pl.niekoniecznie.polar.model.LapInformation}
+   * Protobuf type {@code pl.niekoniecznie.polar.model.LapData}
    */
-  public static final class LapInformation extends
+  public static final class LapData extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.LapInformation)
-      LapInformationOrBuilder {
-    // Use LapInformation.newBuilder() to construct.
-    private LapInformation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.LapData)
+      LapDataOrBuilder {
+    // Use LapData.newBuilder() to construct.
+    private LapData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private LapInformation(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private LapData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final LapInformation defaultInstance;
-    public static LapInformation getDefaultInstance() {
+    private static final LapData defaultInstance;
+    public static LapData getDefaultInstance() {
       return defaultInstance;
     }
 
-    public LapInformation getDefaultInstanceForType() {
+    public LapData getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -9776,7 +9776,7 @@ public final class PolarModel {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private LapInformation(
+    private LapData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -9801,18 +9801,18 @@ public final class PolarModel {
             }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                lap_ = new java.util.ArrayList<pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap>();
+                lap_ = new java.util.ArrayList<pl.niekoniecznie.polar.model.PolarModel.LapData.Lap>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              lap_.add(input.readMessage(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.PARSER, extensionRegistry));
+              lap_.add(input.readMessage(pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.PARSER, extensionRegistry));
               break;
             }
             case 18: {
-              pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.Builder subBuilder = null;
+              pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = summary_.toBuilder();
               }
-              summary_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.PARSER, extensionRegistry);
+              summary_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(summary_);
                 summary_ = subBuilder.buildPartial();
@@ -9837,67 +9837,67 @@ public final class PolarModel {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_descriptor;
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_fieldAccessorTable
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              pl.niekoniecznie.polar.model.PolarModel.LapInformation.class, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Builder.class);
+              pl.niekoniecznie.polar.model.PolarModel.LapData.class, pl.niekoniecznie.polar.model.PolarModel.LapData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<LapInformation> PARSER =
-        new com.google.protobuf.AbstractParser<LapInformation>() {
-      public LapInformation parsePartialFrom(
+    public static com.google.protobuf.Parser<LapData> PARSER =
+        new com.google.protobuf.AbstractParser<LapData>() {
+      public LapData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LapInformation(input, extensionRegistry);
+        return new LapData(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<LapInformation> getParserForType() {
+    public com.google.protobuf.Parser<LapData> getParserForType() {
       return PARSER;
     }
 
     public interface LapOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.LapInformation.Lap)
+        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.LapData.Lap)
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
        */
       boolean hasHeader();
       /**
-       * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
        */
-      pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header getHeader();
+      pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header getHeader();
       /**
-       * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
        */
-      pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.HeaderOrBuilder getHeaderOrBuilder();
+      pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.HeaderOrBuilder getHeaderOrBuilder();
 
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
        */
       boolean hasStatistic();
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
        */
-      pl.niekoniecznie.polar.model.PolarModel.Statistic getStatistic();
+      pl.niekoniecznie.polar.model.PolarModel.StatisticData getStatistic();
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
        */
-      pl.niekoniecznie.polar.model.PolarModel.StatisticOrBuilder getStatisticOrBuilder();
+      pl.niekoniecznie.polar.model.PolarModel.StatisticDataOrBuilder getStatisticOrBuilder();
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.LapInformation.Lap}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.LapData.Lap}
      */
     public static final class Lap extends
         com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.LapInformation.Lap)
+        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.LapData.Lap)
         LapOrBuilder {
       // Use Lap.newBuilder() to construct.
       private Lap(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -9945,11 +9945,11 @@ public final class PolarModel {
                 break;
               }
               case 10: {
-                pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Builder subBuilder = null;
+                pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000001) == 0x00000001)) {
                   subBuilder = header_.toBuilder();
                 }
-                header_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.PARSER, extensionRegistry);
+                header_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(header_);
                   header_ = subBuilder.buildPartial();
@@ -9958,11 +9958,11 @@ public final class PolarModel {
                 break;
               }
               case 18: {
-                pl.niekoniecznie.polar.model.PolarModel.Statistic.Builder subBuilder = null;
+                pl.niekoniecznie.polar.model.PolarModel.StatisticData.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   subBuilder = statistic_.toBuilder();
                 }
-                statistic_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.Statistic.PARSER, extensionRegistry);
+                statistic_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.StatisticData.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(statistic_);
                   statistic_ = subBuilder.buildPartial();
@@ -9984,14 +9984,14 @@ public final class PolarModel {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Lap_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Lap_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.class, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.class, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Builder.class);
       }
 
       public static com.google.protobuf.Parser<Lap> PARSER =
@@ -10010,7 +10010,7 @@ public final class PolarModel {
       }
 
       public interface HeaderOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.LapInformation.Lap.Header)
+          // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.LapData.Lap.Header)
           com.google.protobuf.MessageOrBuilder {
 
         /**
@@ -10067,20 +10067,20 @@ public final class PolarModel {
         float getDescent();
 
         /**
-         * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header.Type type = 6;</code>
+         * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header.Type type = 6;</code>
          */
         boolean hasType();
         /**
-         * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header.Type type = 6;</code>
+         * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header.Type type = 6;</code>
          */
-        pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Type getType();
+        pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Type getType();
       }
       /**
-       * Protobuf type {@code pl.niekoniecznie.polar.model.LapInformation.Lap.Header}
+       * Protobuf type {@code pl.niekoniecznie.polar.model.LapData.Lap.Header}
        */
       public static final class Header extends
           com.google.protobuf.GeneratedMessage implements
-          // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.LapInformation.Lap.Header)
+          // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.LapData.Lap.Header)
           HeaderOrBuilder {
         // Use Header.newBuilder() to construct.
         private Header(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -10170,7 +10170,7 @@ public final class PolarModel {
                 }
                 case 48: {
                   int rawValue = input.readEnum();
-                  pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Type value = pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Type.valueOf(rawValue);
+                  pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Type value = pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Type.valueOf(rawValue);
                   if (value == null) {
                     unknownFields.mergeVarintField(6, rawValue);
                   } else {
@@ -10193,14 +10193,14 @@ public final class PolarModel {
         }
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_Header_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Lap_Header_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_Header_fieldAccessorTable
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Lap_Header_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.class, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Builder.class);
+                  pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.class, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Builder.class);
         }
 
         public static com.google.protobuf.Parser<Header> PARSER =
@@ -10219,7 +10219,7 @@ public final class PolarModel {
         }
 
         /**
-         * Protobuf enum {@code pl.niekoniecznie.polar.model.LapInformation.Lap.Header.Type}
+         * Protobuf enum {@code pl.niekoniecznie.polar.model.LapData.Lap.Header.Type}
          */
         public enum Type
             implements com.google.protobuf.ProtocolMessageEnum {
@@ -10275,7 +10275,7 @@ public final class PolarModel {
           }
           public static final com.google.protobuf.Descriptors.EnumDescriptor
               getDescriptor() {
-            return pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.getDescriptor().getEnumTypes().get(0);
+            return pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.getDescriptor().getEnumTypes().get(0);
           }
 
           private static final Type[] VALUES = values();
@@ -10297,7 +10297,7 @@ public final class PolarModel {
             this.value = value;
           }
 
-          // @@protoc_insertion_point(enum_scope:pl.niekoniecznie.polar.model.LapInformation.Lap.Header.Type)
+          // @@protoc_insertion_point(enum_scope:pl.niekoniecznie.polar.model.LapData.Lap.Header.Type)
         }
 
         private int bitField0_;
@@ -10389,17 +10389,17 @@ public final class PolarModel {
         }
 
         public static final int TYPE_FIELD_NUMBER = 6;
-        private pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Type type_;
+        private pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Type type_;
         /**
-         * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header.Type type = 6;</code>
+         * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header.Type type = 6;</code>
          */
         public boolean hasType() {
           return ((bitField0_ & 0x00000020) == 0x00000020);
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header.Type type = 6;</code>
+         * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header.Type type = 6;</code>
          */
-        public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Type getType() {
+        public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Type getType() {
           return type_;
         }
 
@@ -10409,7 +10409,7 @@ public final class PolarModel {
           distance_ = 0F;
           ascent_ = 0F;
           descent_ = 0F;
-          type_ = pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Type.MANUAL;
+          type_ = pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Type.MANUAL;
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -10503,53 +10503,53 @@ public final class PolarModel {
           return super.writeReplace();
         }
 
-        public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header parseFrom(byte[] data)
+        public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header parseFrom(java.io.InputStream input)
+        public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header parseFrom(java.io.InputStream input)
             throws java.io.IOException {
           return PARSER.parseFrom(input);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header parseDelimitedFrom(java.io.InputStream input)
+        public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
           return PARSER.parseDelimitedFrom(input);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header parseDelimitedFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseDelimitedFrom(input, extensionRegistry);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return PARSER.parseFrom(input);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -10558,7 +10558,7 @@ public final class PolarModel {
 
         public static Builder newBuilder() { return Builder.create(); }
         public Builder newBuilderForType() { return newBuilder(); }
-        public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header prototype) {
+        public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header prototype) {
           return newBuilder().mergeFrom(prototype);
         }
         public Builder toBuilder() { return newBuilder(this); }
@@ -10570,25 +10570,25 @@ public final class PolarModel {
           return builder;
         }
         /**
-         * Protobuf type {@code pl.niekoniecznie.polar.model.LapInformation.Lap.Header}
+         * Protobuf type {@code pl.niekoniecznie.polar.model.LapData.Lap.Header}
          */
         public static final class Builder extends
             com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.LapInformation.Lap.Header)
-            pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.HeaderOrBuilder {
+            // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.LapData.Lap.Header)
+            pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.HeaderOrBuilder {
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_Header_descriptor;
+            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Lap_Header_descriptor;
           }
 
           protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_Header_fieldAccessorTable
+            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Lap_Header_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.class, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Builder.class);
+                    pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.class, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Builder.class);
           }
 
-          // Construct using pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.newBuilder()
+          // Construct using pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -10628,7 +10628,7 @@ public final class PolarModel {
             bitField0_ = (bitField0_ & ~0x00000008);
             descent_ = 0F;
             bitField0_ = (bitField0_ & ~0x00000010);
-            type_ = pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Type.MANUAL;
+            type_ = pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Type.MANUAL;
             bitField0_ = (bitField0_ & ~0x00000020);
             return this;
           }
@@ -10639,23 +10639,23 @@ public final class PolarModel {
 
           public com.google.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
-            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_Header_descriptor;
+            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Lap_Header_descriptor;
           }
 
-          public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header getDefaultInstanceForType() {
-            return pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.getDefaultInstance();
+          public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header getDefaultInstanceForType() {
+            return pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.getDefaultInstance();
           }
 
-          public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header build() {
-            pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header result = buildPartial();
+          public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header build() {
+            pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header result = buildPartial();
             if (!result.isInitialized()) {
               throw newUninitializedMessageException(result);
             }
             return result;
           }
 
-          public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header buildPartial() {
-            pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header result = new pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header(this);
+          public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header buildPartial() {
+            pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header result = new pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header(this);
             int from_bitField0_ = bitField0_;
             int to_bitField0_ = 0;
             if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -10696,16 +10696,16 @@ public final class PolarModel {
           }
 
           public Builder mergeFrom(com.google.protobuf.Message other) {
-            if (other instanceof pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header) {
-              return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header)other);
+            if (other instanceof pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header) {
+              return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header)other);
             } else {
               super.mergeFrom(other);
               return this;
             }
           }
 
-          public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header other) {
-            if (other == pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.getDefaultInstance()) return this;
+          public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header other) {
+            if (other == pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.getDefaultInstance()) return this;
             if (other.hasSplit()) {
               mergeSplit(other.getSplit());
             }
@@ -10752,11 +10752,11 @@ public final class PolarModel {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-            pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header parsedMessage = null;
+            pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
             } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header) e.getUnfinishedMessage();
+              parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header) e.getUnfinishedMessage();
               throw e;
             } finally {
               if (parsedMessage != null) {
@@ -11095,23 +11095,23 @@ public final class PolarModel {
             return this;
           }
 
-          private pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Type type_ = pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Type.MANUAL;
+          private pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Type type_ = pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Type.MANUAL;
           /**
-           * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header.Type type = 6;</code>
+           * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header.Type type = 6;</code>
            */
           public boolean hasType() {
             return ((bitField0_ & 0x00000020) == 0x00000020);
           }
           /**
-           * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header.Type type = 6;</code>
+           * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header.Type type = 6;</code>
            */
-          public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Type getType() {
+          public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Type getType() {
             return type_;
           }
           /**
-           * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header.Type type = 6;</code>
+           * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header.Type type = 6;</code>
            */
-          public Builder setType(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Type value) {
+          public Builder setType(pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Type value) {
             if (value == null) {
               throw new NullPointerException();
             }
@@ -11121,16 +11121,16 @@ public final class PolarModel {
             return this;
           }
           /**
-           * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header.Type type = 6;</code>
+           * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header.Type type = 6;</code>
            */
           public Builder clearType() {
             bitField0_ = (bitField0_ & ~0x00000020);
-            type_ = pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Type.MANUAL;
+            type_ = pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Type.MANUAL;
             onChanged();
             return this;
           }
 
-          // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.LapInformation.Lap.Header)
+          // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.LapData.Lap.Header)
         }
 
         static {
@@ -11138,55 +11138,55 @@ public final class PolarModel {
           defaultInstance.initFields();
         }
 
-        // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.LapInformation.Lap.Header)
+        // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.LapData.Lap.Header)
       }
 
       private int bitField0_;
       public static final int HEADER_FIELD_NUMBER = 1;
-      private pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header header_;
+      private pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header header_;
       /**
-       * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
        */
       public boolean hasHeader() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header getHeader() {
+      public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header getHeader() {
         return header_;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.HeaderOrBuilder getHeaderOrBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.HeaderOrBuilder getHeaderOrBuilder() {
         return header_;
       }
 
       public static final int STATISTIC_FIELD_NUMBER = 2;
-      private pl.niekoniecznie.polar.model.PolarModel.Statistic statistic_;
+      private pl.niekoniecznie.polar.model.PolarModel.StatisticData statistic_;
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
        */
       public boolean hasStatistic() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Statistic getStatistic() {
+      public pl.niekoniecznie.polar.model.PolarModel.StatisticData getStatistic() {
         return statistic_;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+       * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.StatisticOrBuilder getStatisticOrBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.StatisticDataOrBuilder getStatisticOrBuilder() {
         return statistic_;
       }
 
       private void initFields() {
-        header_ = pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.getDefaultInstance();
-        statistic_ = pl.niekoniecznie.polar.model.PolarModel.Statistic.getDefaultInstance();
+        header_ = pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.getDefaultInstance();
+        statistic_ = pl.niekoniecznie.polar.model.PolarModel.StatisticData.getDefaultInstance();
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -11252,53 +11252,53 @@ public final class PolarModel {
         return super.writeReplace();
       }
 
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap parseFrom(byte[] data)
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap parseFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap parseDelimitedFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap parseDelimitedFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Lap parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -11307,7 +11307,7 @@ public final class PolarModel {
 
       public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap prototype) {
+      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.LapData.Lap prototype) {
         return newBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() { return newBuilder(this); }
@@ -11319,25 +11319,25 @@ public final class PolarModel {
         return builder;
       }
       /**
-       * Protobuf type {@code pl.niekoniecznie.polar.model.LapInformation.Lap}
+       * Protobuf type {@code pl.niekoniecznie.polar.model.LapData.Lap}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.LapInformation.Lap)
-          pl.niekoniecznie.polar.model.PolarModel.LapInformation.LapOrBuilder {
+          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.LapData.Lap)
+          pl.niekoniecznie.polar.model.PolarModel.LapData.LapOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Lap_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_fieldAccessorTable
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Lap_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.class, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Builder.class);
+                  pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.class, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Builder.class);
         }
 
-        // Construct using pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.newBuilder()
+        // Construct using pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -11360,13 +11360,13 @@ public final class PolarModel {
         public Builder clear() {
           super.clear();
           if (headerBuilder_ == null) {
-            header_ = pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.getDefaultInstance();
+            header_ = pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.getDefaultInstance();
           } else {
             headerBuilder_.clear();
           }
           bitField0_ = (bitField0_ & ~0x00000001);
           if (statisticBuilder_ == null) {
-            statistic_ = pl.niekoniecznie.polar.model.PolarModel.Statistic.getDefaultInstance();
+            statistic_ = pl.niekoniecznie.polar.model.PolarModel.StatisticData.getDefaultInstance();
           } else {
             statisticBuilder_.clear();
           }
@@ -11380,23 +11380,23 @@ public final class PolarModel {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Lap_descriptor;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap getDefaultInstanceForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.getDefaultInstance();
+        public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap getDefaultInstanceForType() {
+          return pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.getDefaultInstance();
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap build() {
-          pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap result = buildPartial();
+        public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap build() {
+          pl.niekoniecznie.polar.model.PolarModel.LapData.Lap result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap buildPartial() {
-          pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap result = new pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap(this);
+        public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap buildPartial() {
+          pl.niekoniecznie.polar.model.PolarModel.LapData.Lap result = new pl.niekoniecznie.polar.model.PolarModel.LapData.Lap(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -11421,16 +11421,16 @@ public final class PolarModel {
         }
 
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap) {
-            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap)other);
+          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.LapData.Lap) {
+            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.LapData.Lap)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap other) {
-          if (other == pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.getDefaultInstance()) return this;
+        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.LapData.Lap other) {
+          if (other == pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.getDefaultInstance()) return this;
           if (other.hasHeader()) {
             mergeHeader(other.getHeader());
           }
@@ -11465,11 +11465,11 @@ public final class PolarModel {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap parsedMessage = null;
+          pl.niekoniecznie.polar.model.PolarModel.LapData.Lap parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap) e.getUnfinishedMessage();
+            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.LapData.Lap) e.getUnfinishedMessage();
             throw e;
           } finally {
             if (parsedMessage != null) {
@@ -11480,19 +11480,19 @@ public final class PolarModel {
         }
         private int bitField0_;
 
-        private pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header header_ = pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.getDefaultInstance();
+        private pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header header_ = pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Builder, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.HeaderOrBuilder> headerBuilder_;
+            pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Builder, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.HeaderOrBuilder> headerBuilder_;
         /**
-         * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
          */
         public boolean hasHeader() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
          */
-        public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header getHeader() {
+        public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header getHeader() {
           if (headerBuilder_ == null) {
             return header_;
           } else {
@@ -11500,9 +11500,9 @@ public final class PolarModel {
           }
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
          */
-        public Builder setHeader(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header value) {
+        public Builder setHeader(pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header value) {
           if (headerBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -11516,10 +11516,10 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
          */
         public Builder setHeader(
-            pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Builder builderForValue) {
+            pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Builder builderForValue) {
           if (headerBuilder_ == null) {
             header_ = builderForValue.build();
             onChanged();
@@ -11530,14 +11530,14 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
          */
-        public Builder mergeHeader(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header value) {
+        public Builder mergeHeader(pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header value) {
           if (headerBuilder_ == null) {
             if (((bitField0_ & 0x00000001) == 0x00000001) &&
-                header_ != pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.getDefaultInstance()) {
+                header_ != pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.getDefaultInstance()) {
               header_ =
-                pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.newBuilder(header_).mergeFrom(value).buildPartial();
+                pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.newBuilder(header_).mergeFrom(value).buildPartial();
             } else {
               header_ = value;
             }
@@ -11549,11 +11549,11 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
          */
         public Builder clearHeader() {
           if (headerBuilder_ == null) {
-            header_ = pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.getDefaultInstance();
+            header_ = pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.getDefaultInstance();
             onChanged();
           } else {
             headerBuilder_.clear();
@@ -11562,17 +11562,17 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
          */
-        public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Builder getHeaderBuilder() {
+        public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Builder getHeaderBuilder() {
           bitField0_ |= 0x00000001;
           onChanged();
           return getHeaderFieldBuilder().getBuilder();
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
          */
-        public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.HeaderOrBuilder getHeaderOrBuilder() {
+        public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.HeaderOrBuilder getHeaderOrBuilder() {
           if (headerBuilder_ != null) {
             return headerBuilder_.getMessageOrBuilder();
           } else {
@@ -11580,14 +11580,14 @@ public final class PolarModel {
           }
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.LapInformation.Lap.Header header = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.LapData.Lap.Header header = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Builder, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.HeaderOrBuilder> 
+            pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Builder, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.HeaderOrBuilder> 
             getHeaderFieldBuilder() {
           if (headerBuilder_ == null) {
             headerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Header.Builder, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.HeaderOrBuilder>(
+                pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Header.Builder, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.HeaderOrBuilder>(
                     getHeader(),
                     getParentForChildren(),
                     isClean());
@@ -11596,19 +11596,19 @@ public final class PolarModel {
           return headerBuilder_;
         }
 
-        private pl.niekoniecznie.polar.model.PolarModel.Statistic statistic_ = pl.niekoniecznie.polar.model.PolarModel.Statistic.getDefaultInstance();
+        private pl.niekoniecznie.polar.model.PolarModel.StatisticData statistic_ = pl.niekoniecznie.polar.model.PolarModel.StatisticData.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            pl.niekoniecznie.polar.model.PolarModel.Statistic, pl.niekoniecznie.polar.model.PolarModel.Statistic.Builder, pl.niekoniecznie.polar.model.PolarModel.StatisticOrBuilder> statisticBuilder_;
+            pl.niekoniecznie.polar.model.PolarModel.StatisticData, pl.niekoniecznie.polar.model.PolarModel.StatisticData.Builder, pl.niekoniecznie.polar.model.PolarModel.StatisticDataOrBuilder> statisticBuilder_;
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+         * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
          */
         public boolean hasStatistic() {
           return ((bitField0_ & 0x00000002) == 0x00000002);
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+         * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
          */
-        public pl.niekoniecznie.polar.model.PolarModel.Statistic getStatistic() {
+        public pl.niekoniecznie.polar.model.PolarModel.StatisticData getStatistic() {
           if (statisticBuilder_ == null) {
             return statistic_;
           } else {
@@ -11616,9 +11616,9 @@ public final class PolarModel {
           }
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+         * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
          */
-        public Builder setStatistic(pl.niekoniecznie.polar.model.PolarModel.Statistic value) {
+        public Builder setStatistic(pl.niekoniecznie.polar.model.PolarModel.StatisticData value) {
           if (statisticBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -11632,10 +11632,10 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+         * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
          */
         public Builder setStatistic(
-            pl.niekoniecznie.polar.model.PolarModel.Statistic.Builder builderForValue) {
+            pl.niekoniecznie.polar.model.PolarModel.StatisticData.Builder builderForValue) {
           if (statisticBuilder_ == null) {
             statistic_ = builderForValue.build();
             onChanged();
@@ -11646,14 +11646,14 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+         * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
          */
-        public Builder mergeStatistic(pl.niekoniecznie.polar.model.PolarModel.Statistic value) {
+        public Builder mergeStatistic(pl.niekoniecznie.polar.model.PolarModel.StatisticData value) {
           if (statisticBuilder_ == null) {
             if (((bitField0_ & 0x00000002) == 0x00000002) &&
-                statistic_ != pl.niekoniecznie.polar.model.PolarModel.Statistic.getDefaultInstance()) {
+                statistic_ != pl.niekoniecznie.polar.model.PolarModel.StatisticData.getDefaultInstance()) {
               statistic_ =
-                pl.niekoniecznie.polar.model.PolarModel.Statistic.newBuilder(statistic_).mergeFrom(value).buildPartial();
+                pl.niekoniecznie.polar.model.PolarModel.StatisticData.newBuilder(statistic_).mergeFrom(value).buildPartial();
             } else {
               statistic_ = value;
             }
@@ -11665,11 +11665,11 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+         * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
          */
         public Builder clearStatistic() {
           if (statisticBuilder_ == null) {
-            statistic_ = pl.niekoniecznie.polar.model.PolarModel.Statistic.getDefaultInstance();
+            statistic_ = pl.niekoniecznie.polar.model.PolarModel.StatisticData.getDefaultInstance();
             onChanged();
           } else {
             statisticBuilder_.clear();
@@ -11678,17 +11678,17 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+         * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
          */
-        public pl.niekoniecznie.polar.model.PolarModel.Statistic.Builder getStatisticBuilder() {
+        public pl.niekoniecznie.polar.model.PolarModel.StatisticData.Builder getStatisticBuilder() {
           bitField0_ |= 0x00000002;
           onChanged();
           return getStatisticFieldBuilder().getBuilder();
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+         * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
          */
-        public pl.niekoniecznie.polar.model.PolarModel.StatisticOrBuilder getStatisticOrBuilder() {
+        public pl.niekoniecznie.polar.model.PolarModel.StatisticDataOrBuilder getStatisticOrBuilder() {
           if (statisticBuilder_ != null) {
             return statisticBuilder_.getMessageOrBuilder();
           } else {
@@ -11696,14 +11696,14 @@ public final class PolarModel {
           }
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Statistic statistic = 2;</code>
+         * <code>required .pl.niekoniecznie.polar.model.StatisticData statistic = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            pl.niekoniecznie.polar.model.PolarModel.Statistic, pl.niekoniecznie.polar.model.PolarModel.Statistic.Builder, pl.niekoniecznie.polar.model.PolarModel.StatisticOrBuilder> 
+            pl.niekoniecznie.polar.model.PolarModel.StatisticData, pl.niekoniecznie.polar.model.PolarModel.StatisticData.Builder, pl.niekoniecznie.polar.model.PolarModel.StatisticDataOrBuilder> 
             getStatisticFieldBuilder() {
           if (statisticBuilder_ == null) {
             statisticBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                pl.niekoniecznie.polar.model.PolarModel.Statistic, pl.niekoniecznie.polar.model.PolarModel.Statistic.Builder, pl.niekoniecznie.polar.model.PolarModel.StatisticOrBuilder>(
+                pl.niekoniecznie.polar.model.PolarModel.StatisticData, pl.niekoniecznie.polar.model.PolarModel.StatisticData.Builder, pl.niekoniecznie.polar.model.PolarModel.StatisticDataOrBuilder>(
                     getStatistic(),
                     getParentForChildren(),
                     isClean());
@@ -11712,7 +11712,7 @@ public final class PolarModel {
           return statisticBuilder_;
         }
 
-        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.LapInformation.Lap)
+        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.LapData.Lap)
       }
 
       static {
@@ -11720,11 +11720,11 @@ public final class PolarModel {
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.LapInformation.Lap)
+      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.LapData.Lap)
     }
 
     public interface SummaryOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.LapInformation.Summary)
+        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.LapData.Summary)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -11754,11 +11754,11 @@ public final class PolarModel {
       pl.niekoniecznie.polar.model.PolarModel.TimeOrBuilder getAverageOrBuilder();
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.LapInformation.Summary}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.LapData.Summary}
      */
     public static final class Summary extends
         com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.LapInformation.Summary)
+        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.LapData.Summary)
         SummaryOrBuilder {
       // Use Summary.newBuilder() to construct.
       private Summary(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -11845,14 +11845,14 @@ public final class PolarModel {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Summary_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Summary_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Summary_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Summary_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.class, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.class, pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.Builder.class);
       }
 
       public static com.google.protobuf.Parser<Summary> PARSER =
@@ -11973,53 +11973,53 @@ public final class PolarModel {
         return super.writeReplace();
       }
 
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Summary parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Summary parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary parseFrom(byte[] data)
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Summary parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Summary parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary parseFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Summary parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Summary parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary parseDelimitedFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Summary parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary parseDelimitedFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Summary parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Summary parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.LapData.Summary parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -12028,7 +12028,7 @@ public final class PolarModel {
 
       public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary prototype) {
+      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.LapData.Summary prototype) {
         return newBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() { return newBuilder(this); }
@@ -12040,25 +12040,25 @@ public final class PolarModel {
         return builder;
       }
       /**
-       * Protobuf type {@code pl.niekoniecznie.polar.model.LapInformation.Summary}
+       * Protobuf type {@code pl.niekoniecznie.polar.model.LapData.Summary}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.LapInformation.Summary)
-          pl.niekoniecznie.polar.model.PolarModel.LapInformation.SummaryOrBuilder {
+          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.LapData.Summary)
+          pl.niekoniecznie.polar.model.PolarModel.LapData.SummaryOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Summary_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Summary_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Summary_fieldAccessorTable
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Summary_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.class, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.Builder.class);
+                  pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.class, pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.Builder.class);
         }
 
-        // Construct using pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.newBuilder()
+        // Construct using pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -12101,23 +12101,23 @@ public final class PolarModel {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_Summary_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_Summary_descriptor;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary getDefaultInstanceForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.getDefaultInstance();
+        public pl.niekoniecznie.polar.model.PolarModel.LapData.Summary getDefaultInstanceForType() {
+          return pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.getDefaultInstance();
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary build() {
-          pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary result = buildPartial();
+        public pl.niekoniecznie.polar.model.PolarModel.LapData.Summary build() {
+          pl.niekoniecznie.polar.model.PolarModel.LapData.Summary result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary buildPartial() {
-          pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary result = new pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary(this);
+        public pl.niekoniecznie.polar.model.PolarModel.LapData.Summary buildPartial() {
+          pl.niekoniecznie.polar.model.PolarModel.LapData.Summary result = new pl.niekoniecznie.polar.model.PolarModel.LapData.Summary(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -12142,16 +12142,16 @@ public final class PolarModel {
         }
 
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary) {
-            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary)other);
+          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.LapData.Summary) {
+            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.LapData.Summary)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary other) {
-          if (other == pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.getDefaultInstance()) return this;
+        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.LapData.Summary other) {
+          if (other == pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.getDefaultInstance()) return this;
           if (other.hasBest()) {
             mergeBest(other.getBest());
           }
@@ -12178,11 +12178,11 @@ public final class PolarModel {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary parsedMessage = null;
+          pl.niekoniecznie.polar.model.PolarModel.LapData.Summary parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary) e.getUnfinishedMessage();
+            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.LapData.Summary) e.getUnfinishedMessage();
             throw e;
           } finally {
             if (parsedMessage != null) {
@@ -12425,7 +12425,7 @@ public final class PolarModel {
           return averageBuilder_;
         }
 
-        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.LapInformation.Summary)
+        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.LapData.Summary)
       }
 
       static {
@@ -12433,69 +12433,69 @@ public final class PolarModel {
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.LapInformation.Summary)
+      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.LapData.Summary)
     }
 
     private int bitField0_;
     public static final int LAP_FIELD_NUMBER = 1;
-    private java.util.List<pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap> lap_;
+    private java.util.List<pl.niekoniecznie.polar.model.PolarModel.LapData.Lap> lap_;
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
      */
-    public java.util.List<pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap> getLapList() {
+    public java.util.List<pl.niekoniecznie.polar.model.PolarModel.LapData.Lap> getLapList() {
       return lap_;
     }
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
      */
-    public java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.LapInformation.LapOrBuilder> 
+    public java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.LapData.LapOrBuilder> 
         getLapOrBuilderList() {
       return lap_;
     }
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
      */
     public int getLapCount() {
       return lap_.size();
     }
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap getLap(int index) {
+    public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap getLap(int index) {
       return lap_.get(index);
     }
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.LapInformation.LapOrBuilder getLapOrBuilder(
+    public pl.niekoniecznie.polar.model.PolarModel.LapData.LapOrBuilder getLapOrBuilder(
         int index) {
       return lap_.get(index);
     }
 
     public static final int SUMMARY_FIELD_NUMBER = 2;
-    private pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary summary_;
+    private pl.niekoniecznie.polar.model.PolarModel.LapData.Summary summary_;
     /**
-     * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
      */
     public boolean hasSummary() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary getSummary() {
+    public pl.niekoniecznie.polar.model.PolarModel.LapData.Summary getSummary() {
       return summary_;
     }
     /**
-     * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+     * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.LapInformation.SummaryOrBuilder getSummaryOrBuilder() {
+    public pl.niekoniecznie.polar.model.PolarModel.LapData.SummaryOrBuilder getSummaryOrBuilder() {
       return summary_;
     }
 
     private void initFields() {
       lap_ = java.util.Collections.emptyList();
-      summary_ = pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.getDefaultInstance();
+      summary_ = pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -12557,53 +12557,53 @@ public final class PolarModel {
       return super.writeReplace();
     }
 
-    public static pl.niekoniecznie.polar.model.PolarModel.LapInformation parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.LapData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.LapInformation parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.LapData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.LapInformation parseFrom(byte[] data)
+    public static pl.niekoniecznie.polar.model.PolarModel.LapData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.LapInformation parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.LapData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.LapInformation parseFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.LapData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.LapInformation parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.LapData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.LapInformation parseDelimitedFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.LapData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.LapInformation parseDelimitedFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.LapData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.LapInformation parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.LapData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.LapInformation parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.LapData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -12612,7 +12612,7 @@ public final class PolarModel {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.LapInformation prototype) {
+    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.LapData prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -12624,25 +12624,25 @@ public final class PolarModel {
       return builder;
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.LapInformation}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.LapData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.LapInformation)
-        pl.niekoniecznie.polar.model.PolarModel.LapInformationOrBuilder {
+        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.LapData)
+        pl.niekoniecznie.polar.model.PolarModel.LapDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.LapInformation.class, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.LapData.class, pl.niekoniecznie.polar.model.PolarModel.LapData.Builder.class);
       }
 
-      // Construct using pl.niekoniecznie.polar.model.PolarModel.LapInformation.newBuilder()
+      // Construct using pl.niekoniecznie.polar.model.PolarModel.LapData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -12671,7 +12671,7 @@ public final class PolarModel {
           lapBuilder_.clear();
         }
         if (summaryBuilder_ == null) {
-          summary_ = pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.getDefaultInstance();
+          summary_ = pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.getDefaultInstance();
         } else {
           summaryBuilder_.clear();
         }
@@ -12685,23 +12685,23 @@ public final class PolarModel {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapInformation_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_LapData_descriptor;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.LapInformation getDefaultInstanceForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.LapInformation.getDefaultInstance();
+      public pl.niekoniecznie.polar.model.PolarModel.LapData getDefaultInstanceForType() {
+        return pl.niekoniecznie.polar.model.PolarModel.LapData.getDefaultInstance();
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.LapInformation build() {
-        pl.niekoniecznie.polar.model.PolarModel.LapInformation result = buildPartial();
+      public pl.niekoniecznie.polar.model.PolarModel.LapData build() {
+        pl.niekoniecznie.polar.model.PolarModel.LapData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.LapInformation buildPartial() {
-        pl.niekoniecznie.polar.model.PolarModel.LapInformation result = new pl.niekoniecznie.polar.model.PolarModel.LapInformation(this);
+      public pl.niekoniecznie.polar.model.PolarModel.LapData buildPartial() {
+        pl.niekoniecznie.polar.model.PolarModel.LapData result = new pl.niekoniecznie.polar.model.PolarModel.LapData(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (lapBuilder_ == null) {
@@ -12727,16 +12727,16 @@ public final class PolarModel {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.LapInformation) {
-          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.LapInformation)other);
+        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.LapData) {
+          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.LapData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.LapInformation other) {
-        if (other == pl.niekoniecznie.polar.model.PolarModel.LapInformation.getDefaultInstance()) return this;
+      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.LapData other) {
+        if (other == pl.niekoniecznie.polar.model.PolarModel.LapData.getDefaultInstance()) return this;
         if (lapBuilder_ == null) {
           if (!other.lap_.isEmpty()) {
             if (lap_.isEmpty()) {
@@ -12790,11 +12790,11 @@ public final class PolarModel {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        pl.niekoniecznie.polar.model.PolarModel.LapInformation parsedMessage = null;
+        pl.niekoniecznie.polar.model.PolarModel.LapData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.LapInformation) e.getUnfinishedMessage();
+          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.LapData) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -12805,22 +12805,22 @@ public final class PolarModel {
       }
       private int bitField0_;
 
-      private java.util.List<pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap> lap_ =
+      private java.util.List<pl.niekoniecznie.polar.model.PolarModel.LapData.Lap> lap_ =
         java.util.Collections.emptyList();
       private void ensureLapIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          lap_ = new java.util.ArrayList<pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap>(lap_);
+          lap_ = new java.util.ArrayList<pl.niekoniecznie.polar.model.PolarModel.LapData.Lap>(lap_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Builder, pl.niekoniecznie.polar.model.PolarModel.LapInformation.LapOrBuilder> lapBuilder_;
+          pl.niekoniecznie.polar.model.PolarModel.LapData.Lap, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Builder, pl.niekoniecznie.polar.model.PolarModel.LapData.LapOrBuilder> lapBuilder_;
 
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
-      public java.util.List<pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap> getLapList() {
+      public java.util.List<pl.niekoniecznie.polar.model.PolarModel.LapData.Lap> getLapList() {
         if (lapBuilder_ == null) {
           return java.util.Collections.unmodifiableList(lap_);
         } else {
@@ -12828,7 +12828,7 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
       public int getLapCount() {
         if (lapBuilder_ == null) {
@@ -12838,9 +12838,9 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap getLap(int index) {
+      public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap getLap(int index) {
         if (lapBuilder_ == null) {
           return lap_.get(index);
         } else {
@@ -12848,10 +12848,10 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
       public Builder setLap(
-          int index, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap value) {
+          int index, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap value) {
         if (lapBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12865,10 +12865,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
       public Builder setLap(
-          int index, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Builder builderForValue) {
+          int index, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Builder builderForValue) {
         if (lapBuilder_ == null) {
           ensureLapIsMutable();
           lap_.set(index, builderForValue.build());
@@ -12879,9 +12879,9 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
-      public Builder addLap(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap value) {
+      public Builder addLap(pl.niekoniecznie.polar.model.PolarModel.LapData.Lap value) {
         if (lapBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12895,10 +12895,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
       public Builder addLap(
-          int index, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap value) {
+          int index, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap value) {
         if (lapBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12912,10 +12912,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
       public Builder addLap(
-          pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Builder builderForValue) {
+          pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Builder builderForValue) {
         if (lapBuilder_ == null) {
           ensureLapIsMutable();
           lap_.add(builderForValue.build());
@@ -12926,10 +12926,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
       public Builder addLap(
-          int index, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Builder builderForValue) {
+          int index, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Builder builderForValue) {
         if (lapBuilder_ == null) {
           ensureLapIsMutable();
           lap_.add(index, builderForValue.build());
@@ -12940,10 +12940,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
       public Builder addAllLap(
-          java.lang.Iterable<? extends pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap> values) {
+          java.lang.Iterable<? extends pl.niekoniecznie.polar.model.PolarModel.LapData.Lap> values) {
         if (lapBuilder_ == null) {
           ensureLapIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -12955,7 +12955,7 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
       public Builder clearLap() {
         if (lapBuilder_ == null) {
@@ -12968,7 +12968,7 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
       public Builder removeLap(int index) {
         if (lapBuilder_ == null) {
@@ -12981,16 +12981,16 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Builder getLapBuilder(
+      public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Builder getLapBuilder(
           int index) {
         return getLapFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.LapInformation.LapOrBuilder getLapOrBuilder(
+      public pl.niekoniecznie.polar.model.PolarModel.LapData.LapOrBuilder getLapOrBuilder(
           int index) {
         if (lapBuilder_ == null) {
           return lap_.get(index);  } else {
@@ -12998,9 +12998,9 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
-      public java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.LapInformation.LapOrBuilder> 
+      public java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.LapData.LapOrBuilder> 
            getLapOrBuilderList() {
         if (lapBuilder_ != null) {
           return lapBuilder_.getMessageOrBuilderList();
@@ -13009,33 +13009,33 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Builder addLapBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Builder addLapBuilder() {
         return getLapFieldBuilder().addBuilder(
-            pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.getDefaultInstance());
+            pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.getDefaultInstance());
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Builder addLapBuilder(
+      public pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Builder addLapBuilder(
           int index) {
         return getLapFieldBuilder().addBuilder(
-            index, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.getDefaultInstance());
+            index, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.getDefaultInstance());
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.LapInformation.Lap lap = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.LapData.Lap lap = 1;</code>
        */
-      public java.util.List<pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Builder> 
+      public java.util.List<pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Builder> 
            getLapBuilderList() {
         return getLapFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Builder, pl.niekoniecznie.polar.model.PolarModel.LapInformation.LapOrBuilder> 
+          pl.niekoniecznie.polar.model.PolarModel.LapData.Lap, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Builder, pl.niekoniecznie.polar.model.PolarModel.LapData.LapOrBuilder> 
           getLapFieldBuilder() {
         if (lapBuilder_ == null) {
           lapBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Lap.Builder, pl.niekoniecznie.polar.model.PolarModel.LapInformation.LapOrBuilder>(
+              pl.niekoniecznie.polar.model.PolarModel.LapData.Lap, pl.niekoniecznie.polar.model.PolarModel.LapData.Lap.Builder, pl.niekoniecznie.polar.model.PolarModel.LapData.LapOrBuilder>(
                   lap_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -13045,19 +13045,19 @@ public final class PolarModel {
         return lapBuilder_;
       }
 
-      private pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary summary_ = pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.getDefaultInstance();
+      private pl.niekoniecznie.polar.model.PolarModel.LapData.Summary summary_ = pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.Builder, pl.niekoniecznie.polar.model.PolarModel.LapInformation.SummaryOrBuilder> summaryBuilder_;
+          pl.niekoniecznie.polar.model.PolarModel.LapData.Summary, pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.Builder, pl.niekoniecznie.polar.model.PolarModel.LapData.SummaryOrBuilder> summaryBuilder_;
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
        */
       public boolean hasSummary() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary getSummary() {
+      public pl.niekoniecznie.polar.model.PolarModel.LapData.Summary getSummary() {
         if (summaryBuilder_ == null) {
           return summary_;
         } else {
@@ -13065,9 +13065,9 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
        */
-      public Builder setSummary(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary value) {
+      public Builder setSummary(pl.niekoniecznie.polar.model.PolarModel.LapData.Summary value) {
         if (summaryBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -13081,10 +13081,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
        */
       public Builder setSummary(
-          pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.Builder builderForValue) {
+          pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.Builder builderForValue) {
         if (summaryBuilder_ == null) {
           summary_ = builderForValue.build();
           onChanged();
@@ -13095,14 +13095,14 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
        */
-      public Builder mergeSummary(pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary value) {
+      public Builder mergeSummary(pl.niekoniecznie.polar.model.PolarModel.LapData.Summary value) {
         if (summaryBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              summary_ != pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.getDefaultInstance()) {
+              summary_ != pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.getDefaultInstance()) {
             summary_ =
-              pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.newBuilder(summary_).mergeFrom(value).buildPartial();
+              pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.newBuilder(summary_).mergeFrom(value).buildPartial();
           } else {
             summary_ = value;
           }
@@ -13114,11 +13114,11 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
        */
       public Builder clearSummary() {
         if (summaryBuilder_ == null) {
-          summary_ = pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.getDefaultInstance();
+          summary_ = pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.getDefaultInstance();
           onChanged();
         } else {
           summaryBuilder_.clear();
@@ -13127,17 +13127,17 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.Builder getSummaryBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.Builder getSummaryBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getSummaryFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.LapInformation.SummaryOrBuilder getSummaryOrBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.LapData.SummaryOrBuilder getSummaryOrBuilder() {
         if (summaryBuilder_ != null) {
           return summaryBuilder_.getMessageOrBuilder();
         } else {
@@ -13145,14 +13145,14 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>optional .pl.niekoniecznie.polar.model.LapInformation.Summary summary = 2;</code>
+       * <code>optional .pl.niekoniecznie.polar.model.LapData.Summary summary = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.Builder, pl.niekoniecznie.polar.model.PolarModel.LapInformation.SummaryOrBuilder> 
+          pl.niekoniecznie.polar.model.PolarModel.LapData.Summary, pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.Builder, pl.niekoniecznie.polar.model.PolarModel.LapData.SummaryOrBuilder> 
           getSummaryFieldBuilder() {
         if (summaryBuilder_ == null) {
           summaryBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary, pl.niekoniecznie.polar.model.PolarModel.LapInformation.Summary.Builder, pl.niekoniecznie.polar.model.PolarModel.LapInformation.SummaryOrBuilder>(
+              pl.niekoniecznie.polar.model.PolarModel.LapData.Summary, pl.niekoniecznie.polar.model.PolarModel.LapData.Summary.Builder, pl.niekoniecznie.polar.model.PolarModel.LapData.SummaryOrBuilder>(
                   getSummary(),
                   getParentForChildren(),
                   isClean());
@@ -13161,19 +13161,19 @@ public final class PolarModel {
         return summaryBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.LapInformation)
+      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.LapData)
     }
 
     static {
-      defaultInstance = new LapInformation(true);
+      defaultInstance = new LapData(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.LapInformation)
+    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.LapData)
   }
 
-  public interface RouteOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.Route)
+  public interface RouteDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.RouteData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -13255,25 +13255,25 @@ public final class PolarModel {
     pl.niekoniecznie.polar.model.PolarModel.DateTimeOrBuilder getTimestampOrBuilder();
   }
   /**
-   * Protobuf type {@code pl.niekoniecznie.polar.model.Route}
+   * Protobuf type {@code pl.niekoniecznie.polar.model.RouteData}
    */
-  public static final class Route extends
+  public static final class RouteData extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.Route)
-      RouteOrBuilder {
-    // Use Route.newBuilder() to construct.
-    private Route(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.RouteData)
+      RouteDataOrBuilder {
+    // Use RouteData.newBuilder() to construct.
+    private RouteData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private Route(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private RouteData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final Route defaultInstance;
-    public static Route getDefaultInstance() {
+    private static final RouteData defaultInstance;
+    public static RouteData getDefaultInstance() {
       return defaultInstance;
     }
 
-    public Route getDefaultInstanceForType() {
+    public RouteData getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -13283,7 +13283,7 @@ public final class PolarModel {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private Route(
+    private RouteData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -13453,28 +13453,28 @@ public final class PolarModel {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Route_descriptor;
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_RouteData_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Route_fieldAccessorTable
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_RouteData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              pl.niekoniecznie.polar.model.PolarModel.Route.class, pl.niekoniecznie.polar.model.PolarModel.Route.Builder.class);
+              pl.niekoniecznie.polar.model.PolarModel.RouteData.class, pl.niekoniecznie.polar.model.PolarModel.RouteData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<Route> PARSER =
-        new com.google.protobuf.AbstractParser<Route>() {
-      public Route parsePartialFrom(
+    public static com.google.protobuf.Parser<RouteData> PARSER =
+        new com.google.protobuf.AbstractParser<RouteData>() {
+      public RouteData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Route(input, extensionRegistry);
+        return new RouteData(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Route> getParserForType() {
+    public com.google.protobuf.Parser<RouteData> getParserForType() {
       return PARSER;
     }
 
@@ -13721,53 +13721,53 @@ public final class PolarModel {
       return super.writeReplace();
     }
 
-    public static pl.niekoniecznie.polar.model.PolarModel.Route parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.RouteData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Route parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.RouteData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Route parseFrom(byte[] data)
+    public static pl.niekoniecznie.polar.model.PolarModel.RouteData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Route parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.RouteData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Route parseFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.RouteData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Route parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.RouteData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Route parseDelimitedFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.RouteData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Route parseDelimitedFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.RouteData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Route parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.RouteData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Route parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.RouteData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -13776,7 +13776,7 @@ public final class PolarModel {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.Route prototype) {
+    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.RouteData prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -13788,25 +13788,25 @@ public final class PolarModel {
       return builder;
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.Route}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.RouteData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.Route)
-        pl.niekoniecznie.polar.model.PolarModel.RouteOrBuilder {
+        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.RouteData)
+        pl.niekoniecznie.polar.model.PolarModel.RouteDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Route_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_RouteData_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Route_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_RouteData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.Route.class, pl.niekoniecznie.polar.model.PolarModel.Route.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.RouteData.class, pl.niekoniecznie.polar.model.PolarModel.RouteData.Builder.class);
       }
 
-      // Construct using pl.niekoniecznie.polar.model.PolarModel.Route.newBuilder()
+      // Construct using pl.niekoniecznie.polar.model.PolarModel.RouteData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -13852,23 +13852,23 @@ public final class PolarModel {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Route_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_RouteData_descriptor;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Route getDefaultInstanceForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.Route.getDefaultInstance();
+      public pl.niekoniecznie.polar.model.PolarModel.RouteData getDefaultInstanceForType() {
+        return pl.niekoniecznie.polar.model.PolarModel.RouteData.getDefaultInstance();
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Route build() {
-        pl.niekoniecznie.polar.model.PolarModel.Route result = buildPartial();
+      public pl.niekoniecznie.polar.model.PolarModel.RouteData build() {
+        pl.niekoniecznie.polar.model.PolarModel.RouteData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Route buildPartial() {
-        pl.niekoniecznie.polar.model.PolarModel.Route result = new pl.niekoniecznie.polar.model.PolarModel.Route(this);
+      public pl.niekoniecznie.polar.model.PolarModel.RouteData buildPartial() {
+        pl.niekoniecznie.polar.model.PolarModel.RouteData result = new pl.niekoniecznie.polar.model.PolarModel.RouteData(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -13910,16 +13910,16 @@ public final class PolarModel {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.Route) {
-          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.Route)other);
+        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.RouteData) {
+          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.RouteData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.Route other) {
-        if (other == pl.niekoniecznie.polar.model.PolarModel.Route.getDefaultInstance()) return this;
+      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.RouteData other) {
+        if (other == pl.niekoniecznie.polar.model.PolarModel.RouteData.getDefaultInstance()) return this;
         if (!other.duration_.isEmpty()) {
           if (duration_.isEmpty()) {
             duration_ = other.duration_;
@@ -13993,11 +13993,11 @@ public final class PolarModel {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        pl.niekoniecznie.polar.model.PolarModel.Route parsedMessage = null;
+        pl.niekoniecznie.polar.model.PolarModel.RouteData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.Route) e.getUnfinishedMessage();
+          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.RouteData) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -14454,19 +14454,19 @@ public final class PolarModel {
         return timestampBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.Route)
+      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.RouteData)
     }
 
     static {
-      defaultInstance = new Route(true);
+      defaultInstance = new RouteData(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.Route)
+    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.RouteData)
   }
 
-  public interface SampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.Sample)
+  public interface SampleDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.SampleData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -14535,25 +14535,25 @@ public final class PolarModel {
     float getDistance(int index);
   }
   /**
-   * Protobuf type {@code pl.niekoniecznie.polar.model.Sample}
+   * Protobuf type {@code pl.niekoniecznie.polar.model.SampleData}
    */
-  public static final class Sample extends
+  public static final class SampleData extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.Sample)
-      SampleOrBuilder {
-    // Use Sample.newBuilder() to construct.
-    private Sample(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.SampleData)
+      SampleDataOrBuilder {
+    // Use SampleData.newBuilder() to construct.
+    private SampleData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private Sample(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private SampleData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final Sample defaultInstance;
-    public static Sample getDefaultInstance() {
+    private static final SampleData defaultInstance;
+    public static SampleData getDefaultInstance() {
       return defaultInstance;
     }
 
-    public Sample getDefaultInstanceForType() {
+    public SampleData getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -14563,7 +14563,7 @@ public final class PolarModel {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private Sample(
+    private SampleData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -14709,28 +14709,28 @@ public final class PolarModel {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Sample_descriptor;
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SampleData_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Sample_fieldAccessorTable
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SampleData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              pl.niekoniecznie.polar.model.PolarModel.Sample.class, pl.niekoniecznie.polar.model.PolarModel.Sample.Builder.class);
+              pl.niekoniecznie.polar.model.PolarModel.SampleData.class, pl.niekoniecznie.polar.model.PolarModel.SampleData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<Sample> PARSER =
-        new com.google.protobuf.AbstractParser<Sample>() {
-      public Sample parsePartialFrom(
+    public static com.google.protobuf.Parser<SampleData> PARSER =
+        new com.google.protobuf.AbstractParser<SampleData>() {
+      public SampleData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Sample(input, extensionRegistry);
+        return new SampleData(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Sample> getParserForType() {
+    public com.google.protobuf.Parser<SampleData> getParserForType() {
       return PARSER;
     }
 
@@ -14935,53 +14935,53 @@ public final class PolarModel {
       return super.writeReplace();
     }
 
-    public static pl.niekoniecznie.polar.model.PolarModel.Sample parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.SampleData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Sample parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.SampleData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Sample parseFrom(byte[] data)
+    public static pl.niekoniecznie.polar.model.PolarModel.SampleData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Sample parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.SampleData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Sample parseFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.SampleData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Sample parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.SampleData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Sample parseDelimitedFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.SampleData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Sample parseDelimitedFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.SampleData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Sample parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.SampleData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Sample parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.SampleData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -14990,7 +14990,7 @@ public final class PolarModel {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.Sample prototype) {
+    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.SampleData prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -15002,25 +15002,25 @@ public final class PolarModel {
       return builder;
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.Sample}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.SampleData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.Sample)
-        pl.niekoniecznie.polar.model.PolarModel.SampleOrBuilder {
+        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.SampleData)
+        pl.niekoniecznie.polar.model.PolarModel.SampleDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Sample_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SampleData_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Sample_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SampleData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.Sample.class, pl.niekoniecznie.polar.model.PolarModel.Sample.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.SampleData.class, pl.niekoniecznie.polar.model.PolarModel.SampleData.Builder.class);
       }
 
-      // Construct using pl.niekoniecznie.polar.model.PolarModel.Sample.newBuilder()
+      // Construct using pl.niekoniecznie.polar.model.PolarModel.SampleData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -15064,23 +15064,23 @@ public final class PolarModel {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Sample_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_SampleData_descriptor;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Sample getDefaultInstanceForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.Sample.getDefaultInstance();
+      public pl.niekoniecznie.polar.model.PolarModel.SampleData getDefaultInstanceForType() {
+        return pl.niekoniecznie.polar.model.PolarModel.SampleData.getDefaultInstance();
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Sample build() {
-        pl.niekoniecznie.polar.model.PolarModel.Sample result = buildPartial();
+      public pl.niekoniecznie.polar.model.PolarModel.SampleData build() {
+        pl.niekoniecznie.polar.model.PolarModel.SampleData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Sample buildPartial() {
-        pl.niekoniecznie.polar.model.PolarModel.Sample result = new pl.niekoniecznie.polar.model.PolarModel.Sample(this);
+      public pl.niekoniecznie.polar.model.PolarModel.SampleData buildPartial() {
+        pl.niekoniecznie.polar.model.PolarModel.SampleData result = new pl.niekoniecznie.polar.model.PolarModel.SampleData(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -15117,16 +15117,16 @@ public final class PolarModel {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.Sample) {
-          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.Sample)other);
+        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.SampleData) {
+          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.SampleData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.Sample other) {
-        if (other == pl.niekoniecznie.polar.model.PolarModel.Sample.getDefaultInstance()) return this;
+      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.SampleData other) {
+        if (other == pl.niekoniecznie.polar.model.PolarModel.SampleData.getDefaultInstance()) return this;
         if (other.hasInterval()) {
           mergeInterval(other.getInterval());
         }
@@ -15186,11 +15186,11 @@ public final class PolarModel {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        pl.niekoniecznie.polar.model.PolarModel.Sample parsedMessage = null;
+        pl.niekoniecznie.polar.model.PolarModel.SampleData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.Sample) e.getUnfinishedMessage();
+          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.SampleData) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -15581,19 +15581,19 @@ public final class PolarModel {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.Sample)
+      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.SampleData)
     }
 
     static {
-      defaultInstance = new Sample(true);
+      defaultInstance = new SampleData(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.Sample)
+    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.SampleData)
   }
 
-  public interface StatisticOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.Statistic)
+  public interface StatisticDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.StatisticData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -15636,25 +15636,25 @@ public final class PolarModel {
     pl.niekoniecznie.polar.model.PolarModel.AltitudeOrBuilder getAltitudeOrBuilder();
   }
   /**
-   * Protobuf type {@code pl.niekoniecznie.polar.model.Statistic}
+   * Protobuf type {@code pl.niekoniecznie.polar.model.StatisticData}
    */
-  public static final class Statistic extends
+  public static final class StatisticData extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.Statistic)
-      StatisticOrBuilder {
-    // Use Statistic.newBuilder() to construct.
-    private Statistic(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.StatisticData)
+      StatisticDataOrBuilder {
+    // Use StatisticData.newBuilder() to construct.
+    private StatisticData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private Statistic(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private StatisticData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final Statistic defaultInstance;
-    public static Statistic getDefaultInstance() {
+    private static final StatisticData defaultInstance;
+    public static StatisticData getDefaultInstance() {
       return defaultInstance;
     }
 
-    public Statistic getDefaultInstanceForType() {
+    public StatisticData getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -15664,7 +15664,7 @@ public final class PolarModel {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private Statistic(
+    private StatisticData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -15740,28 +15740,28 @@ public final class PolarModel {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Statistic_descriptor;
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_StatisticData_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Statistic_fieldAccessorTable
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_StatisticData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              pl.niekoniecznie.polar.model.PolarModel.Statistic.class, pl.niekoniecznie.polar.model.PolarModel.Statistic.Builder.class);
+              pl.niekoniecznie.polar.model.PolarModel.StatisticData.class, pl.niekoniecznie.polar.model.PolarModel.StatisticData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<Statistic> PARSER =
-        new com.google.protobuf.AbstractParser<Statistic>() {
-      public Statistic parsePartialFrom(
+    public static com.google.protobuf.Parser<StatisticData> PARSER =
+        new com.google.protobuf.AbstractParser<StatisticData>() {
+      public StatisticData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Statistic(input, extensionRegistry);
+        return new StatisticData(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Statistic> getParserForType() {
+    public com.google.protobuf.Parser<StatisticData> getParserForType() {
       return PARSER;
     }
 
@@ -15909,53 +15909,53 @@ public final class PolarModel {
       return super.writeReplace();
     }
 
-    public static pl.niekoniecznie.polar.model.PolarModel.Statistic parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.StatisticData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Statistic parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.StatisticData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Statistic parseFrom(byte[] data)
+    public static pl.niekoniecznie.polar.model.PolarModel.StatisticData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Statistic parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.StatisticData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Statistic parseFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.StatisticData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Statistic parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.StatisticData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Statistic parseDelimitedFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.StatisticData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Statistic parseDelimitedFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.StatisticData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Statistic parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.StatisticData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Statistic parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.StatisticData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -15964,7 +15964,7 @@ public final class PolarModel {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.Statistic prototype) {
+    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.StatisticData prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -15976,25 +15976,25 @@ public final class PolarModel {
       return builder;
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.Statistic}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.StatisticData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.Statistic)
-        pl.niekoniecznie.polar.model.PolarModel.StatisticOrBuilder {
+        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.StatisticData)
+        pl.niekoniecznie.polar.model.PolarModel.StatisticDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Statistic_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_StatisticData_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Statistic_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_StatisticData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.Statistic.class, pl.niekoniecznie.polar.model.PolarModel.Statistic.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.StatisticData.class, pl.niekoniecznie.polar.model.PolarModel.StatisticData.Builder.class);
       }
 
-      // Construct using pl.niekoniecznie.polar.model.PolarModel.Statistic.newBuilder()
+      // Construct using pl.niekoniecznie.polar.model.PolarModel.StatisticData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -16044,23 +16044,23 @@ public final class PolarModel {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Statistic_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_StatisticData_descriptor;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Statistic getDefaultInstanceForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.Statistic.getDefaultInstance();
+      public pl.niekoniecznie.polar.model.PolarModel.StatisticData getDefaultInstanceForType() {
+        return pl.niekoniecznie.polar.model.PolarModel.StatisticData.getDefaultInstance();
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Statistic build() {
-        pl.niekoniecznie.polar.model.PolarModel.Statistic result = buildPartial();
+      public pl.niekoniecznie.polar.model.PolarModel.StatisticData build() {
+        pl.niekoniecznie.polar.model.PolarModel.StatisticData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Statistic buildPartial() {
-        pl.niekoniecznie.polar.model.PolarModel.Statistic result = new pl.niekoniecznie.polar.model.PolarModel.Statistic(this);
+      public pl.niekoniecznie.polar.model.PolarModel.StatisticData buildPartial() {
+        pl.niekoniecznie.polar.model.PolarModel.StatisticData result = new pl.niekoniecznie.polar.model.PolarModel.StatisticData(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -16093,16 +16093,16 @@ public final class PolarModel {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.Statistic) {
-          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.Statistic)other);
+        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.StatisticData) {
+          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.StatisticData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.Statistic other) {
-        if (other == pl.niekoniecznie.polar.model.PolarModel.Statistic.getDefaultInstance()) return this;
+      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.StatisticData other) {
+        if (other == pl.niekoniecznie.polar.model.PolarModel.StatisticData.getDefaultInstance()) return this;
         if (other.hasHeartrate()) {
           mergeHeartrate(other.getHeartrate());
         }
@@ -16144,11 +16144,11 @@ public final class PolarModel {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        pl.niekoniecznie.polar.model.PolarModel.Statistic parsedMessage = null;
+        pl.niekoniecznie.polar.model.PolarModel.StatisticData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.Statistic) e.getUnfinishedMessage();
+          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.StatisticData) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -16507,98 +16507,98 @@ public final class PolarModel {
         return altitudeBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.Statistic)
+      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.StatisticData)
     }
 
     static {
-      defaultInstance = new Statistic(true);
+      defaultInstance = new StatisticData(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.Statistic)
+    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.StatisticData)
   }
 
-  public interface ZoneOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.Zone)
+  public interface ZoneDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.ZoneData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
      */
-    java.util.List<pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone> 
+    java.util.List<pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone> 
         getHeartrateZoneList();
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone getHeartrateZone(int index);
+    pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone getHeartrateZone(int index);
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
      */
     int getHeartrateZoneCount();
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
      */
-    java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZoneOrBuilder> 
+    java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZoneOrBuilder> 
         getHeartrateZoneOrBuilderList();
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZoneOrBuilder getHeartrateZoneOrBuilder(
+    pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZoneOrBuilder getHeartrateZoneOrBuilder(
         int index);
 
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
      */
-    java.util.List<pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone> 
+    java.util.List<pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone> 
         getSpeedZoneList();
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone getSpeedZone(int index);
+    pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone getSpeedZone(int index);
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
      */
     int getSpeedZoneCount();
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
      */
-    java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZoneOrBuilder> 
+    java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZoneOrBuilder> 
         getSpeedZoneOrBuilderList();
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZoneOrBuilder getSpeedZoneOrBuilder(
+    pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZoneOrBuilder getSpeedZoneOrBuilder(
         int index);
 
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateSource heartrateSource = 10;</code>
+     * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateSource heartrateSource = 10;</code>
      */
     boolean hasHeartrateSource();
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateSource heartrateSource = 10;</code>
+     * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateSource heartrateSource = 10;</code>
      */
-    pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateSource getHeartrateSource();
+    pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateSource getHeartrateSource();
   }
   /**
-   * Protobuf type {@code pl.niekoniecznie.polar.model.Zone}
+   * Protobuf type {@code pl.niekoniecznie.polar.model.ZoneData}
    */
-  public static final class Zone extends
+  public static final class ZoneData extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.Zone)
-      ZoneOrBuilder {
-    // Use Zone.newBuilder() to construct.
-    private Zone(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.ZoneData)
+      ZoneDataOrBuilder {
+    // Use ZoneData.newBuilder() to construct.
+    private ZoneData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private Zone(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private ZoneData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final Zone defaultInstance;
-    public static Zone getDefaultInstance() {
+    private static final ZoneData defaultInstance;
+    public static ZoneData getDefaultInstance() {
       return defaultInstance;
     }
 
-    public Zone getDefaultInstanceForType() {
+    public ZoneData getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -16608,7 +16608,7 @@ public final class PolarModel {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private Zone(
+    private ZoneData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -16633,23 +16633,23 @@ public final class PolarModel {
             }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                heartrateZone_ = new java.util.ArrayList<pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone>();
+                heartrateZone_ = new java.util.ArrayList<pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              heartrateZone_.add(input.readMessage(pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.PARSER, extensionRegistry));
+              heartrateZone_.add(input.readMessage(pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.PARSER, extensionRegistry));
               break;
             }
             case 34: {
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                speedZone_ = new java.util.ArrayList<pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone>();
+                speedZone_ = new java.util.ArrayList<pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              speedZone_.add(input.readMessage(pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.PARSER, extensionRegistry));
+              speedZone_.add(input.readMessage(pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.PARSER, extensionRegistry));
               break;
             }
             case 80: {
               int rawValue = input.readEnum();
-              pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateSource value = pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateSource.valueOf(rawValue);
+              pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateSource value = pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateSource.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(10, rawValue);
               } else {
@@ -16678,33 +16678,33 @@ public final class PolarModel {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_descriptor;
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_fieldAccessorTable
+      return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              pl.niekoniecznie.polar.model.PolarModel.Zone.class, pl.niekoniecznie.polar.model.PolarModel.Zone.Builder.class);
+              pl.niekoniecznie.polar.model.PolarModel.ZoneData.class, pl.niekoniecznie.polar.model.PolarModel.ZoneData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<Zone> PARSER =
-        new com.google.protobuf.AbstractParser<Zone>() {
-      public Zone parsePartialFrom(
+    public static com.google.protobuf.Parser<ZoneData> PARSER =
+        new com.google.protobuf.AbstractParser<ZoneData>() {
+      public ZoneData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Zone(input, extensionRegistry);
+        return new ZoneData(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Zone> getParserForType() {
+    public com.google.protobuf.Parser<ZoneData> getParserForType() {
       return PARSER;
     }
 
     /**
-     * Protobuf enum {@code pl.niekoniecznie.polar.model.Zone.HeartrateSource}
+     * Protobuf enum {@code pl.niekoniecznie.polar.model.ZoneData.HeartrateSource}
      */
     public enum HeartrateSource
         implements com.google.protobuf.ProtocolMessageEnum {
@@ -16751,7 +16751,7 @@ public final class PolarModel {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.Zone.getDescriptor().getEnumTypes().get(0);
+        return pl.niekoniecznie.polar.model.PolarModel.ZoneData.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final HeartrateSource[] VALUES = values();
@@ -16773,25 +16773,25 @@ public final class PolarModel {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:pl.niekoniecznie.polar.model.Zone.HeartrateSource)
+      // @@protoc_insertion_point(enum_scope:pl.niekoniecznie.polar.model.ZoneData.HeartrateSource)
     }
 
     public interface HeartrateZoneOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.Zone.HeartrateZone)
+        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.ZoneData.HeartrateZone)
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
        */
       boolean hasLimit();
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
        */
-      pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit getLimit();
+      pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit getLimit();
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
        */
-      pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.LimitOrBuilder getLimitOrBuilder();
+      pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.LimitOrBuilder getLimitOrBuilder();
 
       /**
        * <code>required .pl.niekoniecznie.polar.model.Time duration = 2;</code>
@@ -16807,11 +16807,11 @@ public final class PolarModel {
       pl.niekoniecznie.polar.model.PolarModel.TimeOrBuilder getDurationOrBuilder();
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.Zone.HeartrateZone}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.ZoneData.HeartrateZone}
      */
     public static final class HeartrateZone extends
         com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.Zone.HeartrateZone)
+        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.ZoneData.HeartrateZone)
         HeartrateZoneOrBuilder {
       // Use HeartrateZone.newBuilder() to construct.
       private HeartrateZone(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -16859,11 +16859,11 @@ public final class PolarModel {
                 break;
               }
               case 10: {
-                pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.Builder subBuilder = null;
+                pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000001) == 0x00000001)) {
                   subBuilder = limit_.toBuilder();
                 }
-                limit_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.PARSER, extensionRegistry);
+                limit_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(limit_);
                   limit_ = subBuilder.buildPartial();
@@ -16898,14 +16898,14 @@ public final class PolarModel {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.class, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.class, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Builder.class);
       }
 
       public static com.google.protobuf.Parser<HeartrateZone> PARSER =
@@ -16924,7 +16924,7 @@ public final class PolarModel {
       }
 
       public interface LimitOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit)
+          // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit)
           com.google.protobuf.MessageOrBuilder {
 
         /**
@@ -16946,11 +16946,11 @@ public final class PolarModel {
         int getHight();
       }
       /**
-       * Protobuf type {@code pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit}
+       * Protobuf type {@code pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit}
        */
       public static final class Limit extends
           com.google.protobuf.GeneratedMessage implements
-          // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit)
+          // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit)
           LimitOrBuilder {
         // Use Limit.newBuilder() to construct.
         private Limit(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -17021,14 +17021,14 @@ public final class PolarModel {
         }
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_Limit_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_Limit_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_Limit_fieldAccessorTable
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_Limit_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.class, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.Builder.class);
+                  pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.class, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.Builder.class);
         }
 
         public static com.google.protobuf.Parser<Limit> PARSER =
@@ -17137,53 +17137,53 @@ public final class PolarModel {
           return super.writeReplace();
         }
 
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit parseFrom(byte[] data)
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit parseFrom(java.io.InputStream input)
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit parseFrom(java.io.InputStream input)
             throws java.io.IOException {
           return PARSER.parseFrom(input);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit parseDelimitedFrom(java.io.InputStream input)
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
           return PARSER.parseDelimitedFrom(input);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit parseDelimitedFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseDelimitedFrom(input, extensionRegistry);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return PARSER.parseFrom(input);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -17192,7 +17192,7 @@ public final class PolarModel {
 
         public static Builder newBuilder() { return Builder.create(); }
         public Builder newBuilderForType() { return newBuilder(); }
-        public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit prototype) {
+        public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit prototype) {
           return newBuilder().mergeFrom(prototype);
         }
         public Builder toBuilder() { return newBuilder(this); }
@@ -17204,25 +17204,25 @@ public final class PolarModel {
           return builder;
         }
         /**
-         * Protobuf type {@code pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit}
+         * Protobuf type {@code pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit}
          */
         public static final class Builder extends
             com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit)
-            pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.LimitOrBuilder {
+            // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit)
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.LimitOrBuilder {
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_Limit_descriptor;
+            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_Limit_descriptor;
           }
 
           protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_Limit_fieldAccessorTable
+            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_Limit_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.class, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.Builder.class);
+                    pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.class, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.Builder.class);
           }
 
-          // Construct using pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.newBuilder()
+          // Construct using pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -17255,23 +17255,23 @@ public final class PolarModel {
 
           public com.google.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
-            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_Limit_descriptor;
+            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_Limit_descriptor;
           }
 
-          public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit getDefaultInstanceForType() {
-            return pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.getDefaultInstance();
+          public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit getDefaultInstanceForType() {
+            return pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.getDefaultInstance();
           }
 
-          public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit build() {
-            pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit result = buildPartial();
+          public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit build() {
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit result = buildPartial();
             if (!result.isInitialized()) {
               throw newUninitializedMessageException(result);
             }
             return result;
           }
 
-          public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit buildPartial() {
-            pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit result = new pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit(this);
+          public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit buildPartial() {
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit result = new pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit(this);
             int from_bitField0_ = bitField0_;
             int to_bitField0_ = 0;
             if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -17288,16 +17288,16 @@ public final class PolarModel {
           }
 
           public Builder mergeFrom(com.google.protobuf.Message other) {
-            if (other instanceof pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit) {
-              return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit)other);
+            if (other instanceof pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit) {
+              return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit)other);
             } else {
               super.mergeFrom(other);
               return this;
             }
           }
 
-          public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit other) {
-            if (other == pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.getDefaultInstance()) return this;
+          public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit other) {
+            if (other == pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.getDefaultInstance()) return this;
             if (other.hasLow()) {
               setLow(other.getLow());
             }
@@ -17324,11 +17324,11 @@ public final class PolarModel {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-            pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit parsedMessage = null;
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
             } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit) e.getUnfinishedMessage();
+              parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit) e.getUnfinishedMessage();
               throw e;
             } finally {
               if (parsedMessage != null) {
@@ -17403,7 +17403,7 @@ public final class PolarModel {
             return this;
           }
 
-          // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit)
+          // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit)
         }
 
         static {
@@ -17411,28 +17411,28 @@ public final class PolarModel {
           defaultInstance.initFields();
         }
 
-        // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit)
+        // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit)
       }
 
       private int bitField0_;
       public static final int LIMIT_FIELD_NUMBER = 1;
-      private pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit limit_;
+      private pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit limit_;
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
        */
       public boolean hasLimit() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit getLimit() {
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit getLimit() {
         return limit_;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.LimitOrBuilder getLimitOrBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.LimitOrBuilder getLimitOrBuilder() {
         return limit_;
       }
 
@@ -17458,7 +17458,7 @@ public final class PolarModel {
       }
 
       private void initFields() {
-        limit_ = pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.getDefaultInstance();
+        limit_ = pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.getDefaultInstance();
         duration_ = pl.niekoniecznie.polar.model.PolarModel.Time.getDefaultInstance();
       }
       private byte memoizedIsInitialized = -1;
@@ -17521,53 +17521,53 @@ public final class PolarModel {
         return super.writeReplace();
       }
 
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone parseFrom(byte[] data)
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone parseFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone parseDelimitedFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone parseDelimitedFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -17576,7 +17576,7 @@ public final class PolarModel {
 
       public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone prototype) {
+      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone prototype) {
         return newBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() { return newBuilder(this); }
@@ -17588,25 +17588,25 @@ public final class PolarModel {
         return builder;
       }
       /**
-       * Protobuf type {@code pl.niekoniecznie.polar.model.Zone.HeartrateZone}
+       * Protobuf type {@code pl.niekoniecznie.polar.model.ZoneData.HeartrateZone}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.Zone.HeartrateZone)
-          pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZoneOrBuilder {
+          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.ZoneData.HeartrateZone)
+          pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZoneOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_fieldAccessorTable
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.class, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Builder.class);
+                  pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.class, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Builder.class);
         }
 
-        // Construct using pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.newBuilder()
+        // Construct using pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -17629,7 +17629,7 @@ public final class PolarModel {
         public Builder clear() {
           super.clear();
           if (limitBuilder_ == null) {
-            limit_ = pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.getDefaultInstance();
+            limit_ = pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.getDefaultInstance();
           } else {
             limitBuilder_.clear();
           }
@@ -17649,23 +17649,23 @@ public final class PolarModel {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_descriptor;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone getDefaultInstanceForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.getDefaultInstance();
+        public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone getDefaultInstanceForType() {
+          return pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.getDefaultInstance();
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone build() {
-          pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone result = buildPartial();
+        public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone build() {
+          pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone buildPartial() {
-          pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone result = new pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone(this);
+        public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone buildPartial() {
+          pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone result = new pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -17690,16 +17690,16 @@ public final class PolarModel {
         }
 
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone) {
-            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone)other);
+          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone) {
+            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone other) {
-          if (other == pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.getDefaultInstance()) return this;
+        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone other) {
+          if (other == pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.getDefaultInstance()) return this;
           if (other.hasLimit()) {
             mergeLimit(other.getLimit());
           }
@@ -17730,11 +17730,11 @@ public final class PolarModel {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone parsedMessage = null;
+          pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone) e.getUnfinishedMessage();
+            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone) e.getUnfinishedMessage();
             throw e;
           } finally {
             if (parsedMessage != null) {
@@ -17745,19 +17745,19 @@ public final class PolarModel {
         }
         private int bitField0_;
 
-        private pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit limit_ = pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.getDefaultInstance();
+        private pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit limit_ = pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.Builder, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.LimitOrBuilder> limitBuilder_;
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.Builder, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.LimitOrBuilder> limitBuilder_;
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
          */
         public boolean hasLimit() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
          */
-        public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit getLimit() {
+        public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit getLimit() {
           if (limitBuilder_ == null) {
             return limit_;
           } else {
@@ -17765,9 +17765,9 @@ public final class PolarModel {
           }
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
          */
-        public Builder setLimit(pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit value) {
+        public Builder setLimit(pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit value) {
           if (limitBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -17781,10 +17781,10 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
          */
         public Builder setLimit(
-            pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.Builder builderForValue) {
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.Builder builderForValue) {
           if (limitBuilder_ == null) {
             limit_ = builderForValue.build();
             onChanged();
@@ -17795,14 +17795,14 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
          */
-        public Builder mergeLimit(pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit value) {
+        public Builder mergeLimit(pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit value) {
           if (limitBuilder_ == null) {
             if (((bitField0_ & 0x00000001) == 0x00000001) &&
-                limit_ != pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.getDefaultInstance()) {
+                limit_ != pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.getDefaultInstance()) {
               limit_ =
-                pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.newBuilder(limit_).mergeFrom(value).buildPartial();
+                pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.newBuilder(limit_).mergeFrom(value).buildPartial();
             } else {
               limit_ = value;
             }
@@ -17814,11 +17814,11 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
          */
         public Builder clearLimit() {
           if (limitBuilder_ == null) {
-            limit_ = pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.getDefaultInstance();
+            limit_ = pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.getDefaultInstance();
             onChanged();
           } else {
             limitBuilder_.clear();
@@ -17827,17 +17827,17 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
          */
-        public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.Builder getLimitBuilder() {
+        public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.Builder getLimitBuilder() {
           bitField0_ |= 0x00000001;
           onChanged();
           return getLimitFieldBuilder().getBuilder();
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
          */
-        public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.LimitOrBuilder getLimitOrBuilder() {
+        public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.LimitOrBuilder getLimitOrBuilder() {
           if (limitBuilder_ != null) {
             return limitBuilder_.getMessageOrBuilder();
           } else {
@@ -17845,14 +17845,14 @@ public final class PolarModel {
           }
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone.Limit limit = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.Builder, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.LimitOrBuilder> 
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.Builder, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.LimitOrBuilder> 
             getLimitFieldBuilder() {
           if (limitBuilder_ == null) {
             limitBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Limit.Builder, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.LimitOrBuilder>(
+                pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Limit.Builder, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.LimitOrBuilder>(
                     getLimit(),
                     getParentForChildren(),
                     isClean());
@@ -17977,7 +17977,7 @@ public final class PolarModel {
           return durationBuilder_;
         }
 
-        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.Zone.HeartrateZone)
+        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.ZoneData.HeartrateZone)
       }
 
       static {
@@ -17985,25 +17985,25 @@ public final class PolarModel {
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.Zone.HeartrateZone)
+      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.ZoneData.HeartrateZone)
     }
 
     public interface SpeedZoneOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.Zone.SpeedZone)
+        // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.ZoneData.SpeedZone)
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
        */
       boolean hasLimit();
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
        */
-      pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit getLimit();
+      pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit getLimit();
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
        */
-      pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.LimitOrBuilder getLimitOrBuilder();
+      pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.LimitOrBuilder getLimitOrBuilder();
 
       /**
        * <code>required .pl.niekoniecznie.polar.model.Time duration = 2;</code>
@@ -18028,11 +18028,11 @@ public final class PolarModel {
       float getDistance();
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.Zone.SpeedZone}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.ZoneData.SpeedZone}
      */
     public static final class SpeedZone extends
         com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.Zone.SpeedZone)
+        // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.ZoneData.SpeedZone)
         SpeedZoneOrBuilder {
       // Use SpeedZone.newBuilder() to construct.
       private SpeedZone(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -18080,11 +18080,11 @@ public final class PolarModel {
                 break;
               }
               case 10: {
-                pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.Builder subBuilder = null;
+                pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000001) == 0x00000001)) {
                   subBuilder = limit_.toBuilder();
                 }
-                limit_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.PARSER, extensionRegistry);
+                limit_ = input.readMessage(pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(limit_);
                   limit_ = subBuilder.buildPartial();
@@ -18124,14 +18124,14 @@ public final class PolarModel {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.class, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.class, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Builder.class);
       }
 
       public static com.google.protobuf.Parser<SpeedZone> PARSER =
@@ -18150,7 +18150,7 @@ public final class PolarModel {
       }
 
       public interface LimitOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit)
+          // @@protoc_insertion_point(interface_extends:pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit)
           com.google.protobuf.MessageOrBuilder {
 
         /**
@@ -18172,11 +18172,11 @@ public final class PolarModel {
         float getHigh();
       }
       /**
-       * Protobuf type {@code pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit}
+       * Protobuf type {@code pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit}
        */
       public static final class Limit extends
           com.google.protobuf.GeneratedMessage implements
-          // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit)
+          // @@protoc_insertion_point(message_implements:pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit)
           LimitOrBuilder {
         // Use Limit.newBuilder() to construct.
         private Limit(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -18247,14 +18247,14 @@ public final class PolarModel {
         }
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_Limit_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_Limit_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_Limit_fieldAccessorTable
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_Limit_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.class, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.Builder.class);
+                  pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.class, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.Builder.class);
         }
 
         public static com.google.protobuf.Parser<Limit> PARSER =
@@ -18363,53 +18363,53 @@ public final class PolarModel {
           return super.writeReplace();
         }
 
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit parseFrom(byte[] data)
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit parseFrom(java.io.InputStream input)
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit parseFrom(java.io.InputStream input)
             throws java.io.IOException {
           return PARSER.parseFrom(input);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit parseDelimitedFrom(java.io.InputStream input)
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
           return PARSER.parseDelimitedFrom(input);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit parseDelimitedFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseDelimitedFrom(input, extensionRegistry);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return PARSER.parseFrom(input);
         }
-        public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit parseFrom(
+        public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -18418,7 +18418,7 @@ public final class PolarModel {
 
         public static Builder newBuilder() { return Builder.create(); }
         public Builder newBuilderForType() { return newBuilder(); }
-        public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit prototype) {
+        public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit prototype) {
           return newBuilder().mergeFrom(prototype);
         }
         public Builder toBuilder() { return newBuilder(this); }
@@ -18430,25 +18430,25 @@ public final class PolarModel {
           return builder;
         }
         /**
-         * Protobuf type {@code pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit}
+         * Protobuf type {@code pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit}
          */
         public static final class Builder extends
             com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit)
-            pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.LimitOrBuilder {
+            // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit)
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.LimitOrBuilder {
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_Limit_descriptor;
+            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_Limit_descriptor;
           }
 
           protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_Limit_fieldAccessorTable
+            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_Limit_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.class, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.Builder.class);
+                    pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.class, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.Builder.class);
           }
 
-          // Construct using pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.newBuilder()
+          // Construct using pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -18481,23 +18481,23 @@ public final class PolarModel {
 
           public com.google.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
-            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_Limit_descriptor;
+            return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_Limit_descriptor;
           }
 
-          public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit getDefaultInstanceForType() {
-            return pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.getDefaultInstance();
+          public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit getDefaultInstanceForType() {
+            return pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.getDefaultInstance();
           }
 
-          public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit build() {
-            pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit result = buildPartial();
+          public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit build() {
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit result = buildPartial();
             if (!result.isInitialized()) {
               throw newUninitializedMessageException(result);
             }
             return result;
           }
 
-          public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit buildPartial() {
-            pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit result = new pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit(this);
+          public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit buildPartial() {
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit result = new pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit(this);
             int from_bitField0_ = bitField0_;
             int to_bitField0_ = 0;
             if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -18514,16 +18514,16 @@ public final class PolarModel {
           }
 
           public Builder mergeFrom(com.google.protobuf.Message other) {
-            if (other instanceof pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit) {
-              return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit)other);
+            if (other instanceof pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit) {
+              return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit)other);
             } else {
               super.mergeFrom(other);
               return this;
             }
           }
 
-          public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit other) {
-            if (other == pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.getDefaultInstance()) return this;
+          public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit other) {
+            if (other == pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.getDefaultInstance()) return this;
             if (other.hasLow()) {
               setLow(other.getLow());
             }
@@ -18550,11 +18550,11 @@ public final class PolarModel {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-            pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit parsedMessage = null;
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
             } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit) e.getUnfinishedMessage();
+              parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit) e.getUnfinishedMessage();
               throw e;
             } finally {
               if (parsedMessage != null) {
@@ -18629,7 +18629,7 @@ public final class PolarModel {
             return this;
           }
 
-          // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit)
+          // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit)
         }
 
         static {
@@ -18637,28 +18637,28 @@ public final class PolarModel {
           defaultInstance.initFields();
         }
 
-        // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit)
+        // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit)
       }
 
       private int bitField0_;
       public static final int LIMIT_FIELD_NUMBER = 1;
-      private pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit limit_;
+      private pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit limit_;
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
        */
       public boolean hasLimit() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit getLimit() {
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit getLimit() {
         return limit_;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.LimitOrBuilder getLimitOrBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.LimitOrBuilder getLimitOrBuilder() {
         return limit_;
       }
 
@@ -18699,7 +18699,7 @@ public final class PolarModel {
       }
 
       private void initFields() {
-        limit_ = pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.getDefaultInstance();
+        limit_ = pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.getDefaultInstance();
         duration_ = pl.niekoniecznie.polar.model.PolarModel.Time.getDefaultInstance();
         distance_ = 0F;
       }
@@ -18774,53 +18774,53 @@ public final class PolarModel {
         return super.writeReplace();
       }
 
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone parseFrom(byte[] data)
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone parseFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone parseDelimitedFrom(java.io.InputStream input)
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone parseDelimitedFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone parseFrom(
+      public static pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -18829,7 +18829,7 @@ public final class PolarModel {
 
       public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone prototype) {
+      public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone prototype) {
         return newBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() { return newBuilder(this); }
@@ -18841,25 +18841,25 @@ public final class PolarModel {
         return builder;
       }
       /**
-       * Protobuf type {@code pl.niekoniecznie.polar.model.Zone.SpeedZone}
+       * Protobuf type {@code pl.niekoniecznie.polar.model.ZoneData.SpeedZone}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.Zone.SpeedZone)
-          pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZoneOrBuilder {
+          // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.ZoneData.SpeedZone)
+          pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZoneOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_fieldAccessorTable
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.class, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Builder.class);
+                  pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.class, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Builder.class);
         }
 
-        // Construct using pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.newBuilder()
+        // Construct using pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -18882,7 +18882,7 @@ public final class PolarModel {
         public Builder clear() {
           super.clear();
           if (limitBuilder_ == null) {
-            limit_ = pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.getDefaultInstance();
+            limit_ = pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.getDefaultInstance();
           } else {
             limitBuilder_.clear();
           }
@@ -18904,23 +18904,23 @@ public final class PolarModel {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_descriptor;
+          return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_descriptor;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone getDefaultInstanceForType() {
-          return pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.getDefaultInstance();
+        public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone getDefaultInstanceForType() {
+          return pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.getDefaultInstance();
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone build() {
-          pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone result = buildPartial();
+        public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone build() {
+          pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone buildPartial() {
-          pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone result = new pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone(this);
+        public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone buildPartial() {
+          pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone result = new pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -18949,16 +18949,16 @@ public final class PolarModel {
         }
 
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone) {
-            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone)other);
+          if (other instanceof pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone) {
+            return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone other) {
-          if (other == pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.getDefaultInstance()) return this;
+        public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone other) {
+          if (other == pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.getDefaultInstance()) return this;
           if (other.hasLimit()) {
             mergeLimit(other.getLimit());
           }
@@ -18996,11 +18996,11 @@ public final class PolarModel {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone parsedMessage = null;
+          pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone) e.getUnfinishedMessage();
+            parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone) e.getUnfinishedMessage();
             throw e;
           } finally {
             if (parsedMessage != null) {
@@ -19011,19 +19011,19 @@ public final class PolarModel {
         }
         private int bitField0_;
 
-        private pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit limit_ = pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.getDefaultInstance();
+        private pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit limit_ = pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.Builder, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.LimitOrBuilder> limitBuilder_;
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.Builder, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.LimitOrBuilder> limitBuilder_;
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
          */
         public boolean hasLimit() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
          */
-        public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit getLimit() {
+        public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit getLimit() {
           if (limitBuilder_ == null) {
             return limit_;
           } else {
@@ -19031,9 +19031,9 @@ public final class PolarModel {
           }
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
          */
-        public Builder setLimit(pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit value) {
+        public Builder setLimit(pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit value) {
           if (limitBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -19047,10 +19047,10 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
          */
         public Builder setLimit(
-            pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.Builder builderForValue) {
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.Builder builderForValue) {
           if (limitBuilder_ == null) {
             limit_ = builderForValue.build();
             onChanged();
@@ -19061,14 +19061,14 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
          */
-        public Builder mergeLimit(pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit value) {
+        public Builder mergeLimit(pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit value) {
           if (limitBuilder_ == null) {
             if (((bitField0_ & 0x00000001) == 0x00000001) &&
-                limit_ != pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.getDefaultInstance()) {
+                limit_ != pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.getDefaultInstance()) {
               limit_ =
-                pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.newBuilder(limit_).mergeFrom(value).buildPartial();
+                pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.newBuilder(limit_).mergeFrom(value).buildPartial();
             } else {
               limit_ = value;
             }
@@ -19080,11 +19080,11 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
          */
         public Builder clearLimit() {
           if (limitBuilder_ == null) {
-            limit_ = pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.getDefaultInstance();
+            limit_ = pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.getDefaultInstance();
             onChanged();
           } else {
             limitBuilder_.clear();
@@ -19093,17 +19093,17 @@ public final class PolarModel {
           return this;
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
          */
-        public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.Builder getLimitBuilder() {
+        public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.Builder getLimitBuilder() {
           bitField0_ |= 0x00000001;
           onChanged();
           return getLimitFieldBuilder().getBuilder();
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
          */
-        public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.LimitOrBuilder getLimitOrBuilder() {
+        public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.LimitOrBuilder getLimitOrBuilder() {
           if (limitBuilder_ != null) {
             return limitBuilder_.getMessageOrBuilder();
           } else {
@@ -19111,14 +19111,14 @@ public final class PolarModel {
           }
         }
         /**
-         * <code>required .pl.niekoniecznie.polar.model.Zone.SpeedZone.Limit limit = 1;</code>
+         * <code>required .pl.niekoniecznie.polar.model.ZoneData.SpeedZone.Limit limit = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.Builder, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.LimitOrBuilder> 
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.Builder, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.LimitOrBuilder> 
             getLimitFieldBuilder() {
           if (limitBuilder_ == null) {
             limitBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Limit.Builder, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.LimitOrBuilder>(
+                pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Limit.Builder, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.LimitOrBuilder>(
                     getLimit(),
                     getParentForChildren(),
                     isClean());
@@ -19275,7 +19275,7 @@ public final class PolarModel {
           return this;
         }
 
-        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.Zone.SpeedZone)
+        // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.ZoneData.SpeedZone)
       }
 
       static {
@@ -19283,99 +19283,99 @@ public final class PolarModel {
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.Zone.SpeedZone)
+      // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.ZoneData.SpeedZone)
     }
 
     private int bitField0_;
     public static final int HEARTRATEZONE_FIELD_NUMBER = 1;
-    private java.util.List<pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone> heartrateZone_;
+    private java.util.List<pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone> heartrateZone_;
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
      */
-    public java.util.List<pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone> getHeartrateZoneList() {
+    public java.util.List<pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone> getHeartrateZoneList() {
       return heartrateZone_;
     }
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
      */
-    public java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZoneOrBuilder> 
+    public java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZoneOrBuilder> 
         getHeartrateZoneOrBuilderList() {
       return heartrateZone_;
     }
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
      */
     public int getHeartrateZoneCount() {
       return heartrateZone_.size();
     }
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone getHeartrateZone(int index) {
+    public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone getHeartrateZone(int index) {
       return heartrateZone_.get(index);
     }
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZoneOrBuilder getHeartrateZoneOrBuilder(
+    public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZoneOrBuilder getHeartrateZoneOrBuilder(
         int index) {
       return heartrateZone_.get(index);
     }
 
     public static final int SPEEDZONE_FIELD_NUMBER = 4;
-    private java.util.List<pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone> speedZone_;
+    private java.util.List<pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone> speedZone_;
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
      */
-    public java.util.List<pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone> getSpeedZoneList() {
+    public java.util.List<pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone> getSpeedZoneList() {
       return speedZone_;
     }
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
      */
-    public java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZoneOrBuilder> 
+    public java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZoneOrBuilder> 
         getSpeedZoneOrBuilderList() {
       return speedZone_;
     }
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
      */
     public int getSpeedZoneCount() {
       return speedZone_.size();
     }
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone getSpeedZone(int index) {
+    public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone getSpeedZone(int index) {
       return speedZone_.get(index);
     }
     /**
-     * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+     * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZoneOrBuilder getSpeedZoneOrBuilder(
+    public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZoneOrBuilder getSpeedZoneOrBuilder(
         int index) {
       return speedZone_.get(index);
     }
 
     public static final int HEARTRATESOURCE_FIELD_NUMBER = 10;
-    private pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateSource heartrateSource_;
+    private pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateSource heartrateSource_;
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateSource heartrateSource = 10;</code>
+     * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateSource heartrateSource = 10;</code>
      */
     public boolean hasHeartrateSource() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateSource heartrateSource = 10;</code>
+     * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateSource heartrateSource = 10;</code>
      */
-    public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateSource getHeartrateSource() {
+    public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateSource getHeartrateSource() {
       return heartrateSource_;
     }
 
     private void initFields() {
       heartrateZone_ = java.util.Collections.emptyList();
       speedZone_ = java.util.Collections.emptyList();
-      heartrateSource_ = pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateSource.SENSOR;
+      heartrateSource_ = pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateSource.SENSOR;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -19448,53 +19448,53 @@ public final class PolarModel {
       return super.writeReplace();
     }
 
-    public static pl.niekoniecznie.polar.model.PolarModel.Zone parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.ZoneData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Zone parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.ZoneData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Zone parseFrom(byte[] data)
+    public static pl.niekoniecznie.polar.model.PolarModel.ZoneData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Zone parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.ZoneData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Zone parseFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.ZoneData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Zone parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.ZoneData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Zone parseDelimitedFrom(java.io.InputStream input)
+    public static pl.niekoniecznie.polar.model.PolarModel.ZoneData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Zone parseDelimitedFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.ZoneData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Zone parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.ZoneData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static pl.niekoniecznie.polar.model.PolarModel.Zone parseFrom(
+    public static pl.niekoniecznie.polar.model.PolarModel.ZoneData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -19503,7 +19503,7 @@ public final class PolarModel {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.Zone prototype) {
+    public static Builder newBuilder(pl.niekoniecznie.polar.model.PolarModel.ZoneData prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -19515,25 +19515,25 @@ public final class PolarModel {
       return builder;
     }
     /**
-     * Protobuf type {@code pl.niekoniecznie.polar.model.Zone}
+     * Protobuf type {@code pl.niekoniecznie.polar.model.ZoneData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.Zone)
-        pl.niekoniecznie.polar.model.PolarModel.ZoneOrBuilder {
+        // @@protoc_insertion_point(builder_implements:pl.niekoniecznie.polar.model.ZoneData)
+        pl.niekoniecznie.polar.model.PolarModel.ZoneDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_fieldAccessorTable
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                pl.niekoniecznie.polar.model.PolarModel.Zone.class, pl.niekoniecznie.polar.model.PolarModel.Zone.Builder.class);
+                pl.niekoniecznie.polar.model.PolarModel.ZoneData.class, pl.niekoniecznie.polar.model.PolarModel.ZoneData.Builder.class);
       }
 
-      // Construct using pl.niekoniecznie.polar.model.PolarModel.Zone.newBuilder()
+      // Construct using pl.niekoniecznie.polar.model.PolarModel.ZoneData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -19567,7 +19567,7 @@ public final class PolarModel {
         } else {
           speedZoneBuilder_.clear();
         }
-        heartrateSource_ = pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateSource.SENSOR;
+        heartrateSource_ = pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateSource.SENSOR;
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
@@ -19578,23 +19578,23 @@ public final class PolarModel {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_Zone_descriptor;
+        return pl.niekoniecznie.polar.model.PolarModel.internal_static_pl_niekoniecznie_polar_model_ZoneData_descriptor;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Zone getDefaultInstanceForType() {
-        return pl.niekoniecznie.polar.model.PolarModel.Zone.getDefaultInstance();
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData getDefaultInstanceForType() {
+        return pl.niekoniecznie.polar.model.PolarModel.ZoneData.getDefaultInstance();
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Zone build() {
-        pl.niekoniecznie.polar.model.PolarModel.Zone result = buildPartial();
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData build() {
+        pl.niekoniecznie.polar.model.PolarModel.ZoneData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public pl.niekoniecznie.polar.model.PolarModel.Zone buildPartial() {
-        pl.niekoniecznie.polar.model.PolarModel.Zone result = new pl.niekoniecznie.polar.model.PolarModel.Zone(this);
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData buildPartial() {
+        pl.niekoniecznie.polar.model.PolarModel.ZoneData result = new pl.niekoniecznie.polar.model.PolarModel.ZoneData(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (heartrateZoneBuilder_ == null) {
@@ -19625,16 +19625,16 @@ public final class PolarModel {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.Zone) {
-          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.Zone)other);
+        if (other instanceof pl.niekoniecznie.polar.model.PolarModel.ZoneData) {
+          return mergeFrom((pl.niekoniecznie.polar.model.PolarModel.ZoneData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.Zone other) {
-        if (other == pl.niekoniecznie.polar.model.PolarModel.Zone.getDefaultInstance()) return this;
+      public Builder mergeFrom(pl.niekoniecznie.polar.model.PolarModel.ZoneData other) {
+        if (other == pl.niekoniecznie.polar.model.PolarModel.ZoneData.getDefaultInstance()) return this;
         if (heartrateZoneBuilder_ == null) {
           if (!other.heartrateZone_.isEmpty()) {
             if (heartrateZone_.isEmpty()) {
@@ -19718,11 +19718,11 @@ public final class PolarModel {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        pl.niekoniecznie.polar.model.PolarModel.Zone parsedMessage = null;
+        pl.niekoniecznie.polar.model.PolarModel.ZoneData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.Zone) e.getUnfinishedMessage();
+          parsedMessage = (pl.niekoniecznie.polar.model.PolarModel.ZoneData) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -19733,22 +19733,22 @@ public final class PolarModel {
       }
       private int bitField0_;
 
-      private java.util.List<pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone> heartrateZone_ =
+      private java.util.List<pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone> heartrateZone_ =
         java.util.Collections.emptyList();
       private void ensureHeartrateZoneIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          heartrateZone_ = new java.util.ArrayList<pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone>(heartrateZone_);
+          heartrateZone_ = new java.util.ArrayList<pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone>(heartrateZone_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Builder, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZoneOrBuilder> heartrateZoneBuilder_;
+          pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Builder, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZoneOrBuilder> heartrateZoneBuilder_;
 
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
-      public java.util.List<pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone> getHeartrateZoneList() {
+      public java.util.List<pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone> getHeartrateZoneList() {
         if (heartrateZoneBuilder_ == null) {
           return java.util.Collections.unmodifiableList(heartrateZone_);
         } else {
@@ -19756,7 +19756,7 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
       public int getHeartrateZoneCount() {
         if (heartrateZoneBuilder_ == null) {
@@ -19766,9 +19766,9 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone getHeartrateZone(int index) {
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone getHeartrateZone(int index) {
         if (heartrateZoneBuilder_ == null) {
           return heartrateZone_.get(index);
         } else {
@@ -19776,10 +19776,10 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
       public Builder setHeartrateZone(
-          int index, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone value) {
+          int index, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone value) {
         if (heartrateZoneBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19793,10 +19793,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
       public Builder setHeartrateZone(
-          int index, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Builder builderForValue) {
+          int index, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Builder builderForValue) {
         if (heartrateZoneBuilder_ == null) {
           ensureHeartrateZoneIsMutable();
           heartrateZone_.set(index, builderForValue.build());
@@ -19807,9 +19807,9 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
-      public Builder addHeartrateZone(pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone value) {
+      public Builder addHeartrateZone(pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone value) {
         if (heartrateZoneBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19823,10 +19823,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
       public Builder addHeartrateZone(
-          int index, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone value) {
+          int index, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone value) {
         if (heartrateZoneBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19840,10 +19840,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
       public Builder addHeartrateZone(
-          pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Builder builderForValue) {
+          pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Builder builderForValue) {
         if (heartrateZoneBuilder_ == null) {
           ensureHeartrateZoneIsMutable();
           heartrateZone_.add(builderForValue.build());
@@ -19854,10 +19854,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
       public Builder addHeartrateZone(
-          int index, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Builder builderForValue) {
+          int index, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Builder builderForValue) {
         if (heartrateZoneBuilder_ == null) {
           ensureHeartrateZoneIsMutable();
           heartrateZone_.add(index, builderForValue.build());
@@ -19868,10 +19868,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
       public Builder addAllHeartrateZone(
-          java.lang.Iterable<? extends pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone> values) {
+          java.lang.Iterable<? extends pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone> values) {
         if (heartrateZoneBuilder_ == null) {
           ensureHeartrateZoneIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -19883,7 +19883,7 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
       public Builder clearHeartrateZone() {
         if (heartrateZoneBuilder_ == null) {
@@ -19896,7 +19896,7 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
       public Builder removeHeartrateZone(int index) {
         if (heartrateZoneBuilder_ == null) {
@@ -19909,16 +19909,16 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Builder getHeartrateZoneBuilder(
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Builder getHeartrateZoneBuilder(
           int index) {
         return getHeartrateZoneFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZoneOrBuilder getHeartrateZoneOrBuilder(
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZoneOrBuilder getHeartrateZoneOrBuilder(
           int index) {
         if (heartrateZoneBuilder_ == null) {
           return heartrateZone_.get(index);  } else {
@@ -19926,9 +19926,9 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
-      public java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZoneOrBuilder> 
+      public java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZoneOrBuilder> 
            getHeartrateZoneOrBuilderList() {
         if (heartrateZoneBuilder_ != null) {
           return heartrateZoneBuilder_.getMessageOrBuilderList();
@@ -19937,33 +19937,33 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Builder addHeartrateZoneBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Builder addHeartrateZoneBuilder() {
         return getHeartrateZoneFieldBuilder().addBuilder(
-            pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.getDefaultInstance());
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.getDefaultInstance());
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Builder addHeartrateZoneBuilder(
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Builder addHeartrateZoneBuilder(
           int index) {
         return getHeartrateZoneFieldBuilder().addBuilder(
-            index, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.getDefaultInstance());
+            index, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.getDefaultInstance());
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.HeartrateZone heartrateZone = 1;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.HeartrateZone heartrateZone = 1;</code>
        */
-      public java.util.List<pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Builder> 
+      public java.util.List<pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Builder> 
            getHeartrateZoneBuilderList() {
         return getHeartrateZoneFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Builder, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZoneOrBuilder> 
+          pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Builder, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZoneOrBuilder> 
           getHeartrateZoneFieldBuilder() {
         if (heartrateZoneBuilder_ == null) {
           heartrateZoneBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZone.Builder, pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateZoneOrBuilder>(
+              pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZone.Builder, pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateZoneOrBuilder>(
                   heartrateZone_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -19973,22 +19973,22 @@ public final class PolarModel {
         return heartrateZoneBuilder_;
       }
 
-      private java.util.List<pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone> speedZone_ =
+      private java.util.List<pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone> speedZone_ =
         java.util.Collections.emptyList();
       private void ensureSpeedZoneIsMutable() {
         if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          speedZone_ = new java.util.ArrayList<pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone>(speedZone_);
+          speedZone_ = new java.util.ArrayList<pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone>(speedZone_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Builder, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZoneOrBuilder> speedZoneBuilder_;
+          pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Builder, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZoneOrBuilder> speedZoneBuilder_;
 
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
-      public java.util.List<pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone> getSpeedZoneList() {
+      public java.util.List<pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone> getSpeedZoneList() {
         if (speedZoneBuilder_ == null) {
           return java.util.Collections.unmodifiableList(speedZone_);
         } else {
@@ -19996,7 +19996,7 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
       public int getSpeedZoneCount() {
         if (speedZoneBuilder_ == null) {
@@ -20006,9 +20006,9 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone getSpeedZone(int index) {
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone getSpeedZone(int index) {
         if (speedZoneBuilder_ == null) {
           return speedZone_.get(index);
         } else {
@@ -20016,10 +20016,10 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
       public Builder setSpeedZone(
-          int index, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone value) {
+          int index, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone value) {
         if (speedZoneBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20033,10 +20033,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
       public Builder setSpeedZone(
-          int index, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Builder builderForValue) {
+          int index, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Builder builderForValue) {
         if (speedZoneBuilder_ == null) {
           ensureSpeedZoneIsMutable();
           speedZone_.set(index, builderForValue.build());
@@ -20047,9 +20047,9 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
-      public Builder addSpeedZone(pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone value) {
+      public Builder addSpeedZone(pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone value) {
         if (speedZoneBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20063,10 +20063,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
       public Builder addSpeedZone(
-          int index, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone value) {
+          int index, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone value) {
         if (speedZoneBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20080,10 +20080,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
       public Builder addSpeedZone(
-          pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Builder builderForValue) {
+          pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Builder builderForValue) {
         if (speedZoneBuilder_ == null) {
           ensureSpeedZoneIsMutable();
           speedZone_.add(builderForValue.build());
@@ -20094,10 +20094,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
       public Builder addSpeedZone(
-          int index, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Builder builderForValue) {
+          int index, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Builder builderForValue) {
         if (speedZoneBuilder_ == null) {
           ensureSpeedZoneIsMutable();
           speedZone_.add(index, builderForValue.build());
@@ -20108,10 +20108,10 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
       public Builder addAllSpeedZone(
-          java.lang.Iterable<? extends pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone> values) {
+          java.lang.Iterable<? extends pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone> values) {
         if (speedZoneBuilder_ == null) {
           ensureSpeedZoneIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -20123,7 +20123,7 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
       public Builder clearSpeedZone() {
         if (speedZoneBuilder_ == null) {
@@ -20136,7 +20136,7 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
       public Builder removeSpeedZone(int index) {
         if (speedZoneBuilder_ == null) {
@@ -20149,16 +20149,16 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Builder getSpeedZoneBuilder(
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Builder getSpeedZoneBuilder(
           int index) {
         return getSpeedZoneFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZoneOrBuilder getSpeedZoneOrBuilder(
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZoneOrBuilder getSpeedZoneOrBuilder(
           int index) {
         if (speedZoneBuilder_ == null) {
           return speedZone_.get(index);  } else {
@@ -20166,9 +20166,9 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
-      public java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZoneOrBuilder> 
+      public java.util.List<? extends pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZoneOrBuilder> 
            getSpeedZoneOrBuilderList() {
         if (speedZoneBuilder_ != null) {
           return speedZoneBuilder_.getMessageOrBuilderList();
@@ -20177,33 +20177,33 @@ public final class PolarModel {
         }
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Builder addSpeedZoneBuilder() {
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Builder addSpeedZoneBuilder() {
         return getSpeedZoneFieldBuilder().addBuilder(
-            pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.getDefaultInstance());
+            pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.getDefaultInstance());
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Builder addSpeedZoneBuilder(
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Builder addSpeedZoneBuilder(
           int index) {
         return getSpeedZoneFieldBuilder().addBuilder(
-            index, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.getDefaultInstance());
+            index, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.getDefaultInstance());
       }
       /**
-       * <code>repeated .pl.niekoniecznie.polar.model.Zone.SpeedZone speedZone = 4;</code>
+       * <code>repeated .pl.niekoniecznie.polar.model.ZoneData.SpeedZone speedZone = 4;</code>
        */
-      public java.util.List<pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Builder> 
+      public java.util.List<pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Builder> 
            getSpeedZoneBuilderList() {
         return getSpeedZoneFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Builder, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZoneOrBuilder> 
+          pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Builder, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZoneOrBuilder> 
           getSpeedZoneFieldBuilder() {
         if (speedZoneBuilder_ == null) {
           speedZoneBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZone.Builder, pl.niekoniecznie.polar.model.PolarModel.Zone.SpeedZoneOrBuilder>(
+              pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZone.Builder, pl.niekoniecznie.polar.model.PolarModel.ZoneData.SpeedZoneOrBuilder>(
                   speedZone_,
                   ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
@@ -20213,23 +20213,23 @@ public final class PolarModel {
         return speedZoneBuilder_;
       }
 
-      private pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateSource heartrateSource_ = pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateSource.SENSOR;
+      private pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateSource heartrateSource_ = pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateSource.SENSOR;
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateSource heartrateSource = 10;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateSource heartrateSource = 10;</code>
        */
       public boolean hasHeartrateSource() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateSource heartrateSource = 10;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateSource heartrateSource = 10;</code>
        */
-      public pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateSource getHeartrateSource() {
+      public pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateSource getHeartrateSource() {
         return heartrateSource_;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateSource heartrateSource = 10;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateSource heartrateSource = 10;</code>
        */
-      public Builder setHeartrateSource(pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateSource value) {
+      public Builder setHeartrateSource(pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateSource value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -20239,24 +20239,24 @@ public final class PolarModel {
         return this;
       }
       /**
-       * <code>required .pl.niekoniecznie.polar.model.Zone.HeartrateSource heartrateSource = 10;</code>
+       * <code>required .pl.niekoniecznie.polar.model.ZoneData.HeartrateSource heartrateSource = 10;</code>
        */
       public Builder clearHeartrateSource() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        heartrateSource_ = pl.niekoniecznie.polar.model.PolarModel.Zone.HeartrateSource.SENSOR;
+        heartrateSource_ = pl.niekoniecznie.polar.model.PolarModel.ZoneData.HeartrateSource.SENSOR;
         onChanged();
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.Zone)
+      // @@protoc_insertion_point(builder_scope:pl.niekoniecznie.polar.model.ZoneData)
     }
 
     static {
-      defaultInstance = new Zone(true);
+      defaultInstance = new ZoneData(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.Zone)
+    // @@protoc_insertion_point(class_scope:pl.niekoniecznie.polar.model.ZoneData)
   }
 
   public interface TrainingLoadOrBuilder extends
@@ -25960,105 +25960,105 @@ public final class PolarModel {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_PhysicalData_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_PhysicalData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Birthday_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_PhysicalData_Birthday_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Birthday_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_PhysicalData_Birthday_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Gender_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_PhysicalData_Gender_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Gender_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_PhysicalData_Gender_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_Session_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_SessionData_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_Session_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_SessionData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_Session_Label_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_SessionData_Label_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_Session_Label_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_SessionData_Label_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_Exercise_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_ExerciseData_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_Exercise_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_ExerciseData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_Exercise_Sport_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_ExerciseData_Sport_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_Exercise_Sport_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_ExerciseData_Sport_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_Exercise_RunningIndex_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_ExerciseData_RunningIndex_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_Exercise_RunningIndex_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_ExerciseData_RunningIndex_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_LapInformation_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_LapData_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_LapInformation_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_LapData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_LapData_Lap_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_LapData_Lap_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_Header_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_LapData_Lap_Header_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_Header_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_LapData_Lap_Header_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_LapInformation_Summary_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_LapData_Summary_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_LapInformation_Summary_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_LapData_Summary_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_Route_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_RouteData_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_Route_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_RouteData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_Sample_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_SampleData_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_Sample_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_SampleData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_Statistic_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_StatisticData_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_Statistic_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_StatisticData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_Zone_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_Zone_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_ZoneData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_Limit_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_Limit_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_Limit_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_Limit_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_Limit_descriptor;
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_Limit_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_Limit_fieldAccessorTable;
+      internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_Limit_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pl_niekoniecznie_polar_model_TrainingLoad_descriptor;
   private static
@@ -26114,123 +26114,123 @@ public final class PolarModel {
   static {
     java.lang.String[] descriptorData = {
       "\n#src/main/resources/PolarModel.proto\022\034p" +
-      "l.niekoniecznie.polar.model\"\252\010\n\023Physical" +
-      "Information\022L\n\010birthday\030\001 \002(\0132:.pl.nieko" +
-      "niecznie.polar.model.PhysicalInformation" +
-      ".Birthday\022H\n\006gender\030\002 \002(\01328.pl.niekoniec" +
-      "znie.polar.model.PhysicalInformation.Gen" +
-      "der\0224\n\006weight\030\003 \002(\0132$.pl.niekoniecznie.p" +
-      "olar.model.FloatM\0224\n\006height\030\004 \002(\0132$.pl.n" +
-      "iekoniecznie.polar.model.FloatM\022?\n\020maxim" +
-      "umHeartrate\030\005 \002(\0132%.pl.niekoniecznie.pol",
-      "ar.model.UInt32M\022?\n\020restingHeartrate\030\006 \002" +
+      "l.niekoniecznie.polar.model\"\216\010\n\014Physical" +
+      "Data\022E\n\010birthday\030\001 \002(\01323.pl.niekonieczni" +
+      "e.polar.model.PhysicalData.Birthday\022A\n\006g" +
+      "ender\030\002 \002(\01321.pl.niekoniecznie.polar.mod" +
+      "el.PhysicalData.Gender\0224\n\006weight\030\003 \002(\0132$" +
+      ".pl.niekoniecznie.polar.model.FloatM\0224\n\006" +
+      "height\030\004 \002(\0132$.pl.niekoniecznie.polar.mo" +
+      "del.FloatM\022?\n\020maximumHeartrate\030\005 \002(\0132%.p" +
+      "l.niekoniecznie.polar.model.UInt32M\022?\n\020r",
+      "estingHeartrate\030\006 \002(\0132%.pl.niekoniecznie" +
+      ".polar.model.UInt32M\022?\n\020aerobicThreshold" +
+      "\030\010 \002(\0132%.pl.niekoniecznie.polar.model.UI" +
+      "nt32M\022A\n\022anaerobicThreshold\030\t \002(\0132%.pl.n" +
+      "iekoniecznie.polar.model.UInt32M\0225\n\006vo2m" +
+      "ax\030\n \002(\0132%.pl.niekoniecznie.polar.model." +
+      "UInt32M\0227\n\010unknown1\030\013 \002(\0132%.pl.niekoniec" +
+      "znie.polar.model.UInt32M\0227\n\010unknown2\030\014 \002" +
       "(\0132%.pl.niekoniecznie.polar.model.UInt32" +
-      "M\022?\n\020aerobicThreshold\030\010 \002(\0132%.pl.niekoni" +
-      "ecznie.polar.model.UInt32M\022A\n\022anaerobicT" +
-      "hreshold\030\t \002(\0132%.pl.niekoniecznie.polar." +
-      "model.UInt32M\0225\n\006vo2max\030\n \002(\0132%.pl.nieko" +
-      "niecznie.polar.model.UInt32M\0227\n\010unknown1" +
-      "\030\013 \002(\0132%.pl.niekoniecznie.polar.model.UI" +
-      "nt32M\0227\n\010unknown2\030\014 \002(\0132%.pl.niekonieczn" +
-      "ie.polar.model.UInt32M\0228\n\010modified\030d \002(\013",
-      "2&.pl.niekoniecznie.polar.model.DateTime" +
-      "\032v\n\010Birthday\0220\n\004date\030\001 \002(\0132\".pl.niekonie" +
-      "cznie.polar.model.Date\0228\n\010modified\030\002 \002(\013" +
-      "2&.pl.niekoniecznie.polar.model.DateTime" +
-      "\032\255\001\n\006Gender\022K\n\004type\030\001 \002(\0162=.pl.niekoniec" +
-      "znie.polar.model.PhysicalInformation.Gen" +
-      "der.Type\0228\n\010modified\030\002 \002(\0132&.pl.niekonie" +
-      "cznie.polar.model.DateTime\"\034\n\004Type\022\010\n\004MA" +
-      "LE\020\001\022\n\n\006FEMALE\020\002\"\225\004\n\007Session\0225\n\005start\030\001 " +
-      "\002(\0132&.pl.niekoniecznie.polar.model.DateT",
-      "ime\0223\n\003end\030\024 \002(\0132&.pl.niekoniecznie.pola" +
-      "r.model.DateTime\022\025\n\rexerciseCount\030\002 \002(\r\022" +
-      "\016\n\006device\030\003 \002(\t\022\r\n\005model\030\004 \002(\t\0224\n\010durati" +
-      "on\030\005 \002(\0132\".pl.niekoniecznie.polar.model." +
-      "Time\022\020\n\010distance\030\006 \002(\002\022\020\n\010calories\030\007 \002(\r" +
-      "\022:\n\theartrate\030\010 \001(\0132\'.pl.niekoniecznie.p" +
-      "olar.model.Heartrate\022=\n\021heartrateDuratio" +
-      "n\030\t \002(\0132\".pl.niekoniecznie.polar.model.T" +
-      "ime\022@\n\014trainingLoad\030\n \002(\0132*.pl.niekoniec" +
-      "znie.polar.model.TrainingLoad\022:\n\005label\030\013",
-      " \002(\0132+.pl.niekoniecznie.polar.model.Sess" +
-      "ion.Label\032\025\n\005Label\022\014\n\004name\030\001 \002(\t\"\354\003\n\010Exe" +
-      "rcise\0225\n\005start\030\001 \002(\0132&.pl.niekoniecznie." +
-      "polar.model.DateTime\0224\n\010duration\030\002 \002(\0132\"" +
-      ".pl.niekoniecznie.polar.model.Time\022;\n\005sp" +
-      "ort\030\003 \002(\0132,.pl.niekoniecznie.polar.model" +
-      ".Exercise.Sport\022\020\n\010distance\030\004 \002(\002\022\020\n\010cal" +
-      "ories\030\005 \002(\r\022@\n\014trainingLoad\030\006 \002(\0132*.pl.n" +
-      "iekoniecznie.polar.model.TrainingLoad\022B\n" +
-      "\005index\030\t \001(\01323.pl.niekoniecznie.polar.mo",
-      "del.Exercise.RunningIndex\022\016\n\006ascent\030\n \002(" +
-      "\002\022\017\n\007descent\030\013 \002(\002\032\026\n\005Sport\022\r\n\005value\030\001 \002" +
-      "(\004\032S\n\014RunningIndex\022\r\n\005value\030\001 \002(\r\0224\n\010dur" +
-      "ation\030\002 \002(\0132\".pl.niekoniecznie.polar.mod" +
-      "el.Time\"\246\005\n\016LapInformation\022=\n\003lap\030\001 \003(\0132" +
-      "0.pl.niekoniecznie.polar.model.LapInform" +
-      "ation.Lap\022E\n\007summary\030\002 \001(\01324.pl.niekonie" +
-      "cznie.polar.model.LapInformation.Summary" +
-      "\032\233\003\n\003Lap\022G\n\006header\030\001 \002(\01327.pl.niekoniecz" +
-      "nie.polar.model.LapInformation.Lap.Heade",
-      "r\022:\n\tstatistic\030\002 \002(\0132\'.pl.niekoniecznie." +
-      "polar.model.Statistic\032\216\002\n\006Header\0221\n\005spli" +
-      "t\030\001 \002(\0132\".pl.niekoniecznie.polar.model.T" +
-      "ime\0224\n\010duration\030\002 \002(\0132\".pl.niekoniecznie" +
-      ".polar.model.Time\022\020\n\010distance\030\003 \002(\002\022\016\n\006a" +
-      "scent\030\004 \001(\002\022\017\n\007descent\030\005 \001(\002\022J\n\004type\030\006 \002" +
-      "(\0162<.pl.niekoniecznie.polar.model.LapInf" +
-      "ormation.Lap.Header.Type\"\034\n\004Type\022\n\n\006MANU" +
-      "AL\020\000\022\010\n\004AUTO\020\001\032p\n\007Summary\0220\n\004best\030\001 \002(\0132" +
-      "\".pl.niekoniecznie.polar.model.Time\0223\n\007a",
-      "verage\030\002 \002(\0132\".pl.niekoniecznie.polar.mo" +
-      "del.Time\"\237\001\n\005Route\022\020\n\010duration\030\001 \003(\r\022\020\n\010" +
-      "latitude\030\002 \003(\001\022\021\n\tlongitude\030\003 \003(\001\022\020\n\010alt" +
-      "itude\030\004 \003(\021\022\022\n\nsatellites\030\005 \003(\r\0229\n\ttimes" +
-      "tamp\030\t \002(\0132&.pl.niekoniecznie.polar.mode" +
-      "l.DateTime\"\204\001\n\006Sample\0224\n\010interval\030\001 \002(\0132" +
-      "\".pl.niekoniecznie.polar.model.Time\022\021\n\th" +
-      "eartrate\030\002 \003(\r\022\020\n\010altitude\030\006 \003(\002\022\r\n\005spee" +
-      "d\030\t \003(\002\022\020\n\010distance\030\013 \003(\002\"\265\001\n\tStatistic\022" +
-      ":\n\theartrate\030\001 \001(\0132\'.pl.niekoniecznie.po",
-      "lar.model.Heartrate\0222\n\005speed\030\002 \002(\0132#.pl." +
-      "niekoniecznie.polar.model.Speed\0228\n\010altit" +
-      "ude\030\004 \001(\0132&.pl.niekoniecznie.polar.model" +
-      ".Altitude\"\355\004\n\004Zone\022G\n\rheartrateZone\030\001 \003(" +
-      "\01320.pl.niekoniecznie.polar.model.Zone.He" +
-      "artrateZone\022?\n\tspeedZone\030\004 \003(\0132,.pl.niek" +
-      "oniecznie.polar.model.Zone.SpeedZone\022K\n\017" +
-      "heartrateSource\030\n \002(\01622.pl.niekoniecznie" +
-      ".polar.model.Zone.HeartrateSource\032\261\001\n\rHe" +
-      "artrateZone\022E\n\005limit\030\001 \002(\01326.pl.niekonie",
-      "cznie.polar.model.Zone.HeartrateZone.Lim" +
-      "it\0224\n\010duration\030\002 \002(\0132\".pl.niekoniecznie." +
-      "polar.model.Time\032#\n\005Limit\022\013\n\003low\030\001 \002(\r\022\r" +
-      "\n\005hight\030\002 \002(\r\032\272\001\n\tSpeedZone\022A\n\005limit\030\001 \002" +
-      "(\01322.pl.niekoniecznie.polar.model.Zone.S" +
-      "peedZone.Limit\0224\n\010duration\030\002 \002(\0132\".pl.ni" +
-      "ekoniecznie.polar.model.Time\022\020\n\010distance" +
-      "\030\003 \002(\002\032\"\n\005Limit\022\013\n\003low\030\001 \002(\002\022\014\n\004high\030\002 \002" +
-      "(\002\"\035\n\017HeartrateSource\022\n\n\006SENSOR\020\000\"\200\001\n\014Tr" +
-      "ainingLoad\022\r\n\005value\030\001 \002(\r\0224\n\010recovery\030\002 ",
-      "\002(\0132\".pl.niekoniecznie.polar.model.Time\022" +
-      "\r\n\005carbs\030\003 \001(\r\022\017\n\007protein\030\004 \001(\r\022\013\n\003fat\030\005" +
-      " \001(\r\":\n\005Speed\022\017\n\007average\030\001 \002(\002\022\017\n\007maximu" +
-      "m\030\002 \002(\002\022\017\n\007minimum\030\003 \001(\002\"=\n\010Altitude\022\017\n\007" +
-      "average\030\001 \002(\002\022\017\n\007maximum\030\002 \002(\002\022\017\n\007minimu" +
-      "m\030\003 \002(\002\">\n\tHeartrate\022\017\n\007average\030\001 \002(\r\022\017\n" +
-      "\007maximum\030\002 \002(\r\022\017\n\007minimum\030\003 \001(\r\"Q\n\006Float" +
-      "M\022\r\n\005value\030\001 \002(\002\0228\n\010modified\030\002 \002(\0132&.pl." +
-      "niekoniecznie.polar.model.DateTime\"R\n\007UI" +
-      "nt32M\022\r\n\005value\030\001 \002(\r\0228\n\010modified\030\002 \002(\0132&",
-      ".pl.niekoniecznie.polar.model.DateTime\"n" +
-      "\n\010DateTime\0220\n\004date\030\001 \002(\0132\".pl.niekoniecz" +
-      "nie.polar.model.Date\0220\n\004time\030\002 \002(\0132\".pl." +
-      "niekoniecznie.polar.model.Time\"0\n\004Date\022\014" +
-      "\n\004year\030\001 \002(\r\022\r\n\005month\030\002 \002(\r\022\013\n\003day\030\003 \002(\r" +
-      "\"H\n\004Time\022\014\n\004hour\030\001 \001(\r\022\016\n\006minute\030\002 \001(\r\022\016" +
-      "\n\006second\030\003 \001(\r\022\022\n\nmilisecond\030\004 \001(\rB*\n\034pl" +
-      ".niekoniecznie.polar.modelB\nPolarModel"
+      "M\0228\n\010modified\030d \002(\0132&.pl.niekoniecznie.p",
+      "olar.model.DateTime\032v\n\010Birthday\0220\n\004date\030" +
+      "\001 \002(\0132\".pl.niekoniecznie.polar.model.Dat" +
+      "e\0228\n\010modified\030\002 \002(\0132&.pl.niekoniecznie.p" +
+      "olar.model.DateTime\032\246\001\n\006Gender\022D\n\004type\030\001" +
+      " \002(\01626.pl.niekoniecznie.polar.model.Phys" +
+      "icalData.Gender.Type\0228\n\010modified\030\002 \002(\0132&" +
+      ".pl.niekoniecznie.polar.model.DateTime\"\034" +
+      "\n\004Type\022\010\n\004MALE\020\001\022\n\n\006FEMALE\020\002\"\235\004\n\013Session" +
+      "Data\0225\n\005start\030\001 \002(\0132&.pl.niekoniecznie.p" +
+      "olar.model.DateTime\0223\n\003end\030\024 \002(\0132&.pl.ni",
+      "ekoniecznie.polar.model.DateTime\022\025\n\rexer" +
+      "ciseCount\030\002 \002(\r\022\016\n\006device\030\003 \002(\t\022\r\n\005model" +
+      "\030\004 \002(\t\0224\n\010duration\030\005 \002(\0132\".pl.niekoniecz" +
+      "nie.polar.model.Time\022\020\n\010distance\030\006 \002(\002\022\020" +
+      "\n\010calories\030\007 \002(\r\022:\n\theartrate\030\010 \001(\0132\'.pl" +
+      ".niekoniecznie.polar.model.Heartrate\022=\n\021" +
+      "heartrateDuration\030\t \002(\0132\".pl.niekonieczn" +
+      "ie.polar.model.Time\022@\n\014trainingLoad\030\n \002(" +
+      "\0132*.pl.niekoniecznie.polar.model.Trainin" +
+      "gLoad\022>\n\005label\030\013 \002(\0132/.pl.niekoniecznie.",
+      "polar.model.SessionData.Label\032\025\n\005Label\022\014" +
+      "\n\004name\030\001 \002(\t\"\370\003\n\014ExerciseData\0225\n\005start\030\001" +
+      " \002(\0132&.pl.niekoniecznie.polar.model.Date" +
+      "Time\0224\n\010duration\030\002 \002(\0132\".pl.niekonieczni" +
+      "e.polar.model.Time\022?\n\005sport\030\003 \002(\01320.pl.n" +
+      "iekoniecznie.polar.model.ExerciseData.Sp" +
+      "ort\022\020\n\010distance\030\004 \002(\002\022\020\n\010calories\030\005 \002(\r\022" +
+      "@\n\014trainingLoad\030\006 \002(\0132*.pl.niekoniecznie" +
+      ".polar.model.TrainingLoad\022F\n\005index\030\t \001(\013" +
+      "27.pl.niekoniecznie.polar.model.Exercise",
+      "Data.RunningIndex\022\016\n\006ascent\030\n \002(\002\022\017\n\007des" +
+      "cent\030\013 \002(\002\032\026\n\005Sport\022\r\n\005value\030\001 \002(\004\032S\n\014Ru" +
+      "nningIndex\022\r\n\005value\030\001 \002(\r\0224\n\010duration\030\002 " +
+      "\002(\0132\".pl.niekoniecznie.polar.model.Time\"" +
+      "\207\005\n\007LapData\0226\n\003lap\030\001 \003(\0132).pl.niekoniecz" +
+      "nie.polar.model.LapData.Lap\022>\n\007summary\030\002" +
+      " \001(\0132-.pl.niekoniecznie.polar.model.LapD" +
+      "ata.Summary\032\221\003\n\003Lap\022@\n\006header\030\001 \002(\01320.pl" +
+      ".niekoniecznie.polar.model.LapData.Lap.H" +
+      "eader\022>\n\tstatistic\030\002 \002(\0132+.pl.niekoniecz",
+      "nie.polar.model.StatisticData\032\207\002\n\006Header" +
+      "\0221\n\005split\030\001 \002(\0132\".pl.niekoniecznie.polar" +
+      ".model.Time\0224\n\010duration\030\002 \002(\0132\".pl.nieko" +
+      "niecznie.polar.model.Time\022\020\n\010distance\030\003 " +
+      "\002(\002\022\016\n\006ascent\030\004 \001(\002\022\017\n\007descent\030\005 \001(\002\022C\n\004" +
+      "type\030\006 \002(\01625.pl.niekoniecznie.polar.mode" +
+      "l.LapData.Lap.Header.Type\"\034\n\004Type\022\n\n\006MAN" +
+      "UAL\020\000\022\010\n\004AUTO\020\001\032p\n\007Summary\0220\n\004best\030\001 \002(\013" +
+      "2\".pl.niekoniecznie.polar.model.Time\0223\n\007" +
+      "average\030\002 \002(\0132\".pl.niekoniecznie.polar.m",
+      "odel.Time\"\243\001\n\tRouteData\022\020\n\010duration\030\001 \003(" +
+      "\r\022\020\n\010latitude\030\002 \003(\001\022\021\n\tlongitude\030\003 \003(\001\022\020" +
+      "\n\010altitude\030\004 \003(\021\022\022\n\nsatellites\030\005 \003(\r\0229\n\t" +
+      "timestamp\030\t \002(\0132&.pl.niekoniecznie.polar" +
+      ".model.DateTime\"\210\001\n\nSampleData\0224\n\010interv" +
+      "al\030\001 \002(\0132\".pl.niekoniecznie.polar.model." +
+      "Time\022\021\n\theartrate\030\002 \003(\r\022\020\n\010altitude\030\006 \003(" +
+      "\002\022\r\n\005speed\030\t \003(\002\022\020\n\010distance\030\013 \003(\002\"\271\001\n\rS" +
+      "tatisticData\022:\n\theartrate\030\001 \001(\0132\'.pl.nie" +
+      "koniecznie.polar.model.Heartrate\0222\n\005spee",
+      "d\030\002 \002(\0132#.pl.niekoniecznie.polar.model.S" +
+      "peed\0228\n\010altitude\030\004 \001(\0132&.pl.niekonieczni" +
+      "e.polar.model.Altitude\"\205\005\n\010ZoneData\022K\n\rh" +
+      "eartrateZone\030\001 \003(\01324.pl.niekoniecznie.po" +
+      "lar.model.ZoneData.HeartrateZone\022C\n\tspee" +
+      "dZone\030\004 \003(\01320.pl.niekoniecznie.polar.mod" +
+      "el.ZoneData.SpeedZone\022O\n\017heartrateSource" +
+      "\030\n \002(\01626.pl.niekoniecznie.polar.model.Zo" +
+      "neData.HeartrateSource\032\265\001\n\rHeartrateZone" +
+      "\022I\n\005limit\030\001 \002(\0132:.pl.niekoniecznie.polar",
+      ".model.ZoneData.HeartrateZone.Limit\0224\n\010d" +
+      "uration\030\002 \002(\0132\".pl.niekoniecznie.polar.m" +
+      "odel.Time\032#\n\005Limit\022\013\n\003low\030\001 \002(\r\022\r\n\005hight" +
+      "\030\002 \002(\r\032\276\001\n\tSpeedZone\022E\n\005limit\030\001 \002(\01326.pl" +
+      ".niekoniecznie.polar.model.ZoneData.Spee" +
+      "dZone.Limit\0224\n\010duration\030\002 \002(\0132\".pl.nieko" +
+      "niecznie.polar.model.Time\022\020\n\010distance\030\003 " +
+      "\002(\002\032\"\n\005Limit\022\013\n\003low\030\001 \002(\002\022\014\n\004high\030\002 \002(\002\"" +
+      "\035\n\017HeartrateSource\022\n\n\006SENSOR\020\000\"\200\001\n\014Train" +
+      "ingLoad\022\r\n\005value\030\001 \002(\r\0224\n\010recovery\030\002 \002(\013",
+      "2\".pl.niekoniecznie.polar.model.Time\022\r\n\005" +
+      "carbs\030\003 \001(\r\022\017\n\007protein\030\004 \001(\r\022\013\n\003fat\030\005 \001(" +
+      "\r\":\n\005Speed\022\017\n\007average\030\001 \002(\002\022\017\n\007maximum\030\002" +
+      " \002(\002\022\017\n\007minimum\030\003 \001(\002\"=\n\010Altitude\022\017\n\007ave" +
+      "rage\030\001 \002(\002\022\017\n\007maximum\030\002 \002(\002\022\017\n\007minimum\030\003" +
+      " \002(\002\">\n\tHeartrate\022\017\n\007average\030\001 \002(\r\022\017\n\007ma" +
+      "ximum\030\002 \002(\r\022\017\n\007minimum\030\003 \001(\r\"Q\n\006FloatM\022\r" +
+      "\n\005value\030\001 \002(\002\0228\n\010modified\030\002 \002(\0132&.pl.nie" +
+      "koniecznie.polar.model.DateTime\"R\n\007UInt3" +
+      "2M\022\r\n\005value\030\001 \002(\r\0228\n\010modified\030\002 \002(\0132&.pl",
+      ".niekoniecznie.polar.model.DateTime\"n\n\010D" +
+      "ateTime\0220\n\004date\030\001 \002(\0132\".pl.niekoniecznie" +
+      ".polar.model.Date\0220\n\004time\030\002 \002(\0132\".pl.nie" +
+      "koniecznie.polar.model.Time\"0\n\004Date\022\014\n\004y" +
+      "ear\030\001 \002(\r\022\r\n\005month\030\002 \002(\r\022\013\n\003day\030\003 \002(\r\"H\n" +
+      "\004Time\022\014\n\004hour\030\001 \001(\r\022\016\n\006minute\030\002 \001(\r\022\016\n\006s" +
+      "econd\030\003 \001(\r\022\022\n\nmilisecond\030\004 \001(\rB*\n\034pl.ni" +
+      "ekoniecznie.polar.modelB\nPolarModel"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -26244,125 +26244,125 @@ public final class PolarModel {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_descriptor =
+    internal_static_pl_niekoniecznie_polar_model_PhysicalData_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_PhysicalData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_PhysicalData_descriptor,
         new java.lang.String[] { "Birthday", "Gender", "Weight", "Height", "MaximumHeartrate", "RestingHeartrate", "AerobicThreshold", "AnaerobicThreshold", "Vo2Max", "Unknown1", "Unknown2", "Modified", });
-    internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Birthday_descriptor =
-      internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_descriptor.getNestedTypes().get(0);
-    internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Birthday_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_PhysicalData_Birthday_descriptor =
+      internal_static_pl_niekoniecznie_polar_model_PhysicalData_descriptor.getNestedTypes().get(0);
+    internal_static_pl_niekoniecznie_polar_model_PhysicalData_Birthday_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Birthday_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_PhysicalData_Birthday_descriptor,
         new java.lang.String[] { "Date", "Modified", });
-    internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Gender_descriptor =
-      internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_descriptor.getNestedTypes().get(1);
-    internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Gender_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_PhysicalData_Gender_descriptor =
+      internal_static_pl_niekoniecznie_polar_model_PhysicalData_descriptor.getNestedTypes().get(1);
+    internal_static_pl_niekoniecznie_polar_model_PhysicalData_Gender_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_PhysicalInformation_Gender_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_PhysicalData_Gender_descriptor,
         new java.lang.String[] { "Type", "Modified", });
-    internal_static_pl_niekoniecznie_polar_model_Session_descriptor =
+    internal_static_pl_niekoniecznie_polar_model_SessionData_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_pl_niekoniecznie_polar_model_Session_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_SessionData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_Session_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_SessionData_descriptor,
         new java.lang.String[] { "Start", "End", "ExerciseCount", "Device", "Model", "Duration", "Distance", "Calories", "Heartrate", "HeartrateDuration", "TrainingLoad", "Label", });
-    internal_static_pl_niekoniecznie_polar_model_Session_Label_descriptor =
-      internal_static_pl_niekoniecznie_polar_model_Session_descriptor.getNestedTypes().get(0);
-    internal_static_pl_niekoniecznie_polar_model_Session_Label_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_SessionData_Label_descriptor =
+      internal_static_pl_niekoniecznie_polar_model_SessionData_descriptor.getNestedTypes().get(0);
+    internal_static_pl_niekoniecznie_polar_model_SessionData_Label_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_Session_Label_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_SessionData_Label_descriptor,
         new java.lang.String[] { "Name", });
-    internal_static_pl_niekoniecznie_polar_model_Exercise_descriptor =
+    internal_static_pl_niekoniecznie_polar_model_ExerciseData_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_pl_niekoniecznie_polar_model_Exercise_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_ExerciseData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_Exercise_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_ExerciseData_descriptor,
         new java.lang.String[] { "Start", "Duration", "Sport", "Distance", "Calories", "TrainingLoad", "Index", "Ascent", "Descent", });
-    internal_static_pl_niekoniecznie_polar_model_Exercise_Sport_descriptor =
-      internal_static_pl_niekoniecznie_polar_model_Exercise_descriptor.getNestedTypes().get(0);
-    internal_static_pl_niekoniecznie_polar_model_Exercise_Sport_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_ExerciseData_Sport_descriptor =
+      internal_static_pl_niekoniecznie_polar_model_ExerciseData_descriptor.getNestedTypes().get(0);
+    internal_static_pl_niekoniecznie_polar_model_ExerciseData_Sport_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_Exercise_Sport_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_ExerciseData_Sport_descriptor,
         new java.lang.String[] { "Value", });
-    internal_static_pl_niekoniecznie_polar_model_Exercise_RunningIndex_descriptor =
-      internal_static_pl_niekoniecznie_polar_model_Exercise_descriptor.getNestedTypes().get(1);
-    internal_static_pl_niekoniecznie_polar_model_Exercise_RunningIndex_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_ExerciseData_RunningIndex_descriptor =
+      internal_static_pl_niekoniecznie_polar_model_ExerciseData_descriptor.getNestedTypes().get(1);
+    internal_static_pl_niekoniecznie_polar_model_ExerciseData_RunningIndex_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_Exercise_RunningIndex_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_ExerciseData_RunningIndex_descriptor,
         new java.lang.String[] { "Value", "Duration", });
-    internal_static_pl_niekoniecznie_polar_model_LapInformation_descriptor =
+    internal_static_pl_niekoniecznie_polar_model_LapData_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_pl_niekoniecznie_polar_model_LapInformation_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_LapData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_LapInformation_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_LapData_descriptor,
         new java.lang.String[] { "Lap", "Summary", });
-    internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_descriptor =
-      internal_static_pl_niekoniecznie_polar_model_LapInformation_descriptor.getNestedTypes().get(0);
-    internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_LapData_Lap_descriptor =
+      internal_static_pl_niekoniecznie_polar_model_LapData_descriptor.getNestedTypes().get(0);
+    internal_static_pl_niekoniecznie_polar_model_LapData_Lap_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_LapData_Lap_descriptor,
         new java.lang.String[] { "Header", "Statistic", });
-    internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_Header_descriptor =
-      internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_descriptor.getNestedTypes().get(0);
-    internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_Header_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_LapData_Lap_Header_descriptor =
+      internal_static_pl_niekoniecznie_polar_model_LapData_Lap_descriptor.getNestedTypes().get(0);
+    internal_static_pl_niekoniecznie_polar_model_LapData_Lap_Header_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_LapInformation_Lap_Header_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_LapData_Lap_Header_descriptor,
         new java.lang.String[] { "Split", "Duration", "Distance", "Ascent", "Descent", "Type", });
-    internal_static_pl_niekoniecznie_polar_model_LapInformation_Summary_descriptor =
-      internal_static_pl_niekoniecznie_polar_model_LapInformation_descriptor.getNestedTypes().get(1);
-    internal_static_pl_niekoniecznie_polar_model_LapInformation_Summary_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_LapData_Summary_descriptor =
+      internal_static_pl_niekoniecznie_polar_model_LapData_descriptor.getNestedTypes().get(1);
+    internal_static_pl_niekoniecznie_polar_model_LapData_Summary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_LapInformation_Summary_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_LapData_Summary_descriptor,
         new java.lang.String[] { "Best", "Average", });
-    internal_static_pl_niekoniecznie_polar_model_Route_descriptor =
+    internal_static_pl_niekoniecznie_polar_model_RouteData_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_pl_niekoniecznie_polar_model_Route_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_RouteData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_Route_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_RouteData_descriptor,
         new java.lang.String[] { "Duration", "Latitude", "Longitude", "Altitude", "Satellites", "Timestamp", });
-    internal_static_pl_niekoniecznie_polar_model_Sample_descriptor =
+    internal_static_pl_niekoniecznie_polar_model_SampleData_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_pl_niekoniecznie_polar_model_Sample_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_SampleData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_Sample_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_SampleData_descriptor,
         new java.lang.String[] { "Interval", "Heartrate", "Altitude", "Speed", "Distance", });
-    internal_static_pl_niekoniecznie_polar_model_Statistic_descriptor =
+    internal_static_pl_niekoniecznie_polar_model_StatisticData_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_pl_niekoniecznie_polar_model_Statistic_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_StatisticData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_Statistic_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_StatisticData_descriptor,
         new java.lang.String[] { "Heartrate", "Speed", "Altitude", });
-    internal_static_pl_niekoniecznie_polar_model_Zone_descriptor =
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_pl_niekoniecznie_polar_model_Zone_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_Zone_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_ZoneData_descriptor,
         new java.lang.String[] { "HeartrateZone", "SpeedZone", "HeartrateSource", });
-    internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_descriptor =
-      internal_static_pl_niekoniecznie_polar_model_Zone_descriptor.getNestedTypes().get(0);
-    internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_descriptor =
+      internal_static_pl_niekoniecznie_polar_model_ZoneData_descriptor.getNestedTypes().get(0);
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_descriptor,
         new java.lang.String[] { "Limit", "Duration", });
-    internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_Limit_descriptor =
-      internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_descriptor.getNestedTypes().get(0);
-    internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_Limit_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_Limit_descriptor =
+      internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_descriptor.getNestedTypes().get(0);
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_Limit_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_Zone_HeartrateZone_Limit_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_ZoneData_HeartrateZone_Limit_descriptor,
         new java.lang.String[] { "Low", "Hight", });
-    internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_descriptor =
-      internal_static_pl_niekoniecznie_polar_model_Zone_descriptor.getNestedTypes().get(1);
-    internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_descriptor =
+      internal_static_pl_niekoniecznie_polar_model_ZoneData_descriptor.getNestedTypes().get(1);
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_descriptor,
         new java.lang.String[] { "Limit", "Duration", "Distance", });
-    internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_Limit_descriptor =
-      internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_descriptor.getNestedTypes().get(0);
-    internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_Limit_fieldAccessorTable = new
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_Limit_descriptor =
+      internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_descriptor.getNestedTypes().get(0);
+    internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_Limit_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pl_niekoniecznie_polar_model_Zone_SpeedZone_Limit_descriptor,
+        internal_static_pl_niekoniecznie_polar_model_ZoneData_SpeedZone_Limit_descriptor,
         new java.lang.String[] { "Low", "High", });
     internal_static_pl_niekoniecznie_polar_model_TrainingLoad_descriptor =
       getDescriptor().getMessageTypes().get(8);
