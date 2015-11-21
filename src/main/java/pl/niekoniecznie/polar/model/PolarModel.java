@@ -1291,15 +1291,23 @@ public final class PolarModel {
       public enum Type
           implements com.google.protobuf.ProtocolMessageEnum {
         /**
+         * <code>UNKNOWN = 0;</code>
+         */
+        UNKNOWN(0, 0),
+        /**
          * <code>MALE = 1;</code>
          */
-        MALE(0, 1),
+        MALE(1, 1),
         /**
          * <code>FEMALE = 2;</code>
          */
-        FEMALE(1, 2),
+        FEMALE(2, 2),
         ;
 
+        /**
+         * <code>UNKNOWN = 0;</code>
+         */
+        public static final int UNKNOWN_VALUE = 0;
         /**
          * <code>MALE = 1;</code>
          */
@@ -1314,6 +1322,7 @@ public final class PolarModel {
 
         public static Type valueOf(int value) {
           switch (value) {
+            case 0: return UNKNOWN;
             case 1: return MALE;
             case 2: return FEMALE;
             default: return null;
@@ -1405,7 +1414,7 @@ public final class PolarModel {
       }
 
       private void initFields() {
-        type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type.MALE;
+        type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type.UNKNOWN;
         modified_ = pl.niekoniecznie.polar.model.PolarModel.DateTime.getDefaultInstance();
       }
       private byte memoizedIsInitialized = -1;
@@ -1574,7 +1583,7 @@ public final class PolarModel {
 
         public Builder clear() {
           super.clear();
-          type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type.MALE;
+          type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type.UNKNOWN;
           bitField0_ = (bitField0_ & ~0x00000001);
           if (modifiedBuilder_ == null) {
             modified_ = pl.niekoniecznie.polar.model.PolarModel.DateTime.getDefaultInstance();
@@ -1683,7 +1692,7 @@ public final class PolarModel {
         }
         private int bitField0_;
 
-        private pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type.MALE;
+        private pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type.UNKNOWN;
         /**
          * <code>required .pl.niekoniecznie.polar.model.PhysicalData.Gender.Type type = 1;</code>
          */
@@ -1713,7 +1722,7 @@ public final class PolarModel {
          */
         public Builder clearType() {
           bitField0_ = (bitField0_ & ~0x00000001);
-          type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type.MALE;
+          type_ = pl.niekoniecznie.polar.model.PolarModel.PhysicalData.Gender.Type.UNKNOWN;
           onChanged();
           return this;
         }
@@ -26114,7 +26123,7 @@ public final class PolarModel {
   static {
     java.lang.String[] descriptorData = {
       "\n#src/main/resources/PolarModel.proto\022\034p" +
-      "l.niekoniecznie.polar.model\"\216\010\n\014Physical" +
+      "l.niekoniecznie.polar.model\"\233\010\n\014Physical" +
       "Data\022E\n\010birthday\030\001 \002(\01323.pl.niekonieczni" +
       "e.polar.model.PhysicalData.Birthday\022A\n\006g" +
       "ender\030\002 \002(\01321.pl.niekoniecznie.polar.mod" +
@@ -26136,101 +26145,102 @@ public final class PolarModel {
       "olar.model.DateTime\032v\n\010Birthday\0220\n\004date\030" +
       "\001 \002(\0132\".pl.niekoniecznie.polar.model.Dat" +
       "e\0228\n\010modified\030\002 \002(\0132&.pl.niekoniecznie.p" +
-      "olar.model.DateTime\032\246\001\n\006Gender\022D\n\004type\030\001" +
+      "olar.model.DateTime\032\263\001\n\006Gender\022D\n\004type\030\001" +
       " \002(\01626.pl.niekoniecznie.polar.model.Phys" +
       "icalData.Gender.Type\0228\n\010modified\030\002 \002(\0132&" +
-      ".pl.niekoniecznie.polar.model.DateTime\"\034" +
-      "\n\004Type\022\010\n\004MALE\020\001\022\n\n\006FEMALE\020\002\"\235\004\n\013Session" +
-      "Data\0225\n\005start\030\001 \002(\0132&.pl.niekoniecznie.p" +
-      "olar.model.DateTime\0223\n\003end\030\024 \002(\0132&.pl.ni",
-      "ekoniecznie.polar.model.DateTime\022\025\n\rexer" +
-      "ciseCount\030\002 \002(\r\022\016\n\006device\030\003 \002(\t\022\r\n\005model" +
-      "\030\004 \002(\t\0224\n\010duration\030\005 \002(\0132\".pl.niekoniecz" +
-      "nie.polar.model.Time\022\020\n\010distance\030\006 \002(\002\022\020" +
-      "\n\010calories\030\007 \002(\r\022:\n\theartrate\030\010 \001(\0132\'.pl" +
-      ".niekoniecznie.polar.model.Heartrate\022=\n\021" +
-      "heartrateDuration\030\t \002(\0132\".pl.niekonieczn" +
-      "ie.polar.model.Time\022@\n\014trainingLoad\030\n \002(" +
-      "\0132*.pl.niekoniecznie.polar.model.Trainin" +
-      "gLoad\022>\n\005label\030\013 \002(\0132/.pl.niekoniecznie.",
-      "polar.model.SessionData.Label\032\025\n\005Label\022\014" +
-      "\n\004name\030\001 \002(\t\"\370\003\n\014ExerciseData\0225\n\005start\030\001" +
+      ".pl.niekoniecznie.polar.model.DateTime\")" +
+      "\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004MALE\020\001\022\n\n\006FEMALE\020" +
+      "\002\"\235\004\n\013SessionData\0225\n\005start\030\001 \002(\0132&.pl.ni" +
+      "ekoniecznie.polar.model.DateTime\0223\n\003end\030",
+      "\024 \002(\0132&.pl.niekoniecznie.polar.model.Dat" +
+      "eTime\022\025\n\rexerciseCount\030\002 \002(\r\022\016\n\006device\030\003" +
+      " \002(\t\022\r\n\005model\030\004 \002(\t\0224\n\010duration\030\005 \002(\0132\"." +
+      "pl.niekoniecznie.polar.model.Time\022\020\n\010dis" +
+      "tance\030\006 \002(\002\022\020\n\010calories\030\007 \002(\r\022:\n\theartra" +
+      "te\030\010 \001(\0132\'.pl.niekoniecznie.polar.model." +
+      "Heartrate\022=\n\021heartrateDuration\030\t \002(\0132\".p" +
+      "l.niekoniecznie.polar.model.Time\022@\n\014trai" +
+      "ningLoad\030\n \002(\0132*.pl.niekoniecznie.polar." +
+      "model.TrainingLoad\022>\n\005label\030\013 \002(\0132/.pl.n",
+      "iekoniecznie.polar.model.SessionData.Lab" +
+      "el\032\025\n\005Label\022\014\n\004name\030\001 \002(\t\"\370\003\n\014ExerciseDa" +
+      "ta\0225\n\005start\030\001 \002(\0132&.pl.niekoniecznie.pol" +
+      "ar.model.DateTime\0224\n\010duration\030\002 \002(\0132\".pl" +
+      ".niekoniecznie.polar.model.Time\022?\n\005sport" +
+      "\030\003 \002(\01320.pl.niekoniecznie.polar.model.Ex" +
+      "erciseData.Sport\022\020\n\010distance\030\004 \002(\002\022\020\n\010ca" +
+      "lories\030\005 \002(\r\022@\n\014trainingLoad\030\006 \002(\0132*.pl." +
+      "niekoniecznie.polar.model.TrainingLoad\022F" +
+      "\n\005index\030\t \001(\01327.pl.niekoniecznie.polar.m",
+      "odel.ExerciseData.RunningIndex\022\016\n\006ascent" +
+      "\030\n \002(\002\022\017\n\007descent\030\013 \002(\002\032\026\n\005Sport\022\r\n\005valu" +
+      "e\030\001 \002(\004\032S\n\014RunningIndex\022\r\n\005value\030\001 \002(\r\0224" +
+      "\n\010duration\030\002 \002(\0132\".pl.niekoniecznie.pola" +
+      "r.model.Time\"\207\005\n\007LapData\0226\n\003lap\030\001 \003(\0132)." +
+      "pl.niekoniecznie.polar.model.LapData.Lap" +
+      "\022>\n\007summary\030\002 \001(\0132-.pl.niekoniecznie.pol" +
+      "ar.model.LapData.Summary\032\221\003\n\003Lap\022@\n\006head" +
+      "er\030\001 \002(\01320.pl.niekoniecznie.polar.model." +
+      "LapData.Lap.Header\022>\n\tstatistic\030\002 \002(\0132+.",
+      "pl.niekoniecznie.polar.model.StatisticDa" +
+      "ta\032\207\002\n\006Header\0221\n\005split\030\001 \002(\0132\".pl.niekon" +
+      "iecznie.polar.model.Time\0224\n\010duration\030\002 \002" +
+      "(\0132\".pl.niekoniecznie.polar.model.Time\022\020" +
+      "\n\010distance\030\003 \002(\002\022\016\n\006ascent\030\004 \001(\002\022\017\n\007desc" +
+      "ent\030\005 \001(\002\022C\n\004type\030\006 \002(\01625.pl.niekonieczn" +
+      "ie.polar.model.LapData.Lap.Header.Type\"\034" +
+      "\n\004Type\022\n\n\006MANUAL\020\000\022\010\n\004AUTO\020\001\032p\n\007Summary\022" +
+      "0\n\004best\030\001 \002(\0132\".pl.niekoniecznie.polar.m" +
+      "odel.Time\0223\n\007average\030\002 \002(\0132\".pl.niekonie",
+      "cznie.polar.model.Time\"\243\001\n\tRouteData\022\020\n\010" +
+      "duration\030\001 \003(\r\022\020\n\010latitude\030\002 \003(\001\022\021\n\tlong" +
+      "itude\030\003 \003(\001\022\020\n\010altitude\030\004 \003(\021\022\022\n\nsatelli" +
+      "tes\030\005 \003(\r\0229\n\ttimestamp\030\t \002(\0132&.pl.niekon" +
+      "iecznie.polar.model.DateTime\"\210\001\n\nSampleD" +
+      "ata\0224\n\010interval\030\001 \002(\0132\".pl.niekoniecznie" +
+      ".polar.model.Time\022\021\n\theartrate\030\002 \003(\r\022\020\n\010" +
+      "altitude\030\006 \003(\002\022\r\n\005speed\030\t \003(\002\022\020\n\010distanc" +
+      "e\030\013 \003(\002\"\271\001\n\rStatisticData\022:\n\theartrate\030\001" +
+      " \001(\0132\'.pl.niekoniecznie.polar.model.Hear",
+      "trate\0222\n\005speed\030\002 \002(\0132#.pl.niekoniecznie." +
+      "polar.model.Speed\0228\n\010altitude\030\004 \001(\0132&.pl" +
+      ".niekoniecznie.polar.model.Altitude\"\205\005\n\010" +
+      "ZoneData\022K\n\rheartrateZone\030\001 \003(\01324.pl.nie" +
+      "koniecznie.polar.model.ZoneData.Heartrat" +
+      "eZone\022C\n\tspeedZone\030\004 \003(\01320.pl.niekoniecz" +
+      "nie.polar.model.ZoneData.SpeedZone\022O\n\017he" +
+      "artrateSource\030\n \002(\01626.pl.niekoniecznie.p" +
+      "olar.model.ZoneData.HeartrateSource\032\265\001\n\r" +
+      "HeartrateZone\022I\n\005limit\030\001 \002(\0132:.pl.niekon",
+      "iecznie.polar.model.ZoneData.HeartrateZo" +
+      "ne.Limit\0224\n\010duration\030\002 \002(\0132\".pl.niekonie" +
+      "cznie.polar.model.Time\032#\n\005Limit\022\013\n\003low\030\001" +
+      " \002(\r\022\r\n\005hight\030\002 \002(\r\032\276\001\n\tSpeedZone\022E\n\005lim" +
+      "it\030\001 \002(\01326.pl.niekoniecznie.polar.model." +
+      "ZoneData.SpeedZone.Limit\0224\n\010duration\030\002 \002" +
+      "(\0132\".pl.niekoniecznie.polar.model.Time\022\020" +
+      "\n\010distance\030\003 \002(\002\032\"\n\005Limit\022\013\n\003low\030\001 \002(\002\022\014" +
+      "\n\004high\030\002 \002(\002\"\035\n\017HeartrateSource\022\n\n\006SENSO" +
+      "R\020\000\"\200\001\n\014TrainingLoad\022\r\n\005value\030\001 \002(\r\0224\n\010r",
+      "ecovery\030\002 \002(\0132\".pl.niekoniecznie.polar.m" +
+      "odel.Time\022\r\n\005carbs\030\003 \001(\r\022\017\n\007protein\030\004 \001(" +
+      "\r\022\013\n\003fat\030\005 \001(\r\":\n\005Speed\022\017\n\007average\030\001 \002(\002" +
+      "\022\017\n\007maximum\030\002 \002(\002\022\017\n\007minimum\030\003 \001(\002\"=\n\010Al" +
+      "titude\022\017\n\007average\030\001 \002(\002\022\017\n\007maximum\030\002 \002(\002" +
+      "\022\017\n\007minimum\030\003 \002(\002\">\n\tHeartrate\022\017\n\007averag" +
+      "e\030\001 \002(\r\022\017\n\007maximum\030\002 \002(\r\022\017\n\007minimum\030\003 \001(" +
+      "\r\"Q\n\006FloatM\022\r\n\005value\030\001 \002(\002\0228\n\010modified\030\002" +
       " \002(\0132&.pl.niekoniecznie.polar.model.Date" +
-      "Time\0224\n\010duration\030\002 \002(\0132\".pl.niekonieczni" +
-      "e.polar.model.Time\022?\n\005sport\030\003 \002(\01320.pl.n" +
-      "iekoniecznie.polar.model.ExerciseData.Sp" +
-      "ort\022\020\n\010distance\030\004 \002(\002\022\020\n\010calories\030\005 \002(\r\022" +
-      "@\n\014trainingLoad\030\006 \002(\0132*.pl.niekoniecznie" +
-      ".polar.model.TrainingLoad\022F\n\005index\030\t \001(\013" +
-      "27.pl.niekoniecznie.polar.model.Exercise",
-      "Data.RunningIndex\022\016\n\006ascent\030\n \002(\002\022\017\n\007des" +
-      "cent\030\013 \002(\002\032\026\n\005Sport\022\r\n\005value\030\001 \002(\004\032S\n\014Ru" +
-      "nningIndex\022\r\n\005value\030\001 \002(\r\0224\n\010duration\030\002 " +
-      "\002(\0132\".pl.niekoniecznie.polar.model.Time\"" +
-      "\207\005\n\007LapData\0226\n\003lap\030\001 \003(\0132).pl.niekoniecz" +
-      "nie.polar.model.LapData.Lap\022>\n\007summary\030\002" +
-      " \001(\0132-.pl.niekoniecznie.polar.model.LapD" +
-      "ata.Summary\032\221\003\n\003Lap\022@\n\006header\030\001 \002(\01320.pl" +
-      ".niekoniecznie.polar.model.LapData.Lap.H" +
-      "eader\022>\n\tstatistic\030\002 \002(\0132+.pl.niekoniecz",
-      "nie.polar.model.StatisticData\032\207\002\n\006Header" +
-      "\0221\n\005split\030\001 \002(\0132\".pl.niekoniecznie.polar" +
-      ".model.Time\0224\n\010duration\030\002 \002(\0132\".pl.nieko" +
-      "niecznie.polar.model.Time\022\020\n\010distance\030\003 " +
-      "\002(\002\022\016\n\006ascent\030\004 \001(\002\022\017\n\007descent\030\005 \001(\002\022C\n\004" +
-      "type\030\006 \002(\01625.pl.niekoniecznie.polar.mode" +
-      "l.LapData.Lap.Header.Type\"\034\n\004Type\022\n\n\006MAN" +
-      "UAL\020\000\022\010\n\004AUTO\020\001\032p\n\007Summary\0220\n\004best\030\001 \002(\013" +
-      "2\".pl.niekoniecznie.polar.model.Time\0223\n\007" +
-      "average\030\002 \002(\0132\".pl.niekoniecznie.polar.m",
-      "odel.Time\"\243\001\n\tRouteData\022\020\n\010duration\030\001 \003(" +
-      "\r\022\020\n\010latitude\030\002 \003(\001\022\021\n\tlongitude\030\003 \003(\001\022\020" +
-      "\n\010altitude\030\004 \003(\021\022\022\n\nsatellites\030\005 \003(\r\0229\n\t" +
-      "timestamp\030\t \002(\0132&.pl.niekoniecznie.polar" +
-      ".model.DateTime\"\210\001\n\nSampleData\0224\n\010interv" +
-      "al\030\001 \002(\0132\".pl.niekoniecznie.polar.model." +
-      "Time\022\021\n\theartrate\030\002 \003(\r\022\020\n\010altitude\030\006 \003(" +
-      "\002\022\r\n\005speed\030\t \003(\002\022\020\n\010distance\030\013 \003(\002\"\271\001\n\rS" +
-      "tatisticData\022:\n\theartrate\030\001 \001(\0132\'.pl.nie" +
-      "koniecznie.polar.model.Heartrate\0222\n\005spee",
-      "d\030\002 \002(\0132#.pl.niekoniecznie.polar.model.S" +
-      "peed\0228\n\010altitude\030\004 \001(\0132&.pl.niekonieczni" +
-      "e.polar.model.Altitude\"\205\005\n\010ZoneData\022K\n\rh" +
-      "eartrateZone\030\001 \003(\01324.pl.niekoniecznie.po" +
-      "lar.model.ZoneData.HeartrateZone\022C\n\tspee" +
-      "dZone\030\004 \003(\01320.pl.niekoniecznie.polar.mod" +
-      "el.ZoneData.SpeedZone\022O\n\017heartrateSource" +
-      "\030\n \002(\01626.pl.niekoniecznie.polar.model.Zo" +
-      "neData.HeartrateSource\032\265\001\n\rHeartrateZone" +
-      "\022I\n\005limit\030\001 \002(\0132:.pl.niekoniecznie.polar",
-      ".model.ZoneData.HeartrateZone.Limit\0224\n\010d" +
-      "uration\030\002 \002(\0132\".pl.niekoniecznie.polar.m" +
-      "odel.Time\032#\n\005Limit\022\013\n\003low\030\001 \002(\r\022\r\n\005hight" +
-      "\030\002 \002(\r\032\276\001\n\tSpeedZone\022E\n\005limit\030\001 \002(\01326.pl" +
-      ".niekoniecznie.polar.model.ZoneData.Spee" +
-      "dZone.Limit\0224\n\010duration\030\002 \002(\0132\".pl.nieko" +
-      "niecznie.polar.model.Time\022\020\n\010distance\030\003 " +
-      "\002(\002\032\"\n\005Limit\022\013\n\003low\030\001 \002(\002\022\014\n\004high\030\002 \002(\002\"" +
-      "\035\n\017HeartrateSource\022\n\n\006SENSOR\020\000\"\200\001\n\014Train" +
-      "ingLoad\022\r\n\005value\030\001 \002(\r\0224\n\010recovery\030\002 \002(\013",
-      "2\".pl.niekoniecznie.polar.model.Time\022\r\n\005" +
-      "carbs\030\003 \001(\r\022\017\n\007protein\030\004 \001(\r\022\013\n\003fat\030\005 \001(" +
-      "\r\":\n\005Speed\022\017\n\007average\030\001 \002(\002\022\017\n\007maximum\030\002" +
-      " \002(\002\022\017\n\007minimum\030\003 \001(\002\"=\n\010Altitude\022\017\n\007ave" +
-      "rage\030\001 \002(\002\022\017\n\007maximum\030\002 \002(\002\022\017\n\007minimum\030\003" +
-      " \002(\002\">\n\tHeartrate\022\017\n\007average\030\001 \002(\r\022\017\n\007ma" +
-      "ximum\030\002 \002(\r\022\017\n\007minimum\030\003 \001(\r\"Q\n\006FloatM\022\r" +
-      "\n\005value\030\001 \002(\002\0228\n\010modified\030\002 \002(\0132&.pl.nie" +
-      "koniecznie.polar.model.DateTime\"R\n\007UInt3" +
-      "2M\022\r\n\005value\030\001 \002(\r\0228\n\010modified\030\002 \002(\0132&.pl",
-      ".niekoniecznie.polar.model.DateTime\"n\n\010D" +
-      "ateTime\0220\n\004date\030\001 \002(\0132\".pl.niekoniecznie" +
-      ".polar.model.Date\0220\n\004time\030\002 \002(\0132\".pl.nie" +
-      "koniecznie.polar.model.Time\"0\n\004Date\022\014\n\004y" +
-      "ear\030\001 \002(\r\022\r\n\005month\030\002 \002(\r\022\013\n\003day\030\003 \002(\r\"H\n" +
-      "\004Time\022\014\n\004hour\030\001 \001(\r\022\016\n\006minute\030\002 \001(\r\022\016\n\006s" +
-      "econd\030\003 \001(\r\022\022\n\nmilisecond\030\004 \001(\rB*\n\034pl.ni" +
-      "ekoniecznie.polar.modelB\nPolarModel"
+      "Time\"R\n\007UInt32M\022\r\n\005value\030\001 \002(\r\0228\n\010modifi",
+      "ed\030\002 \002(\0132&.pl.niekoniecznie.polar.model." +
+      "DateTime\"n\n\010DateTime\0220\n\004date\030\001 \002(\0132\".pl." +
+      "niekoniecznie.polar.model.Date\0220\n\004time\030\002" +
+      " \002(\0132\".pl.niekoniecznie.polar.model.Time" +
+      "\"0\n\004Date\022\014\n\004year\030\001 \002(\r\022\r\n\005month\030\002 \002(\r\022\013\n" +
+      "\003day\030\003 \002(\r\"H\n\004Time\022\014\n\004hour\030\001 \001(\r\022\016\n\006minu" +
+      "te\030\002 \001(\r\022\016\n\006second\030\003 \001(\r\022\022\n\nmilisecond\030\004" +
+      " \001(\rB*\n\034pl.niekoniecznie.polar.modelB\nPo" +
+      "larModel"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

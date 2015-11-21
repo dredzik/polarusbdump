@@ -34,12 +34,12 @@ public class DownloadCommand implements Command<Map<SessionFile, InputStream>> {
 
             InputStream stream = filesystem.get(path);
 
-            try {
-                if (path.endsWith(".GZB")) {
+            if (path.endsWith(".GZB")) {
+                try {
                     stream = new GZIPInputStream(stream);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
                 }
-            } catch (IOException e) {
-                throw new RuntimeException(e);
             }
 
             result.put(file, stream);

@@ -14,6 +14,7 @@ message PhysicalData {
         required DateTime modified = 2;
 
         enum Type {
+            UNKNOWN = 0;
             MALE = 1;
             FEMALE = 2;
         }
