@@ -3,6 +3,7 @@ package pl.niekoniecznie.p2e;
 import com.codeminders.hidapi.ClassPathLibraryLoader;
 import com.codeminders.hidapi.HIDDevice;
 import com.codeminders.hidapi.HIDManager;
+import pl.niekoniecznie.p2e.workflow.ConvertCommand;
 import pl.niekoniecznie.p2e.workflow.DownloadCommand;
 import pl.niekoniecznie.p2e.workflow.ListCommand;
 import pl.niekoniecznie.p2e.workflow.ParseCommand;
@@ -34,6 +35,7 @@ public class Polar2Endomondo {
         new ListCommand(lister).execute().forEach(directory -> new Thread(() -> {
             Map<SessionFile, InputStream> files = new DownloadCommand(filesystem, directory).execute();
             Session session = new ParseCommand(files).execute();
+            new ConvertCommand(session).execute();
         }).start());
 
 //        hid.close();
