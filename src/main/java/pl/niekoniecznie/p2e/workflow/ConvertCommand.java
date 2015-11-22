@@ -2,6 +2,8 @@ package pl.niekoniecznie.p2e.workflow;
 
 import com.garmin.xmlschemas.trainingcenterdatabase.v2.*;
 import pl.niekoniecznie.polar.model.PolarModel.Date;
+import pl.niekoniecznie.polar.model.PolarModel.DateTime;
+import pl.niekoniecznie.polar.model.PolarModel.LapData.Lap;
 import pl.niekoniecznie.polar.model.PolarModel.Time;
 import pl.niekoniecznie.polar.model.Session;
 
@@ -18,7 +20,9 @@ import java.nio.file.Paths;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 public class ConvertCommand implements Command<Void> {
 
@@ -34,82 +38,117 @@ public class ConvertCommand implements Command<Void> {
             DatatypeFactory datatypeFactory = DatatypeFactory.newInstance();
             ObjectFactory factory = new ObjectFactory();
 
-            Date tmp1 = session.getData().getStart().getDate();
-            Time tmp2 = session.getData().getStart().getTime();
-            LocalDate date = LocalDate.of(tmp1.getYear(), tmp1.getMonth(), tmp1.getDay());
-            LocalTime time = LocalTime.of(tmp2.getHour(), tmp2.getMinute(), tmp2.getSecond()).plus(tmp2.getMilisecond(), ChronoUnit.MILLIS);
-            ZonedDateTime sdt = ZonedDateTime.of(date, time, ZoneId.systemDefault());
-            GregorianCalendar start = GregorianCalendar.from(sdt);
+            ZonedDateTime sessionStart = convertDateTime(session.getData().getStart());
+            ZonedDateTime sessionEnd = convertDateTime(session.getData().getEnd());
+
+            List<ZonedDateTime> lapStartDates = new ArrayList<>();
+
+            lapStartDates.add(sessionStart);
+
+            session.getAutomaticLaps().getLapList().forEach(data -> {
+                Duration split = convertDuration(data.getHeader().getSplit());
+                lapStartDates.add(sessionStart.plus(split));
+            });
+
+            lapStartDates.add(sessionEnd);
+
+
+            ZonedDateTime lastLapStart = lapStartDates.get(lapStartDates.size() - 2);
+            double lastLapDuration = convertDuration(session.getExercise().getDuration()).toMillis() / 1000.;
+            double lastLapDistance = session.getExercise().getDistance();
+            int lastLapCalories = session.getExercise().getCalories() / (lapStartDates.size() - 1);
 
             ActivityT activity = factory.createActivityT();
             activity.setSport(SportT.RUNNING);
-            activity.setId(datatypeFactory.newXMLGregorianCalendar(start));
+            activity.setId(datatypeFactory.newXMLGregorianCalendar(GregorianCalendar.from(sessionStart)));
 
-            session.getAutomaticLaps().getLapList().forEach(data -> {
+            for (int i = 0; i < session.getAutomaticLaps().getLapCount(); i++) {
+                Lap data = session.getAutomaticLaps().getLap(i);
+
+
+                ZonedDateTime lapStart = lapStartDates.get(i);
+                double lapDuration = convertDuration(data.getHeader().getDuration()).toMillis() / 1000.;
+                double lapDistance = data.getHeader().getDistance();
+                double lapSpeedMax = data.getStatistic().getSpeed().getMaximum();
+                int lapCalories = session.getExercise().getCalories() / (lapStartDates.size() - 1);
+
+                boolean lapHasHeartrate = data.getStatistic().hasHeartrate();
+                short lapHeartrateMax = lapHasHeartrate ? (short) data.getStatistic().getHeartrate().getMaximum() : 0;
+                short lapHeartrateAvg = lapHasHeartrate ? (short) data.getStatistic().getHeartrate().getAverage() : 0;
+
+
                 ActivityLapT lap = factory.createActivityLapT();
+                lap.getTrack().add(factory.createTrackT());
+                lap.setStartTime(datatypeFactory.newXMLGregorianCalendar(GregorianCalendar.from(lapStart)));
+                lap.setTotalTimeSeconds(lapDuration);
+                lap.setDistanceMeters(lapDistance);
+                lap.setMaximumSpeed(lapSpeedMax);
+                lap.setCalories(lapCalories);
 
-                Time durationData = data.getHeader().getDuration();
-                Duration duration = Duration.ofHours(durationData.getHour())
-                        .plusMinutes(durationData.getMinute())
-                        .plusSeconds(durationData.getSecond())
-                        .plusMillis(durationData.getMilisecond());
-
-                Time splitData = data.getHeader().getSplit();
-                Duration split = Duration.ofHours(splitData.getHour())
-                        .plusMinutes(splitData.getMinute())
-                        .plusSeconds(splitData.getSecond())
-                        .plusMillis(splitData.getMilisecond());
-
-                Duration lstart = split.minus(duration);
-                ZonedDateTime ldt = sdt.plus(lstart);
-
-                lap.setStartTime(datatypeFactory.newXMLGregorianCalendar(GregorianCalendar.from(ldt)));
-                lap.setTotalTimeSeconds(duration.toMillis() / 1000.);
-                lap.setDistanceMeters(data.getHeader().getDistance());
-                lap.setMaximumSpeed((double) data.getStatistic().getSpeed().getMaximum());
-                lap.setCalories(session.getExercise().getCalories() / session.getAutomaticLaps().getLapCount());
-
-                if (data.getStatistic().hasHeartrate()) {
+                if (lapHasHeartrate) {
                     lap.setMaximumHeartRateBpm(factory.createHeartRateInBeatsPerMinuteT());
-                    lap.getMaximumHeartRateBpm().setValue((short) data.getStatistic().getHeartrate().getMaximum());
+                    lap.getMaximumHeartRateBpm().setValue(lapHeartrateMax);
 
                     lap.setAverageHeartRateBpm(factory.createHeartRateInBeatsPerMinuteT());
-                    lap.getAverageHeartRateBpm().setValue((short) data.getStatistic().getHeartrate().getAverage());
-                }
-
-                lap.getTrack().add(factory.createTrackT());
-
-                for (int i = 0; i < session.getRoute().getDurationCount(); i++) {
-                    Duration pduration = Duration.ofMillis(session.getRoute().getDuration(i));
-
-                    if (pduration.compareTo(lstart) < 0 || pduration.compareTo(split) >= 0) {
-                        continue;
-                    }
-
-                    TrackpointT point = factory.createTrackpointT();
-
-                    if (session.getSamples().getHeartrateCount() > 0) {
-                        point.setHeartRateBpm(factory.createHeartRateInBeatsPerMinuteT());
-                        point.getHeartRateBpm().setValue((short) session.getSamples().getHeartrate(i));
-                    }
-
-                    point.setTime(datatypeFactory.newXMLGregorianCalendar(GregorianCalendar.from(sdt.plus(pduration))));
-                    point.setAltitudeMeters((double) session.getSamples().getAltitude(i));
-                    point.setPosition(factory.createPositionT());
-                    point.getPosition().setLatitudeDegrees(session.getRoute().getLatitude(i));
-                    point.getPosition().setLongitudeDegrees(session.getRoute().getLongitude(i));
-
-                    lap.getTrack().get(0).getTrackpoint().add(point);
+                    lap.getAverageHeartRateBpm().setValue(lapHeartrateAvg);
                 }
 
                 activity.getLap().add(lap);
-            });
+
+
+                lastLapDuration -= lapDuration;
+                lastLapDistance -= lapDistance;
+            }
+
+            ActivityLapT lastLap = factory.createActivityLapT();
+            lastLap.getTrack().add(factory.createTrackT());
+            lastLap.setStartTime(datatypeFactory.newXMLGregorianCalendar(GregorianCalendar.from(lastLapStart)));
+            lastLap.setTotalTimeSeconds(lastLapDuration);
+            lastLap.setDistanceMeters(lastLapDistance);
+            lastLap.setCalories(lastLapCalories);
+
+            activity.getLap().add(lastLap);
+
+
+            int currentLap = 0;
+
+            for (int i = 0; i < session.getRoute().getDurationCount(); i++) {
+                Duration pointDuration = Duration.ofMillis(session.getRoute().getDuration(i));
+                ZonedDateTime pointTime = sessionStart.plus(pointDuration);
+                double pointAltitude = session.getSamples().getAltitude(i);
+                double pointLatitude = session.getRoute().getLatitude(i);
+                double pointLongitude = session.getRoute().getLongitude(i);
+
+                boolean pointHasHeartrate = session.getSamples().getHeartrateCount() > 0;
+                short pointHeartrate = pointHasHeartrate ? (short) session.getSamples().getHeartrate(i) : 0;
+
+
+                TrackpointT point = factory.createTrackpointT();
+                point.setPosition(factory.createPositionT());
+                point.setAltitudeMeters(pointAltitude);
+                point.getPosition().setLatitudeDegrees(pointLatitude);
+                point.getPosition().setLongitudeDegrees(pointLongitude);
+                point.setTime(datatypeFactory.newXMLGregorianCalendar(GregorianCalendar.from(pointTime)));
+
+                if (pointHasHeartrate) {
+                    point.setHeartRateBpm(factory.createHeartRateInBeatsPerMinuteT());
+                    point.getHeartRateBpm().setValue(pointHeartrate);
+                }
+
+
+                if (pointTime.compareTo(lapStartDates.get(currentLap + 1)) >= 0) {
+                    currentLap++;
+                }
+
+                activity.getLap().get(currentLap).getTrack().get(0).getTrackpoint().add(point);
+            }
+
 
             TrainingCenterDatabaseT tcx = factory.createTrainingCenterDatabaseT();
             tcx.setActivities(factory.createActivityListT());
             tcx.getActivities().getActivity().add(activity);
 
-            Path output = Files.createFile(Paths.get("/Users/ak/Downloads/polar_data/", sdt.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) + ".tcx"));
+            Path output = Files.createFile(Paths.get("/Users/ak/Downloads/polar_data/", sessionStart.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) + ".tcx"));
 
             JAXBContext context = JAXBContext.newInstance(ObjectFactory.class);
             Marshaller marshaller = context.createMarshaller();
@@ -121,5 +160,22 @@ public class ConvertCommand implements Command<Void> {
         } catch (JAXBException | DatatypeConfigurationException | IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private ZonedDateTime convertDateTime(DateTime dt) {
+        Date date = dt.getDate();
+        Time time = dt.getTime();
+
+        LocalDate ldate = LocalDate.of(date.getYear(), date.getMonth(), date.getDay());
+        LocalTime ltime = LocalTime.of(time.getHour(), time.getMinute(), time.getSecond()).plus(time.getMilisecond(), ChronoUnit.MILLIS);
+
+        return ZonedDateTime.of(ldate, ltime, ZoneId.systemDefault());
+    }
+
+    private Duration convertDuration(Time t) {
+        return Duration.ofHours(t.getHour())
+                .plusMinutes(t.getMinute())
+                .plusSeconds(t.getSecond())
+                .plusMillis(t.getMilisecond());
     }
 }
