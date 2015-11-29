@@ -1,10 +1,7 @@
 package pl.niekoniecznie.p2e.workflow;
 
 import com.garmin.xmlschemas.trainingcenterdatabase.v2.*;
-import pl.niekoniecznie.polar.model.PolarModel.Date;
-import pl.niekoniecznie.polar.model.PolarModel.DateTime;
-import pl.niekoniecznie.polar.model.PolarModel.LapData.Lap;
-import pl.niekoniecznie.polar.model.PolarModel.Time;
+import pl.niekoniecznie.polar.model.Model.*;
 import pl.niekoniecznie.polar.model.Session;
 
 import javax.xml.bind.JAXBContext;

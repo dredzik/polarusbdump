@@ -1,6 +1,6 @@
 package pl.niekoniecznie.polar.model;
 
-import pl.niekoniecznie.polar.model.PolarModel.*;
+import pl.niekoniecznie.polar.model.Model.*;
 
 public class Session {
 

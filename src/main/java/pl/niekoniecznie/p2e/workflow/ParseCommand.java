@@ -2,7 +2,7 @@ package pl.niekoniecznie.p2e.workflow;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import pl.niekoniecznie.polar.model.PolarModel.*;
+import pl.niekoniecznie.polar.model.Model.*;
 import pl.niekoniecznie.polar.model.Session;
 import pl.niekoniecznie.polar.model.SessionFile;
 

@@ -1,7 +1,7 @@
 package pl.niekoniecznie.polar.model;
 
 option java_package = "pl.niekoniecznie.polar.model";
-option java_outer_classname = "PolarModel";
+option java_outer_classname = "Model";
 
 message PhysicalData {
     message Birthday {
@@ -75,25 +75,6 @@ message ExerciseData {
 }
 
 message LapData {
-    message Lap {
-        message Header {
-            enum Type {
-                MANUAL = 0;
-                AUTO = 1;
-            }
-
-            required Time split = 1;
-            required Time duration = 2;
-            required float distance = 3;
-            optional float ascent = 4;
-            optional float descent = 5;
-            required Type type = 6;
-        }
-
-        required Header header = 1;
-        required StatisticData statistic = 2;
-    }
-
     message Summary {
         required Time best = 1;
         required Time average = 2;
@@ -101,6 +82,25 @@ message LapData {
 
     repeated Lap lap = 1;
     optional Summary summary = 2;
+}
+
+message Lap {
+    message Header {
+        enum Type {
+            MANUAL = 0;
+            AUTO = 1;
+        }
+
+        required Time split = 1;
+        required Time duration = 2;
+        required float distance = 3;
+        optional float ascent = 4;
+        optional float descent = 5;
+        required Type type = 6;
+    }
+
+    required Header header = 1;
+    required StatisticData statistic = 2;
 }
 
 message RouteData {
