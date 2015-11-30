@@ -9,7 +9,6 @@ import pl.niekoniecznie.p2e.workflow.ListCommand;
 import pl.niekoniecznie.p2e.workflow.ParseCommand;
 import pl.niekoniecznie.polar.device.PolarDevice;
 import pl.niekoniecznie.polar.filesystem.PolarFileSystem;
-import pl.niekoniecznie.polar.filesystem.PolarLister;
 import pl.niekoniecznie.polar.model.Session;
 import pl.niekoniecznie.polar.model.SessionFile;
 import pl.niekoniecznie.polar.service.PolarService;
@@ -30,9 +29,8 @@ public class Polar2Endomondo {
         PolarDevice device = new PolarDevice(hid);
         PolarService service = new PolarService(device);
         PolarFileSystem filesystem = new PolarFileSystem(service);
-        PolarLister lister = new PolarLister(filesystem);
 
-        new ListCommand(lister).execute().forEach(directory -> new Thread(() -> {
+        new ListCommand(filesystem).execute().forEach(directory -> new Thread(() -> {
             Map<SessionFile, InputStream> files = new DownloadCommand(filesystem, directory).execute();
             Session session = new ParseCommand(files).execute();
             new ConvertCommand(session).execute();
