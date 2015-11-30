@@ -2,7 +2,7 @@ package pl.niekoniecznie.p2e.workflow;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import pl.niekoniecznie.polar.filesystem.PolarFileSystem;
+import pl.niekoniecznie.polar.io.PolarFileSystem;
 
 import java.util.Collection;
 import java.util.List;

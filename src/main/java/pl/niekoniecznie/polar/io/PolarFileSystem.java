@@ -1,8 +1,4 @@
-package pl.niekoniecznie.polar.filesystem;
-
-import pl.niekoniecznie.polar.service.PolarRequest;
-import pl.niekoniecznie.polar.service.PolarResponse;
-import pl.niekoniecznie.polar.service.PolarService;
+package pl.niekoniecznie.polar.io;
 
 import java.io.InputStream;
 import java.util.ArrayList;

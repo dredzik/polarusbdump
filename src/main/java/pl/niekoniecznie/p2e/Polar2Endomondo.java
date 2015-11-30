@@ -7,11 +7,11 @@ import pl.niekoniecznie.p2e.workflow.ConvertCommand;
 import pl.niekoniecznie.p2e.workflow.DownloadCommand;
 import pl.niekoniecznie.p2e.workflow.ListCommand;
 import pl.niekoniecznie.p2e.workflow.ParseCommand;
-import pl.niekoniecznie.polar.device.PolarDevice;
-import pl.niekoniecznie.polar.filesystem.PolarFileSystem;
+import pl.niekoniecznie.polar.io.PolarDevice;
+import pl.niekoniecznie.polar.io.PolarFileSystem;
 import pl.niekoniecznie.polar.model.Session;
 import pl.niekoniecznie.polar.model.SessionFile;
-import pl.niekoniecznie.polar.service.PolarService;
+import pl.niekoniecznie.polar.io.PolarService;
 
 import java.io.IOException;
 import java.io.InputStream;

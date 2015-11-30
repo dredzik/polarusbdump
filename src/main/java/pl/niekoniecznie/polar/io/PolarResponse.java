@@ -1,6 +1,4 @@
-package pl.niekoniecznie.polar.service;
-
-import pl.niekoniecznie.polar.device.PolarPacket;
+package pl.niekoniecznie.polar.io;
 
 import java.util.ArrayList;
 import java.util.List;
