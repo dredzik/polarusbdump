@@ -12,6 +12,15 @@ public class PolarRequest {
     }
 
     public PolarPacket getPacket() {
+        PolarPacket result0 = new PolarPacket();
+
+        result0.setType(0x01);
+        result0.setData(getData());
+
+        return result0;
+    }
+
+    public byte[] getData() {
         byte[] message = CommandMessage.newBuilder().setType(CommandType.READ).setPath(url).build().toByteArray();
         byte[] data = new byte[message.length + 4];
 
@@ -23,12 +32,6 @@ public class PolarRequest {
         data[data.length - 1] = 0x00;
 
         System.arraycopy(message, 0, data, 3, message.length);
-
-        PolarPacket result0 = new PolarPacket();
-
-        result0.setType((byte) 0x01);
-        result0.setData(data);
-
-        return result0;
+        return data;
     }
 }

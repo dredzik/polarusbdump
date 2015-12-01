@@ -12,23 +12,19 @@ public class PolarDevice {
         this.device = device;
     }
 
-    public void write(PolarPacket packet) {
+    public int write(byte[] buffer) {
         try {
-            device.write(packet.getBytes());
+            return device.write(buffer);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public PolarPacket read() {
-        byte[] buffer = new byte[PolarPacket.BUFFER_LENGTH];
-
+    public int read(byte[] buffer) {
         try {
-            device.read(buffer);
+            return device.read(buffer);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-        return new PolarPacket(buffer);
     }
 }

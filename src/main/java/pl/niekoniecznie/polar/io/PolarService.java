@@ -9,20 +9,21 @@ public class PolarService {
     }
 
     public void send(PolarRequest request) {
-        device.write(request.getPacket());
+        device.write(request.getPacket().getBytes());
     }
 
     public PolarResponse recv() {
         PolarResponse response = new PolarResponse();
 
-        PolarPacket packet;
+        byte[] buffer = new byte[PolarPacket.BUFFER_LENGTH];
+        PolarPacket packet = new PolarPacket(buffer);
 
         do {
-            packet = device.read();
+            device.read(buffer);
             response.append(packet);
 
             if (packet.hasMore()) {
-                device.write(response.getPacket());
+                device.write(response.getPacket().getBytes());
             }
         } while (packet.hasMore());
 

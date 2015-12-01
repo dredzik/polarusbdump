@@ -13,7 +13,7 @@ public class PolarResponse {
 
         PolarPacket result0 = new PolarPacket();
 
-        result0.setType((byte) 0x01);
+        result0.setType(0x01);
         result0.setMore(true);
         result0.setData(data);
 
