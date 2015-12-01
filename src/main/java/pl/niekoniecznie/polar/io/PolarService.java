@@ -18,6 +18,7 @@ public class PolarService {
 
         packet.setType(0x01);
         packet.setMore(false);
+        packet.setSequence(0);
         packet.setData(message);
 
         device.write(buffer);
@@ -38,7 +39,7 @@ public class PolarService {
             }
 
             packet.setType(0x01);
-            packet.setSize(1);
+            packet.setSize(0);
 
             device.write(buffer);
         }

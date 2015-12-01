@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class PolarPacket {
 
     public static final int BUFFER_LENGTH = 64;
-    public static final int MAX_DATA_SIZE = 62;
+    public static final int MAX_DATA_SIZE = 61;
 
     private byte[] buffer;
 
@@ -35,16 +35,24 @@ public class PolarPacket {
     }
 
     public int getSize() {
-        return (buffer[1] & 0xfc) >> 2;
+        return ((buffer[1] & 0xfc) >> 2) - 1;
     }
 
     public void setSize(int size) {
         buffer[1] &= 0x03;
-        buffer[1] |= size << 2;
+        buffer[1] |= (size + 1) << 2;
+    }
+
+    public int getSequence() {
+        return buffer[2];
+    }
+
+    public void setSequence(int sequence) {
+        buffer[2] = (byte) sequence;
     }
 
     public byte[] getData() {
-        return Arrays.copyOfRange(buffer, 2, getSize() + 2);
+        return Arrays.copyOfRange(buffer, 3, getSize() + 3);
     }
 
     public void setData(byte[] data) {
@@ -52,7 +60,7 @@ public class PolarPacket {
             throw new IllegalArgumentException("Data size set to " + data.length + ", shouldn't be greater than " + MAX_DATA_SIZE);
         }
 
-        System.arraycopy(data, 0, buffer, 2, data.length);
+        System.arraycopy(data, 0, buffer, 3, data.length);
         setSize(data.length);
     }
 
