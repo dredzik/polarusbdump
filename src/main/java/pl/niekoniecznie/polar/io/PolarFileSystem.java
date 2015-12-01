@@ -49,7 +49,7 @@ public class PolarFileSystem {
         PolarResponse response;
 
         try {
-            service.send(request);
+            service.write(request.getData());
             response = service.recv();
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -63,7 +63,7 @@ public class PolarFileSystem {
         PolarResponse response;
 
         try {
-            service.send(request);
+            service.write(request.getData());
             response = service.recv();
         } catch (IOException e) {
             throw new RuntimeException(e);

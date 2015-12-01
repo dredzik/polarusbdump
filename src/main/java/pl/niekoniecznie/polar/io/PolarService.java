@@ -12,8 +12,15 @@ public class PolarService {
         this.device = device;
     }
 
-    public void send(PolarRequest request) throws IOException {
-        device.write(request.getPacket().getBytes());
+    public void write(byte[] message) throws IOException {
+        byte[] buffer = new byte[PolarPacket.BUFFER_LENGTH];
+        PolarPacket packet = new PolarPacket(buffer);
+
+        packet.setType(0x01);
+        packet.setMore(false);
+        packet.setData(message);
+
+        device.write(buffer);
     }
 
     public PolarResponse recv() throws IOException {
@@ -30,7 +37,10 @@ public class PolarService {
                 break;
             }
 
-            device.write(response.getPacket().getBytes());
+            packet.setType(0x01);
+            packet.setSize(1);
+
+            device.write(buffer);
         }
 
         return response;

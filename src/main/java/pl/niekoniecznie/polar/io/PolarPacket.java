@@ -9,11 +9,6 @@ public class PolarPacket {
 
     private byte[] buffer;
 
-    public PolarPacket() {
-        this.buffer = new byte[BUFFER_LENGTH];
-        Arrays.fill(this.buffer, (byte) 0x00);
-    }
-
     public PolarPacket(byte[] buffer) {
         if (buffer.length != BUFFER_LENGTH) {
             throw new IllegalArgumentException("Buffer size set to " + buffer.length + ", should be " + BUFFER_LENGTH);
