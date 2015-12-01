@@ -1,6 +1,7 @@
 package pl.niekoniecznie.polar.io;
 
-import java.nio.charset.Charset;
+import pl.niekoniecznie.polar.model.Model.CommandMessage;
+import pl.niekoniecznie.polar.model.Model.CommandType;
 
 public class PolarRequest {
 
@@ -11,25 +12,17 @@ public class PolarRequest {
     }
 
     public PolarPacket getPacket() {
-        byte[] data = new byte[url.length() + 8];
-        Integer length1 = url.length() + 4;
-        Integer length2 = url.length();
+        byte[] message = CommandMessage.newBuilder().setType(CommandType.READ).setPath(url).build().toByteArray();
+        byte[] data = new byte[message.length + 4];
 
         data[0] = 0x00;
-        data[1] = length1.byteValue();
+
+        data[1] = (byte) message.length;
         data[2] = 0x00;
-        data[3] = 0x08;
-        data[4] = 0x00;
-        data[5] = 0x12;
-        data[6] = length2.byteValue();
-
-        byte[] tmp = url.getBytes(Charset.forName("UTF-8"));
-
-        for (int i = 0; i < length2; i++) {
-            data[7 + i] = tmp[i];
-        }
 
         data[data.length - 1] = 0x00;
+
+        System.arraycopy(message, 0, data, 3, message.length);
 
         PolarPacket result0 = new PolarPacket();
 

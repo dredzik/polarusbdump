@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class PolarPacket {
 
     public static final int BUFFER_LENGTH = 64;
-    public static final int MAX_DATA_SIZE = 61;
+    public static final int MAX_DATA_SIZE = 62;
 
     private byte type;
     private boolean continuation;
@@ -24,10 +24,6 @@ public class PolarPacket {
 
         int size = (packet[1] & 0xff) >> 2;
         data = Arrays.copyOfRange(packet, 2, size + 2);
-    }
-
-    public byte getType() {
-        return type;
     }
 
     public void setType(byte type) {

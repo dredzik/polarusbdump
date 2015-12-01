@@ -30,12 +30,13 @@ public class Polar2Endomondo {
         PolarService service = new PolarService(device);
         PolarFileSystem filesystem = new PolarFileSystem(service);
 
-        new ListCommand(filesystem).execute().forEach(directory -> new Thread(() -> {
+        new ListCommand(filesystem).execute().forEach(directory -> {
             Map<SessionFile, InputStream> files = new DownloadCommand(filesystem, directory).execute();
             Session session = new ParseCommand(files).execute();
             new ConvertCommand(session).execute();
-        }).start());
+        });
 
-//        hid.close();
+        hid.close();
+        System.exit(0);
     }
 }

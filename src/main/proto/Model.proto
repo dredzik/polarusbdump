@@ -3,6 +3,17 @@ package pl.niekoniecznie.polar.model;
 option java_package = "pl.niekoniecznie.polar.model";
 option java_outer_classname = "Model";
 
+message CommandMessage {
+    required CommandType type = 1;
+    required string path = 2;
+}
+
+enum CommandType {
+    READ = 0;
+    WRITE = 1;
+    DELETE = 3;
+}
+
 message ListMessage {
     message ListEntry {
         required string path = 1;
