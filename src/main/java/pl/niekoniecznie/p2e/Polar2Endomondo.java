@@ -7,7 +7,6 @@ import pl.niekoniecznie.p2e.workflow.ConvertCommand;
 import pl.niekoniecznie.p2e.workflow.DownloadCommand;
 import pl.niekoniecznie.p2e.workflow.ListCommand;
 import pl.niekoniecznie.p2e.workflow.ParseCommand;
-import pl.niekoniecznie.polar.io.PolarDevice;
 import pl.niekoniecznie.polar.io.PolarFileSystem;
 import pl.niekoniecznie.polar.model.Session;
 import pl.niekoniecznie.polar.model.SessionFile;
@@ -26,8 +25,7 @@ public class Polar2Endomondo {
         ClassPathLibraryLoader.loadNativeHIDLibrary();
 
         HIDDevice hid = HIDManager.getInstance().openById(POLAR_VENDOR_ID, POLAR_PRODUCT_ID, null);
-        PolarDevice device = new PolarDevice(hid);
-        PolarService service = new PolarService(device);
+        PolarService service = new PolarService(hid);
         PolarFileSystem filesystem = new PolarFileSystem(service);
 
         new ListCommand(filesystem).execute().forEach(directory -> {

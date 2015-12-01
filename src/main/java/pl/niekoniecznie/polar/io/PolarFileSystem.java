@@ -3,6 +3,7 @@ package pl.niekoniecznie.polar.io;
 import pl.niekoniecznie.polar.model.Model.ListMessage;
 import pl.niekoniecznie.polar.model.Model.ListMessage.ListEntry;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -47,8 +48,12 @@ public class PolarFileSystem {
         PolarRequest request = new PolarRequest(path);
         PolarResponse response;
 
-        service.send(request);
-        response = service.recv();
+        try {
+            service.send(request);
+            response = service.recv();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         return new PolarInputStream(response.getBytes());
     }
@@ -57,8 +62,12 @@ public class PolarFileSystem {
         PolarRequest request = new PolarRequest(path);
         PolarResponse response;
 
-        service.send(request);
-        response = service.recv();
+        try {
+            service.send(request);
+            response = service.recv();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         try {
             return ListMessage.parseFrom(response.getBytes()).getEntryList().stream().map(ListEntry::getPath).map(x -> path + x).collect(Collectors.toList());
