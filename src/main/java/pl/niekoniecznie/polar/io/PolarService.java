@@ -21,10 +21,10 @@ public class PolarService {
             packet = device.read();
             response.append(packet);
 
-            if (packet.isContinuation()) {
+            if (packet.hasMore()) {
                 device.write(response.getPacket());
             }
-        } while (packet.isContinuation());
+        } while (packet.hasMore());
 
         return response;
     }

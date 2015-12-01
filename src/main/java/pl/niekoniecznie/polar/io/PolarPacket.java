@@ -7,60 +7,61 @@ public class PolarPacket {
     public static final int BUFFER_LENGTH = 64;
     public static final int MAX_DATA_SIZE = 62;
 
-    private byte type;
-    private boolean continuation;
-    private byte[] data;
+    private byte[] buffer;
 
     public PolarPacket() {
+        this.buffer = new byte[BUFFER_LENGTH];
+        Arrays.fill(this.buffer, (byte) 0x00);
     }
 
-    public PolarPacket(byte[] packet) {
-        if (packet.length > BUFFER_LENGTH) {
-            throw new IllegalArgumentException("Packet size greater than BUFFER_LENGTH");
+    public PolarPacket(byte[] buffer) {
+        if (buffer.length != BUFFER_LENGTH) {
+            throw new IllegalArgumentException("Buffer size set to " + buffer.length + ", should be " + BUFFER_LENGTH);
         }
 
-        type = packet[0];
-        continuation = (packet[1] & 1) == 1;
-
-        int size = (packet[1] & 0xff) >> 2;
-        data = Arrays.copyOfRange(packet, 2, size + 2);
+        this.buffer = buffer;
     }
 
-    public void setType(byte type) {
-        this.type = type;
+    public int getType() {
+        return buffer[0];
     }
 
-    public boolean isContinuation() {
-        return continuation;
+    public void setType(int type) {
+        buffer[0] = (byte) type;
     }
 
-    public void setContinuation(boolean continuation) {
-        this.continuation = continuation;
+    public boolean hasMore() {
+        return (buffer[1] & 0x03) == 1;
+    }
+
+    public void setMore(boolean more) {
+        buffer[1] &= 0xfc;
+        buffer[1] |= more ? 1 : 0;
+    }
+
+    public int getSize() {
+        return (buffer[1] & 0xfc) >> 2;
+    }
+
+    public void setSize(int size) {
+        buffer[1] &= 0x03;
+        buffer[1] |= size << 2;
     }
 
     public byte[] getData() {
-        return data;
+        return Arrays.copyOfRange(buffer, 2, getSize() + 2);
     }
 
     public void setData(byte[] data) {
         if (data.length > MAX_DATA_SIZE) {
-            throw new IllegalArgumentException("Packet data greater than MAX_DATA_SIZE");
+            throw new IllegalArgumentException("Data size set to " + data.length + ", shouldn't be greater than " + MAX_DATA_SIZE);
         }
 
-        this.data = data;
+        System.arraycopy(data, 0, buffer, 2, data.length);
+        setSize(data.length);
     }
 
     public byte[] getBytes() {
-        byte[] result = new byte[BUFFER_LENGTH];
-        Arrays.fill(result, (byte) 0x00);
-
-        result[0] = type;
-        result[1] = new Integer((data.length << 2) | (continuation ? 1 : 0)).byteValue();
-
-        for (int i = 0; i < data.length; i++) {
-            result[i + 2] = data[i];
-        }
-
-        return result;
+        return buffer;
     }
 }
