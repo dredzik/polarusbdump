@@ -3,6 +3,18 @@ package pl.niekoniecznie.polar.model;
 option java_package = "pl.niekoniecznie.polar.model";
 option java_outer_classname = "Model";
 
+message ListMessage {
+    message ListEntry {
+        required string path = 1;
+        required uint32 size = 2;
+        required DateTime created = 3;
+        required DateTime modified = 4;
+        required DateTime unknown = 5;
+    }
+
+    repeated ListEntry entry = 1;
+}
+
 message PhysicalData {
     message Birthday {
         required Date date = 1;
@@ -196,6 +208,7 @@ message UInt32M {
 message DateTime {
     required Date date = 1;
     required Time time = 2;
+    optional uint32 timezone = 3;
 }
 
 message Date {

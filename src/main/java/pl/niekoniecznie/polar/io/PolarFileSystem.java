@@ -1,17 +1,20 @@
 package pl.niekoniecznie.polar.io;
 
+import pl.niekoniecznie.polar.model.Model.ListMessage;
+import pl.niekoniecznie.polar.model.Model.ListMessage.ListEntry;
+
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PolarFileSystem {
 
     private class PolarInputStream extends InputStream {
 
-        private final Object[] buffer;
+        private final byte[] buffer;
         private int pointer;
 
-        public PolarInputStream(Object[] buffer) {
+        public PolarInputStream(byte[] buffer) {
             this.buffer = buffer;
         }
 
@@ -21,7 +24,7 @@ public class PolarFileSystem {
                 return -1;
             }
 
-            return (byte) buffer[pointer++] & 0xff;
+            return buffer[pointer++] & 0xff;
         }
 
         @Override
@@ -44,35 +47,17 @@ public class PolarFileSystem {
         PolarRequest request = new PolarRequest(path);
         PolarResponse response = service.doRequest(request);
 
-        return new PolarInputStream(response.getBody().toArray());
+        return new PolarInputStream(response.getBytes());
     }
 
     public List<String> list(final String path) {
         PolarRequest request = new PolarRequest(path);
         PolarResponse response = service.doRequest(request);
 
-        List<String> result = new ArrayList<>();
-        List<Byte> body = response.getBody();
-
-        for (int i = 0; i < body.size(); ) {
-            if (body.get(i) != 0x0a || body.get(i + 2) != 0x0a) {
-                throw new IllegalStateException("something went wrong");
-            }
-
-            int entrySize = body.get(i + 1) + 2;
-            int nameSize = body.get(i + 3);
-
-            StringBuffer sb = new StringBuffer();
-
-            for (int j = 0; j < nameSize; j++) {
-                sb.append((char) (byte) body.get(i + 4 + j));
-            }
-
-            result.add(path + sb.toString());
-
-            i += entrySize;
+        try {
+            return ListMessage.parseFrom(response.getBytes()).getEntryList().stream().map(ListEntry::getPath).map(x -> path + x).collect(Collectors.toList());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
-
-        return result;
     }
 }
