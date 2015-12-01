@@ -45,14 +45,20 @@ public class PolarFileSystem {
 
     public InputStream get(final String path) {
         PolarRequest request = new PolarRequest(path);
-        PolarResponse response = service.doRequest(request);
+        PolarResponse response;
+
+        service.send(request);
+        response = service.recv();
 
         return new PolarInputStream(response.getBytes());
     }
 
     public List<String> list(final String path) {
         PolarRequest request = new PolarRequest(path);
-        PolarResponse response = service.doRequest(request);
+        PolarResponse response;
+
+        service.send(request);
+        response = service.recv();
 
         try {
             return ListMessage.parseFrom(response.getBytes()).getEntryList().stream().map(ListEntry::getPath).map(x -> path + x).collect(Collectors.toList());

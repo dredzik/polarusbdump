@@ -8,21 +8,23 @@ public class PolarService {
         this.device = device;
     }
 
-    public synchronized PolarResponse doRequest(PolarRequest request) {
+    public void send(PolarRequest request) {
         device.write(request.getPacket());
+    }
 
+    public PolarResponse recv() {
         PolarResponse response = new PolarResponse();
 
-        while (true) {
-            PolarPacket packet = device.read();
+        PolarPacket packet;
+
+        do {
+            packet = device.read();
             response.append(packet);
 
             if (packet.isContinuation()) {
                 device.write(response.getPacket());
-            } else {
-                break;
             }
-        }
+        } while (packet.isContinuation());
 
         return response;
     }
