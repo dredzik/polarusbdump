@@ -31,7 +31,7 @@ public class PolarService {
 
         while (true) {
             device.read(buffer);
-            response.append(packet);
+            response.append(packet.getData());
 
             if (!packet.hasMore()) {
                 break;
