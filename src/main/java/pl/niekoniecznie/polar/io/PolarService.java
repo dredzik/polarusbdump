@@ -13,15 +13,35 @@ public class PolarService {
     }
 
     public void write(byte[] message) throws IOException {
+        byte[] chunk = new byte[PolarPacket.MAX_DATA_SIZE];
         byte[] buffer = new byte[PolarPacket.BUFFER_LENGTH];
         PolarPacket packet = new PolarPacket(buffer);
 
-        packet.setType(0x01);
-        packet.setMore(false);
-        packet.setSequence(0);
-        packet.setData(message);
+        int count = (int) Math.ceil((double) message.length / PolarPacket.MAX_DATA_SIZE);
 
-        device.write(buffer);
+        for (int i = 0; i < count; i++) {
+            boolean last = i == count - 1;
+            int start = i * PolarPacket.MAX_DATA_SIZE;
+            int size = PolarPacket.MAX_DATA_SIZE;
+
+            if (last) {
+                size = message.length % size;
+            }
+
+            System.arraycopy(message, start, chunk, 0, size);
+
+            packet.setType(0x01);
+            packet.setMore(!last);
+            packet.setSequence(i);
+            packet.setData(chunk);
+            packet.setSize(size);
+
+            device.write(buffer);
+
+            if (!last) {
+                device.read(buffer);
+            }
+        }
     }
 
     public PolarResponse recv() throws IOException {
