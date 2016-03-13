@@ -6,7 +6,6 @@ import pl.niekoniecznie.polar.model.Model.ListMessage.ListEntry;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class PolarFileSystem {
 
@@ -58,7 +57,7 @@ public class PolarFileSystem {
         return new PolarInputStream(response.getBytes());
     }
 
-    public List<String> list(final String path) {
+    public List<ListEntry> list(final String path) {
         PolarRequest request = new PolarRequest(path);
         PolarResponse response;
 
@@ -70,7 +69,7 @@ public class PolarFileSystem {
         }
 
         try {
-            return ListMessage.parseFrom(response.getBytes()).getEntryList().stream().map(ListEntry::getPath).map(x -> path + x).collect(Collectors.toList());
+            return ListMessage.parseFrom(response.getBytes()).getEntryList();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

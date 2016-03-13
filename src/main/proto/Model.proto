@@ -66,7 +66,7 @@ message SessionData {
     required DateTime end = 20;
     required uint32 exerciseCount = 2;
     required string device = 3;
-    required string model = 4;
+    optional string model = 4;
     required Time duration = 5;
     required float distance = 6;
     required uint32 calories = 7;
