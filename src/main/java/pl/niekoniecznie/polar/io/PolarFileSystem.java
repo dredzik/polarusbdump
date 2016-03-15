@@ -1,41 +1,13 @@
 package pl.niekoniecznie.polar.io;
 
 import pl.niekoniecznie.polar.model.Model.ListMessage;
-import pl.niekoniecznie.polar.model.Model.ListMessage.ListEntry;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PolarFileSystem {
-
-    private class PolarInputStream extends InputStream {
-
-        private final byte[] buffer;
-        private int pointer;
-
-        public PolarInputStream(byte[] buffer) {
-            this.buffer = buffer;
-        }
-
-        @Override
-        public int read() {
-            if (pointer >= buffer.length) {
-                return -1;
-            }
-
-            return buffer[pointer++] & 0xff;
-        }
-
-        @Override
-        public int available() {
-            if (buffer == null) {
-                return 0;
-            }
-
-            return buffer.length - pointer;
-        }
-    }
 
     private final PolarService service;
 
@@ -43,7 +15,8 @@ public class PolarFileSystem {
         this.service = service;
     }
 
-    public InputStream get(final String path) {
+    public InputStream get(final PolarEntry file) {
+        String path = file.getPath();
         PolarRequest request = new PolarRequest(path);
         PolarResponse response;
 
@@ -57,7 +30,8 @@ public class PolarFileSystem {
         return new PolarInputStream(response.getBytes());
     }
 
-    public List<ListEntry> list(final String path) {
+    public List<PolarEntry> list(PolarEntry directory) {
+        String path = directory.getPath();
         PolarRequest request = new PolarRequest(path);
         PolarResponse response;
 
@@ -69,7 +43,12 @@ public class PolarFileSystem {
         }
 
         try {
-            return ListMessage.parseFrom(response.getBytes()).getEntryList();
+            return ListMessage
+                .parseFrom(response.getBytes())
+                .getEntryList()
+                .stream()
+                .map(x -> new PolarEntry(path, x))
+                .collect(Collectors.toList());
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
