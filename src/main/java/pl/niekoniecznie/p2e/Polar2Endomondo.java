@@ -26,7 +26,7 @@ public class Polar2Endomondo {
         while (iterator.hasNext()) {
             PolarEntry next = iterator.next();
 
-            System.out.println(next.getPath());
+            System.out.println(next.getPath() + " " + next.getSize() + "B " + next.getModified());
         }
 
         System.exit(0);
