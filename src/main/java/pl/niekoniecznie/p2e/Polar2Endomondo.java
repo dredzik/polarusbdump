@@ -25,6 +25,7 @@ public class Polar2Endomondo {
         PolarStream
             .stream(filesystem)
             .filter(new DirectoryFilter())
+            .filter(new FileFilter())
             .map(PolarEntry::getPath)
             .peek(System.out::println)
             .count();

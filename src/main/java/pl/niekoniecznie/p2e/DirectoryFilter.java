@@ -14,7 +14,7 @@ public class DirectoryFilter implements Predicate<PolarEntry> {
     @Override
     public boolean test(PolarEntry entry) {
         if (entry.isFile()) {
-            return false;
+            return true;
         }
 
         Path directory = Paths.get(DOWNLOAD_DIRECTORY, entry.getPath());
