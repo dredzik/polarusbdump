@@ -37,6 +37,10 @@ public class PolarEntry {
         return path.endsWith("/");
     }
 
+    public boolean isFile() {
+        return !isDirectory();
+    }
+
     public Instant getModified() {
         return modified;
     }
