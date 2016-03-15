@@ -3,9 +3,9 @@ package pl.niekoniecznie.p2e;
 import com.codeminders.hidapi.ClassPathLibraryLoader;
 import com.codeminders.hidapi.HIDDevice;
 import com.codeminders.hidapi.HIDManager;
-import pl.niekoniecznie.polar.io.PolarEntry;
 import pl.niekoniecznie.polar.io.PolarFileSystem;
 import pl.niekoniecznie.polar.io.PolarService;
+import pl.niekoniecznie.polar.stream.PolarStream;
 
 import java.io.IOException;
 
@@ -21,13 +21,7 @@ public class Polar2Endomondo {
         PolarService service = new PolarService(hid);
         PolarFileSystem filesystem = new PolarFileSystem(service);
 
-        PolarIterator iterator = new PolarIterator(filesystem);
-
-        while (iterator.hasNext()) {
-            PolarEntry next = iterator.next();
-
-            System.out.println(next.getPath() + " " + next.getSize() + "B " + next.getModified());
-        }
+        PolarStream.stream(filesystem).map(x -> x.getPath()).peek(System.out::println).count();
 
         System.exit(0);
     }

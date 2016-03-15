@@ -1,4 +1,4 @@
-package pl.niekoniecznie.p2e;
+package pl.niekoniecznie.polar.stream;
 
 import pl.niekoniecznie.polar.io.PolarEntry;
 import pl.niekoniecznie.polar.io.PolarFileSystem;
