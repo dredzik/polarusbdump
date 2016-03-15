@@ -22,14 +22,14 @@ public class Polar2Endomondo {
         PolarService service = new PolarService(hid);
         PolarFileSystem filesystem = new PolarFileSystem(service);
 
-        PolarStream
+        long updated = PolarStream
             .stream(filesystem)
             .filter(new DirectoryFilter())
             .filter(new FileFilter())
-            .map(PolarEntry::getPath)
-            .peek(System.out::println)
+            .peek(new DirectoryDownloader())
             .count();
 
+        System.out.println("Updated " + updated + " files and directories.");
         System.exit(0);
     }
 }
