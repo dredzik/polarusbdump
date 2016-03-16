@@ -26,13 +26,13 @@ public class Polar2Endomondo {
         ClassPathLibraryLoader.loadNativeHIDLibrary();
 
         HIDDevice hid = HIDManager.getInstance().openById(POLAR_VENDOR_ID, POLAR_PRODUCT_ID, null);
-        logger.trace("Device " + hid.getProductString() + " " + hid.getSerialNumberString() + " found");
+        logger.trace("device " + hid.getProductString() + " " + hid.getSerialNumberString() + " found");
 
         PolarService service = new PolarService(hid);
         PolarFileSystem filesystem = new PolarFileSystem(service);
 
         Path backupDirectory = Paths.get(System.getProperty("user.home"), ".polar/backup/", hid.getSerialNumberString());
-        logger.trace("Backup directory set to " + backupDirectory);
+        logger.trace("backup directory set to " + backupDirectory);
 
         if (!Files.exists(backupDirectory)) {
             Files.createDirectories(backupDirectory);
