@@ -9,7 +9,11 @@ import java.util.function.Predicate;
 
 public class DirectoryFilter implements Predicate<PolarEntry> {
 
-    private final static String DOWNLOAD_DIRECTORY = "/Users/ak/Downloads/polar/";
+    private final Path backupDirectory;
+
+    public DirectoryFilter(Path backupDirectory) {
+        this.backupDirectory = backupDirectory;
+    }
 
     @Override
     public boolean test(PolarEntry entry) {
@@ -17,7 +21,7 @@ public class DirectoryFilter implements Predicate<PolarEntry> {
             return true;
         }
 
-        Path directory = Paths.get(DOWNLOAD_DIRECTORY, entry.getPath());
+        Path directory = Paths.get(backupDirectory.toString(), entry.getPath());
 
         return Files.notExists(directory);
     }

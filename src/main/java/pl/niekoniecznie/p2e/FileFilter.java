@@ -13,7 +13,11 @@ import java.util.function.Predicate;
 
 public class FileFilter implements Predicate<PolarEntry> {
 
-    private final static String DOWNLOAD_DIRECTORY = "/Users/ak/Downloads/polar/";
+    private final Path backupDirectory;
+
+    public FileFilter(Path backupDirectory) {
+        this.backupDirectory = backupDirectory;
+    }
 
     @Override
     public boolean test(PolarEntry entry) {
@@ -21,7 +25,7 @@ public class FileFilter implements Predicate<PolarEntry> {
             return true;
         }
 
-        Path file = Paths.get(DOWNLOAD_DIRECTORY, entry.getPath());
+        Path file = Paths.get(backupDirectory.toString(), entry.getPath());
 
         if (Files.notExists(file)) {
             return true;

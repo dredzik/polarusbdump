@@ -10,7 +10,11 @@ import java.util.function.Consumer;
 
 public class DirectoryDownloader implements Consumer<PolarEntry> {
 
-    private final static String DOWNLOAD_DIRECTORY = "/Users/ak/Downloads/polar/";
+    private final Path backupDirectory;
+
+    public DirectoryDownloader(Path backupDirectory) {
+        this.backupDirectory = backupDirectory;
+    }
 
     @Override
     public void accept(PolarEntry polarEntry) {
@@ -18,7 +22,7 @@ public class DirectoryDownloader implements Consumer<PolarEntry> {
             return;
         }
 
-        Path destination = Paths.get(DOWNLOAD_DIRECTORY, polarEntry.getPath());
+        Path destination = Paths.get(backupDirectory.toString(), polarEntry.getPath());
 
         try {
             Files.createDirectory(destination);
