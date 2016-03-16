@@ -40,6 +40,7 @@ public class Polar2Endomondo {
 
         long downloaded = PolarStream
             .stream(filesystem)
+            .sorted(new EntryComparator())
             .filter(new DirectoryFilter(backupDirectory))
             .filter(new FileFilter(backupDirectory))
             .peek(new DirectoryDownloader(backupDirectory))
