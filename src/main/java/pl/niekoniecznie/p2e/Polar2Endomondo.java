@@ -43,9 +43,14 @@ public class Polar2Endomondo {
             .filter(new DirectoryFilter(backupDirectory))
             .filter(new FileFilter(backupDirectory))
             .peek(new DirectoryDownloader(backupDirectory))
+            .peek(new FileDownloader(backupDirectory, filesystem))
             .count();
 
-        System.out.println("Downloaded " + downloaded + " files and directories.");
+        if (downloaded > 0) {
+            System.out.println("Downloaded " + downloaded + " files and directories");
+        } else {
+            System.out.println("All files are up-to-date");
+        }
 
         hid.close();
         System.exit(0);
