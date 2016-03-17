@@ -1,4 +1,4 @@
-package pl.niekoniecznie.p2e.download;
+package pl.niekoniecznie.p2e.downloader;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

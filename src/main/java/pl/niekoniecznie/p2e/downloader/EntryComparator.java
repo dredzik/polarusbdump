@@ -1,4 +1,4 @@
-package pl.niekoniecznie.p2e.download;
+package pl.niekoniecznie.p2e.downloader;
 
 import pl.niekoniecznie.polar.io.PolarEntry;
 

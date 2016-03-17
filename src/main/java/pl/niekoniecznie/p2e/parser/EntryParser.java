@@ -1,4 +1,4 @@
-package pl.niekoniecznie.p2e.parse;
+package pl.niekoniecznie.p2e.parser;
 
 import com.google.protobuf.Parser;
 import org.apache.logging.log4j.LogManager;
@@ -14,7 +14,7 @@ import java.util.zip.GZIPInputStream;
 
 public class EntryParser {
 
-    private final static String REGEX = "^/Users/akuczynski16/.polar/backup/6A5B111D/U/0/(\\d{8})/E/(\\d{6})/(\\d{2})?/?([^.]*).(BPB|GZB)$";
+    private final static String REGEX = "^/Users/ak/.polar/backup/6A5B111D/U/0/(\\d{8})/E/(\\d{6})/(\\d{2})?/?([^.]*).(BPB|GZB)$";
     private final static Pattern PATTERN = Pattern.compile(REGEX);
 
     private final static Logger logger = LogManager.getLogger(EntryParser.class);

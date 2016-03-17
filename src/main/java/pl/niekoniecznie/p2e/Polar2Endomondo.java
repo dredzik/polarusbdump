@@ -5,13 +5,13 @@ import com.codeminders.hidapi.HIDDevice;
 import com.codeminders.hidapi.HIDManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import pl.niekoniecznie.p2e.download.DirectoryDownloader;
-import pl.niekoniecznie.p2e.download.DirectoryFilter;
-import pl.niekoniecznie.p2e.download.EntryComparator;
-import pl.niekoniecznie.p2e.download.EntryMapper;
-import pl.niekoniecznie.p2e.download.FileDownloader;
-import pl.niekoniecznie.p2e.download.FileFilter;
-import pl.niekoniecznie.p2e.parse.EntryParser;
+import pl.niekoniecznie.p2e.downloader.DirectoryDownloader;
+import pl.niekoniecznie.p2e.downloader.DirectoryFilter;
+import pl.niekoniecznie.p2e.downloader.EntryComparator;
+import pl.niekoniecznie.p2e.downloader.EntryMapper;
+import pl.niekoniecznie.p2e.downloader.FileDownloader;
+import pl.niekoniecznie.p2e.downloader.FileFilter;
+import pl.niekoniecznie.p2e.parser.EntryParser;
 import pl.niekoniecznie.polar.io.PolarFileSystem;
 import pl.niekoniecznie.polar.io.PolarService;
 import pl.niekoniecznie.polar.stream.PolarStream;
@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 public class Polar2Endomondo {
 
@@ -44,7 +45,7 @@ public class Polar2Endomondo {
             Files.createDirectories(backupDirectory);
         }
 
-        long downloaded = PolarStream.stream(filesystem)
+        List<Session> sessions = PolarStream.stream(filesystem)
             .sorted(new EntryComparator())
             .filter(new DirectoryFilter(backupDirectory))
             .filter(new FileFilter(backupDirectory))
@@ -52,10 +53,11 @@ public class Polar2Endomondo {
             .peek(new FileDownloader(backupDirectory, filesystem))
             .map(new EntryMapper(backupDirectory)::map)
             .map(new EntryParser()::parse)
-            .count();
+            .filter(x -> x != null)
+            .collect(new EntryCollector());
 
-        if (downloaded > 0) {
-            System.out.println("Downloaded " + downloaded + " files and directories");
+        if (sessions.size() > 0) {
+            System.out.println("Downloaded " + sessions.size() + " sessions");
         } else {
             System.out.println("All files are up-to-date");
         }

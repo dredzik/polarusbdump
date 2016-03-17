@@ -1,4 +1,4 @@
-package pl.niekoniecznie.p2e.parse;
+package pl.niekoniecznie.p2e.parser;
 
 public class ParseResult {
     public String sessionKey;

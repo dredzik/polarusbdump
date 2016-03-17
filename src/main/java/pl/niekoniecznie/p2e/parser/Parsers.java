@@ -1,4 +1,4 @@
-package pl.niekoniecznie.p2e.parse;
+package pl.niekoniecznie.p2e.parser;
 
 import com.google.protobuf.Parser;
 import pl.niekoniecznie.polar.model.Model.ExerciseData;
