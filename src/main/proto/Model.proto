@@ -93,8 +93,8 @@ message ExerciseData {
     required uint32 calories = 5;
     required TrainingLoad trainingLoad = 6;
     optional RunningIndex index = 9;
-    required float ascent = 10;
-    required float descent = 11;
+    optional float ascent = 10;
+    optional float descent = 11;
 }
 
 message LapData {
@@ -119,7 +119,7 @@ message Lap {
         required float distance = 3;
         optional float ascent = 4;
         optional float descent = 5;
-        required Type type = 6;
+        optional Type type = 6;
     }
 
     required Header header = 1;

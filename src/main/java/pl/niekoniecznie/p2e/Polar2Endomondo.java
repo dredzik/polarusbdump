@@ -11,6 +11,7 @@ import pl.niekoniecznie.p2e.download.EntryComparator;
 import pl.niekoniecznie.p2e.download.EntryMapper;
 import pl.niekoniecznie.p2e.download.FileDownloader;
 import pl.niekoniecznie.p2e.download.FileFilter;
+import pl.niekoniecznie.p2e.parse.EntryParser;
 import pl.niekoniecznie.polar.io.PolarFileSystem;
 import pl.niekoniecznie.polar.io.PolarService;
 import pl.niekoniecznie.polar.stream.PolarStream;
@@ -43,14 +44,14 @@ public class Polar2Endomondo {
             Files.createDirectories(backupDirectory);
         }
 
-        long downloaded = PolarStream
-            .stream(filesystem)
+        long downloaded = PolarStream.stream(filesystem)
             .sorted(new EntryComparator())
             .filter(new DirectoryFilter(backupDirectory))
             .filter(new FileFilter(backupDirectory))
             .peek(new DirectoryDownloader(backupDirectory))
             .peek(new FileDownloader(backupDirectory, filesystem))
             .map(new EntryMapper(backupDirectory)::map)
+            .map(new EntryParser()::parse)
             .count();
 
         if (downloaded > 0) {
