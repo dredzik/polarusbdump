@@ -134,6 +134,13 @@
         </dependency>
 
         <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.8</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
             <groupId>com.garmin.schemas</groupId>
             <artifactId>tcx-v2</artifactId>
             <version>1.0</version>

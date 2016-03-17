@@ -4,8 +4,9 @@ import pl.niekoniecznie.polar.io.PolarEntry;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.function.Function;
 
-public class EntryMapper {
+public class EntryMapper implements Function<PolarEntry, Path> {
 
     private final Path backupDirectory;
 
@@ -13,7 +14,8 @@ public class EntryMapper {
         this.backupDirectory = backupDirectory;
     }
 
-    public Path map(PolarEntry entry) {
+    @Override
+    public Path apply(PolarEntry entry) {
         return Paths.get(backupDirectory.toString(), entry.getPath());
     }
 }

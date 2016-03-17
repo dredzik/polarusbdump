@@ -11,7 +11,6 @@ import pl.niekoniecznie.p2e.downloader.EntryComparator;
 import pl.niekoniecznie.p2e.downloader.EntryMapper;
 import pl.niekoniecznie.p2e.downloader.FileDownloader;
 import pl.niekoniecznie.p2e.downloader.FileFilter;
-import pl.niekoniecznie.p2e.parser.EntryParser;
 import pl.niekoniecznie.polar.io.PolarFileSystem;
 import pl.niekoniecznie.polar.io.PolarService;
 import pl.niekoniecznie.polar.stream.PolarStream;
@@ -21,6 +20,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Polar2Endomondo {
 
@@ -45,24 +46,29 @@ public class Polar2Endomondo {
             Files.createDirectories(backupDirectory);
         }
 
-        List<Session> sessions = PolarStream.stream(filesystem)
+        List<Path> files = PolarStream.stream(filesystem)
             .sorted(new EntryComparator())
             .filter(new DirectoryFilter(backupDirectory))
             .filter(new FileFilter(backupDirectory))
             .peek(new DirectoryDownloader(backupDirectory))
             .peek(new FileDownloader(backupDirectory, filesystem))
-            .map(new EntryMapper(backupDirectory)::map)
-            .map(new EntryParser()::parse)
-            .filter(x -> x != null)
-            .collect(new EntryCollector());
+            .map(new EntryMapper(backupDirectory))
+            .collect(Collectors.toList());
 
-        if (sessions.size() > 0) {
-            System.out.println("Downloaded " + sessions.size() + " sessions");
+        if (files.size() > 0) {
+            System.out.println("Downloaded " + files.size() + " file(s)");
         } else {
             System.out.println("All files are up-to-date");
         }
 
         hid.close();
+
+
+        Map<String, List<Path>> sessions = files.stream()
+            .collect(new SessionCollector());
+
+        System.out.println(sessions.size());
+
         System.exit(0);
     }
 }
