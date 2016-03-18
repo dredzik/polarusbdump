@@ -97,17 +97,17 @@ message ExerciseData {
     optional float descent = 11;
 }
 
-message LapData {
+message LapSetData {
     message Summary {
         required Time best = 1;
         required Time average = 2;
     }
 
-    repeated Lap lap = 1;
+    repeated LapData lap = 1;
     optional Summary summary = 2;
 }
 
-message Lap {
+message LapData {
     message Header {
         enum Type {
             MANUAL = 0;
