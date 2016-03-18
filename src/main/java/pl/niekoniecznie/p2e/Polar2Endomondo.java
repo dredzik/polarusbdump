@@ -2,8 +2,6 @@ package pl.niekoniecznie.p2e;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import pl.niekoniecznie.p2e.collector.SessionCollector;
-import pl.niekoniecznie.p2e.collector.SessionMap;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -54,17 +52,6 @@ public class Polar2Endomondo {
         }
 
 //        hid.close();
-
-
-        List<Session> sessions =
-//        List<SessionMap> sessions =
-            files.stream()
-            .collect(new SessionCollector())
-            .parallelStream()
-            .map(new EntryParser())
-            .collect(Collectors.toList());
-
-        System.out.println(sessions.size());
 
         System.exit(0);
     }
