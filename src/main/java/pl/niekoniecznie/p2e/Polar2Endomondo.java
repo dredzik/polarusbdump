@@ -34,6 +34,7 @@ public class Polar2Endomondo {
     public static void main(String[] args) throws IOException {
         boolean debug = false;
         Stream<String> files;
+        HIDDevice hid = null;
 
         if (debug) {
             files = Files.walk(Paths.get(System.getProperty("user.home"), ".polar/backup/"))
@@ -41,7 +42,7 @@ public class Polar2Endomondo {
         } else {
             ClassPathLibraryLoader.loadNativeHIDLibrary();
 
-            HIDDevice hid = HIDManager.getInstance().openById(POLAR_VENDOR_ID, POLAR_PRODUCT_ID, null);
+            hid = HIDManager.getInstance().openById(POLAR_VENDOR_ID, POLAR_PRODUCT_ID, null);
             logger.trace("device " + hid.getProductString() + " " + hid.getSerialNumberString() + " found");
 
             PolarService service = new PolarService(hid);
@@ -55,14 +56,12 @@ public class Polar2Endomondo {
             }
 
             files = PolarStream.stream(filesystem)
-                .sorted(new EntryComparator())
+//                .sorted(new EntryComparator())
                 .filter(new DirectoryFilter(backupDirectory))
                 .filter(new FileFilter(backupDirectory))
                 .peek(new DirectoryDownloader(backupDirectory))
                 .peek(new FileDownloader(backupDirectory, filesystem))
                 .map(new RemoteMapper(backupDirectory));
-
-            hid.close();
         }
 
         long a = files
@@ -73,6 +72,10 @@ public class Polar2Endomondo {
             .count();
 
         System.out.println(a);
+
+        if (Objects.nonNull(hid)) {
+            hid.close();
+        }
 
         System.exit(0);
     }
