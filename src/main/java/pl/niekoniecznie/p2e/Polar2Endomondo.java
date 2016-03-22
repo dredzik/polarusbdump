@@ -32,7 +32,7 @@ public class Polar2Endomondo {
     private final static Logger logger = LogManager.getLogger(Polar2Endomondo.class);
 
     public static void main(String[] args) throws IOException {
-        boolean debug = true;
+        boolean debug = false;
         Stream<String> files;
 
         if (debug) {
