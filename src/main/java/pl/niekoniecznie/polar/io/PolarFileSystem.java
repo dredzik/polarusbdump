@@ -22,7 +22,7 @@ public class PolarFileSystem {
 
         try {
             service.write(request.getData());
-            response = service.recv();
+            response = service.read();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -37,7 +37,7 @@ public class PolarFileSystem {
 
         try {
             service.write(request.getData());
-            response = service.recv();
+            response = service.read();
         } catch (IOException e) {
             throw new RuntimeException("Cannot list " + directory.getPath(), e);
         }

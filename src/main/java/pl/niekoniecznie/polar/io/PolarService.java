@@ -44,7 +44,7 @@ public class PolarService {
         }
     }
 
-    public PolarResponse recv() throws IOException {
+    public PolarResponse read() throws IOException {
         PolarResponse response = new PolarResponse();
 
         byte[] buffer = new byte[PolarPacket.BUFFER_LENGTH];
