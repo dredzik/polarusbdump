@@ -28,7 +28,7 @@ public class StreamMapper implements Function<Pair<String, InputStream>, Pair<St
             return null;
         }
 
-        GeneratedMessage value = (GeneratedMessage) parser.parseDelimitedFrom(entry.getValue());
+        GeneratedMessage value = (GeneratedMessage) parser.parseFrom(entry.getValue());
 
         return new Pair<>(key, value);
     }
