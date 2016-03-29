@@ -1,7 +1,7 @@
-package pl.niekoniecznie.polar.stream;
+package io.typedef.polar.stream;
 
-import pl.niekoniecznie.polar.io.PolarEntry;
-import pl.niekoniecznie.polar.io.PolarFileSystem;
+import io.typedef.polar.io.PolarEntry;
+import io.typedef.polar.io.PolarFileSystem;
 
 import java.util.ArrayList;
 import java.util.Iterator;

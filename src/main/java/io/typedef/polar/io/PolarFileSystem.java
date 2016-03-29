@@ -1,6 +1,6 @@
-package pl.niekoniecznie.polar.io;
+package io.typedef.polar.io;
 
-import pl.niekoniecznie.polar.model.Model.ListMessage;
+import io.typedef.polar.model.Model.ListMessage;
 
 import java.io.IOException;
 import java.io.InputStream;

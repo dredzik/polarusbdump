@@ -1,4 +1,4 @@
-package pl.niekoniecznie.p2e.mapper;
+package io.typedef.cothroime.mapper;
 
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;

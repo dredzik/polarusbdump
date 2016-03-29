@@ -1,6 +1,6 @@
-package pl.niekoniecznie.p2e.downloader;
+package io.typedef.cothroime.downloader;
 
-import pl.niekoniecznie.polar.io.PolarEntry;
+import io.typedef.polar.io.PolarEntry;
 
 import java.util.Comparator;
 

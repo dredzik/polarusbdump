@@ -1,4 +1,4 @@
-package pl.niekoniecznie.p2e.mapper;
+package io.typedef.cothroime.mapper;
 
 import java.io.IOException;
 import java.io.InputStream;

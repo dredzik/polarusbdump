@@ -1,21 +1,20 @@
-package pl.niekoniecznie.p2e;
+package io.typedef.cothroime;
 
 import com.codeminders.hidapi.ClassPathLibraryLoader;
 import com.codeminders.hidapi.HIDDevice;
 import com.codeminders.hidapi.HIDManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import pl.niekoniecznie.p2e.downloader.DirectoryDownloader;
-import pl.niekoniecznie.p2e.downloader.DirectoryFilter;
-import pl.niekoniecznie.p2e.downloader.EntryComparator;
-import pl.niekoniecznie.p2e.mapper.StreamMapper;
-import pl.niekoniecznie.p2e.mapper.LocalMapper;
-import pl.niekoniecznie.p2e.mapper.RemoteMapper;
-import pl.niekoniecznie.p2e.downloader.FileDownloader;
-import pl.niekoniecznie.p2e.downloader.FileFilter;
-import pl.niekoniecznie.polar.io.PolarFileSystem;
-import pl.niekoniecznie.polar.io.PolarService;
-import pl.niekoniecznie.polar.stream.PolarStream;
+import io.typedef.cothroime.downloader.DirectoryDownloader;
+import io.typedef.cothroime.downloader.DirectoryFilter;
+import io.typedef.cothroime.mapper.StreamMapper;
+import io.typedef.cothroime.mapper.LocalMapper;
+import io.typedef.cothroime.mapper.RemoteMapper;
+import io.typedef.cothroime.downloader.FileDownloader;
+import io.typedef.cothroime.downloader.FileFilter;
+import io.typedef.polar.io.PolarFileSystem;
+import io.typedef.polar.io.PolarService;
+import io.typedef.polar.stream.PolarStream;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -24,12 +23,12 @@ import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.stream.Stream;
 
-public class Polar2Endomondo {
+public class Cothroime {
 
     private final static int POLAR_VENDOR_ID = 0x0da4;
     private final static int POLAR_PRODUCT_ID = 0x0008;
 
-    private final static Logger logger = LogManager.getLogger(Polar2Endomondo.class);
+    private final static Logger logger = LogManager.getLogger(Cothroime.class);
 
     public static void main(String[] args) throws IOException {
         boolean debug = true;

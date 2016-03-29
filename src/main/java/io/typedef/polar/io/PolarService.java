@@ -1,4 +1,4 @@
-package pl.niekoniecznie.polar.io;
+package io.typedef.polar.io;
 
 import com.codeminders.hidapi.HIDDevice;
 

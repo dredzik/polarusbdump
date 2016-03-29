@@ -1,8 +1,8 @@
-package pl.niekoniecznie.p2e;
+package io.typedef.cothroime;
 
-import pl.niekoniecznie.polar.model.Model.Date;
-import pl.niekoniecznie.polar.model.Model.DateTime;
-import pl.niekoniecznie.polar.model.Model.Time;
+import io.typedef.polar.model.Model.Date;
+import io.typedef.polar.model.Model.DateTime;
+import io.typedef.polar.model.Model.Time;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;

@@ -1,9 +1,8 @@
-package pl.niekoniecznie.p2e.mapper;
+package io.typedef.cothroime.mapper;
 
-import pl.niekoniecznie.polar.io.PolarEntry;
+import io.typedef.polar.io.PolarEntry;
 
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.function.Function;
 
 public class RemoteMapper implements Function<PolarEntry, String> {

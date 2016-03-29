@@ -1,7 +1,7 @@
-package pl.niekoniecznie.polar.io;
+package io.typedef.polar.io;
 
-import pl.niekoniecznie.polar.model.Model.CommandMessage;
-import pl.niekoniecznie.polar.model.Model.CommandType;
+import io.typedef.polar.model.Model.CommandMessage;
+import io.typedef.polar.model.Model.CommandType;
 
 public class PolarRequest {
 

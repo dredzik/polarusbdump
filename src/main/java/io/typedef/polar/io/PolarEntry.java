@@ -1,8 +1,8 @@
-package pl.niekoniecznie.polar.io;
+package io.typedef.polar.io;
 
-import pl.niekoniecznie.polar.model.Model.Date;
-import pl.niekoniecznie.polar.model.Model.ListMessage.ListEntry;
-import pl.niekoniecznie.polar.model.Model.Time;
+import io.typedef.polar.model.Model.Date;
+import io.typedef.polar.model.Model.ListMessage.ListEntry;
+import io.typedef.polar.model.Model.Time;
 
 import java.time.Instant;
 import java.time.ZoneId;

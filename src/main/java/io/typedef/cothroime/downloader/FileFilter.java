@@ -1,8 +1,8 @@
-package pl.niekoniecznie.p2e.downloader;
+package io.typedef.cothroime.downloader;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import pl.niekoniecznie.polar.io.PolarEntry;
+import io.typedef.polar.io.PolarEntry;
 
 import java.io.IOException;
 import java.nio.file.Files;

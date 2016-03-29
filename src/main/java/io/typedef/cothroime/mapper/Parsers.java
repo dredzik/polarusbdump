@@ -1,14 +1,14 @@
-package pl.niekoniecznie.p2e.mapper;
+package io.typedef.cothroime.mapper;
 
 import com.google.protobuf.Parser;
-import pl.niekoniecznie.polar.model.Model.ExerciseData;
-import pl.niekoniecznie.polar.model.Model.LapSetData;
-import pl.niekoniecznie.polar.model.Model.PhysicalData;
-import pl.niekoniecznie.polar.model.Model.RouteData;
-import pl.niekoniecznie.polar.model.Model.SampleData;
-import pl.niekoniecznie.polar.model.Model.SessionData;
-import pl.niekoniecznie.polar.model.Model.StatisticData;
-import pl.niekoniecznie.polar.model.Model.ZoneData;
+import io.typedef.polar.model.Model.ExerciseData;
+import io.typedef.polar.model.Model.LapSetData;
+import io.typedef.polar.model.Model.PhysicalData;
+import io.typedef.polar.model.Model.RouteData;
+import io.typedef.polar.model.Model.SampleData;
+import io.typedef.polar.model.Model.SessionData;
+import io.typedef.polar.model.Model.StatisticData;
+import io.typedef.polar.model.Model.ZoneData;
 
 import java.util.HashMap;
 import java.util.Map;

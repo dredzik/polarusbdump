@@ -1,6 +1,6 @@
-package pl.niekoniecznie.polar.model;
+package io.typedef.polar.model;
 
-option java_package = "pl.niekoniecznie.polar.model";
+option java_package = "io.typedef.polar.model";
 option java_outer_classname = "Model";
 
 message CommandMessage {
