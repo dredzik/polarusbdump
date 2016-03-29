@@ -67,7 +67,6 @@ public class Cothroime {
             .map(new LocalMapper())
             .map(new StreamMapper())
             .filter(Objects::nonNull)
-            .peek(x -> logger.trace(x.getKey()))
             .count();
 
         System.out.println(a);
