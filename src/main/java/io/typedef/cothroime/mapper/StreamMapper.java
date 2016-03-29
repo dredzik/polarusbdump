@@ -35,7 +35,7 @@ public class StreamMapper implements Function<Pair<String, InputStream>, Pair<St
         }
 
         logger.trace("parsing " + key);
-        GeneratedMessage result = (GeneratedMessage) parser.parseFrom(entry.getValue());
+        GeneratedMessage result = (GeneratedMessage) parser.parseFrom(value);
 
         return new Pair<>(key, result);
     }
