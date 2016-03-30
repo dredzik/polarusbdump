@@ -3,6 +3,7 @@ package io.typedef.cothroime;
 import com.codeminders.hidapi.ClassPathLibraryLoader;
 import com.codeminders.hidapi.HIDDevice;
 import com.codeminders.hidapi.HIDManager;
+import io.typedef.cothroime.converter.DataConverter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import io.typedef.cothroime.downloader.DirectoryDownloader;
@@ -55,7 +56,6 @@ public class Cothroime {
             }
 
             files = PolarStream.stream(filesystem)
-//                .sorted(new EntryComparator())
                 .filter(new DirectoryFilter(backupDirectory))
                 .filter(new FileFilter(backupDirectory))
                 .peek(new DirectoryDownloader(backupDirectory))
@@ -66,6 +66,8 @@ public class Cothroime {
         long a = files
             .map(new LocalMapper())
             .map(new StreamParser())
+            .filter(Objects::nonNull)
+            .map(new DataConverter())
             .filter(Objects::nonNull)
             .count();
 
