@@ -1,8 +1,9 @@
-package io.typedef.cothroime.mapper;
+package io.typedef.cothroime.parser;
 
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Parser;
+import io.typedef.cothroime.mapper.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -11,9 +12,9 @@ import java.io.InputStream;
 import java.util.Objects;
 import java.util.function.Function;
 
-public class StreamMapper implements Function<Pair<String, InputStream>, Pair<String, GeneratedMessage>> {
+public class StreamParser implements Function<Pair<String, InputStream>, Pair<String, GeneratedMessage>> {
 
-    private final static Logger logger = LogManager.getLogger(StreamMapper.class);
+    private final static Logger logger = LogManager.getLogger(StreamParser.class);
 
     @Override
     public Pair<String, GeneratedMessage> apply(Pair<String, InputStream> entry) {

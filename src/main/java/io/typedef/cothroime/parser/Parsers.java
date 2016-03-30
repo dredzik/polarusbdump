@@ -1,4 +1,4 @@
-package io.typedef.cothroime.mapper;
+package io.typedef.cothroime.parser;
 
 import com.google.protobuf.Parser;
 import io.typedef.polar.model.Model.ExerciseData;

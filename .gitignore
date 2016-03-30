@@ -1,5 +1,5 @@
 .idea/
 out/
 target/
-polar.iml
+*.iml
 .DS_Store

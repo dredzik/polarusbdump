@@ -7,7 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import io.typedef.cothroime.downloader.DirectoryDownloader;
 import io.typedef.cothroime.downloader.DirectoryFilter;
-import io.typedef.cothroime.mapper.StreamMapper;
+import io.typedef.cothroime.parser.StreamParser;
 import io.typedef.cothroime.mapper.LocalMapper;
 import io.typedef.cothroime.mapper.RemoteMapper;
 import io.typedef.cothroime.downloader.FileDownloader;
@@ -65,7 +65,7 @@ public class Cothroime {
 
         long a = files
             .map(new LocalMapper())
-            .map(new StreamMapper())
+            .map(new StreamParser())
             .filter(Objects::nonNull)
             .count();
 
