@@ -36,14 +36,6 @@
         </profile>
     </profiles>
 
-    <repositories>
-        <repository>
-            <id>developer.garmin.com</id>
-            <name>Garmin Developer Repository</name>
-            <url>http://garmindeveloper.com/maven2</url>
-        </repository>
-    </repositories>
-
     <pluginRepositories>
         <pluginRepository>
             <releases>
@@ -153,31 +145,6 @@
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
             <version>2.6.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-xjc</artifactId>
-            <version>2.0.5</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.8</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.garmin.schemas</groupId>
-            <artifactId>tcx-v2</artifactId>
-            <version>1.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>jaxb</groupId>
-                    <artifactId>jaxb-xjc</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 </project>
