@@ -1,7 +1,7 @@
-package io.typedef.cothroime.converter;
+package io.typedef.polarusbdump.converter;
 
-import io.typedef.cothroime.DateUtil;
-import io.typedef.cothroime.model.Session;
+import io.typedef.polarusbdump.DateUtil;
+import io.typedef.polarusbdump.model.Session;
 import io.typedef.polar.model.Model.SessionData;
 
 public class SessionConverter implements Converter<SessionData, Session> {

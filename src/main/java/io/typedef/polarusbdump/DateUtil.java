@@ -1,4 +1,4 @@
-package io.typedef.cothroime;
+package io.typedef.polarusbdump;
 
 import io.typedef.polar.model.Model.Date;
 import io.typedef.polar.model.Model.DateTime;

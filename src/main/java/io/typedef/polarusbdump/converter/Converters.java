@@ -1,7 +1,6 @@
-package io.typedef.cothroime.converter;
+package io.typedef.polarusbdump.converter;
 
 import com.google.protobuf.GeneratedMessage;
-import com.google.protobuf.Parser;
 import io.typedef.polar.model.Model.ExerciseData;
 import io.typedef.polar.model.Model.LapSetData;
 import io.typedef.polar.model.Model.PhysicalData;

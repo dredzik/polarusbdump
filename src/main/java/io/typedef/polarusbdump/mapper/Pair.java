@@ -1,4 +1,4 @@
-package io.typedef.cothroime.mapper;
+package io.typedef.polarusbdump.mapper;
 
 import lombok.Getter;
 import lombok.Setter;

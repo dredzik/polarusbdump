@@ -1,8 +1,8 @@
-package io.typedef.cothroime.converter;
+package io.typedef.polarusbdump.converter;
 
 import com.google.protobuf.GeneratedMessage;
-import io.typedef.cothroime.mapper.Pair;
-import io.typedef.cothroime.model.Entity;
+import io.typedef.polarusbdump.mapper.Pair;
+import io.typedef.polarusbdump.model.Entity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

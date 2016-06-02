@@ -1,4 +1,4 @@
-package io.typedef.cothroime.downloader;
+package io.typedef.polarusbdump.downloader;
 
 import io.typedef.polar.io.PolarEntry;
 

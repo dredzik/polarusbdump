@@ -1,9 +1,9 @@
-package io.typedef.cothroime.parser;
+package io.typedef.polarusbdump.parser;
 
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Parser;
-import io.typedef.cothroime.mapper.Pair;
+import io.typedef.polarusbdump.mapper.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

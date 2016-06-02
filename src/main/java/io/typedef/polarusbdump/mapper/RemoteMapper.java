@@ -1,4 +1,4 @@
-package io.typedef.cothroime.mapper;
+package io.typedef.polarusbdump.mapper;
 
 import io.typedef.polar.io.PolarEntry;
 

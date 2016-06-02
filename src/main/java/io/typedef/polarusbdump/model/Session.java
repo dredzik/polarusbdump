@@ -1,4 +1,4 @@
-package io.typedef.cothroime.model;
+package io.typedef.polarusbdump.model;
 
 import lombok.Data;
 
