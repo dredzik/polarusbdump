@@ -22,33 +22,40 @@ public class PolarUsbDump {
     private final static int POLAR_PRODUCT_ID = 0x0008;
 
     public static void main(String[] args) throws IOException {
+        ClassPathLibraryLoader.loadNativeHIDLibrary();
         System.out.println("[+] polarusbdump started");
 
-        ClassPathLibraryLoader.loadNativeHIDLibrary();
-        HIDDevice hid = HIDManager.getInstance().openById(POLAR_VENDOR_ID, POLAR_PRODUCT_ID, null);
-        System.out.println("[+] found " + hid.getProductString() + ":" + hid.getSerialNumberString());
+        HIDDevice hid = null;
 
-        PolarService service = new PolarService(hid);
-        PolarFileSystem filesystem = new PolarFileSystem(service);
+        try {
+            hid = HIDManager.getInstance().openById(POLAR_VENDOR_ID, POLAR_PRODUCT_ID, null);
+            System.out.println("[+] found " + hid.getProductString() + ":" + hid.getSerialNumberString());
 
-        Path target = Paths.get(System.getProperty("user.home"), ".polar/backup/", hid.getSerialNumberString());
-        System.out.println("[+] dumping into " + target);
+            PolarService service = new PolarService(hid);
+            PolarFileSystem filesystem = new PolarFileSystem(service);
 
-        if (!Files.exists(target)) {
-            Files.createDirectories(target);
+            Path target = Paths.get(System.getProperty("user.home"), ".polar/backup/", hid.getSerialNumberString());
+            System.out.println("[+] dumping into " + target);
+
+            if (!Files.exists(target)) {
+                Files.createDirectories(target);
+            }
+
+            long count = PolarStream.stream(filesystem)
+                .filter(new DirectoryFilter(target))
+                .filter(new FileFilter(target))
+                .peek(new DirectoryDownloader(target))
+                .peek(new FileDownloader(target, filesystem))
+                .count();
+
+            System.out.println("[+] dump completed");
+            System.out.println("[+] " + count + " entries");
+        } finally {
+            if (hid != null) {
+                hid.close();
+            }
         }
 
-        long count = PolarStream.stream(filesystem)
-            .filter(new DirectoryFilter(target))
-            .filter(new FileFilter(target))
-            .peek(new DirectoryDownloader(target))
-            .peek(new FileDownloader(target, filesystem))
-            .count();
-
-        System.out.println("[+] dump completed");
-        System.out.println("[+] " + count + " entries");
-
-        hid.close();
         System.exit(0);
     }
 }
