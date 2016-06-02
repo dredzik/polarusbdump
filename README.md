@@ -16,4 +16,5 @@ how to dump data over Bluetooth and will focus on that project.
 
 #### Data
 
-All data will be dumped into `${user.home}/.polar/backup/${device.id}/` directory.
+All data will be dumped into `${user.home}/.polar/backup/${device.id}/` directory. Please
+note that this data is still in polar format (Google Procol Buffers encoded).

@@ -48,8 +48,7 @@ public class PolarUsbDump {
                 .peek(new FileDownloader(target, filesystem))
                 .count();
 
-            System.out.println("[+] dump completed");
-            System.out.println("[+] " + count + " entries");
+            System.out.println("[+] " + count + " entries dumped");
         } finally {
             if (hid != null) {
                 hid.close();
