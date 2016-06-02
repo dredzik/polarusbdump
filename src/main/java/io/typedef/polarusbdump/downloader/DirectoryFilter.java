@@ -1,7 +1,5 @@
 package io.typedef.polarusbdump.downloader;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import io.typedef.polar.io.PolarEntry;
 
 import java.nio.file.Files;
@@ -11,7 +9,6 @@ import java.util.function.Predicate;
 
 public class DirectoryFilter implements Predicate<PolarEntry> {
 
-    private final static Logger logger = LogManager.getLogger(DirectoryFilter.class);
     private final Path backupDirectory;
 
     public DirectoryFilter(Path backupDirectory) {
@@ -25,10 +22,6 @@ public class DirectoryFilter implements Predicate<PolarEntry> {
         }
 
         Path directory = Paths.get(backupDirectory.toString(), entry.getPath());
-
-        if (Files.notExists(directory)) {
-            logger.trace("nonexistent directory " + directory);
-        }
 
         return Files.notExists(directory);
     }

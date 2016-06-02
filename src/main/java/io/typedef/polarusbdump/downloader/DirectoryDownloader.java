@@ -1,7 +1,5 @@
 package io.typedef.polarusbdump.downloader;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import io.typedef.polar.io.PolarEntry;
 
 import java.io.IOException;
@@ -12,7 +10,6 @@ import java.util.function.Consumer;
 
 public class DirectoryDownloader implements Consumer<PolarEntry> {
 
-    private final static Logger logger = LogManager.getLogger(DirectoryDownloader.class);
     private final Path backupDirectory;
 
     public DirectoryDownloader(Path backupDirectory) {
@@ -29,7 +26,7 @@ public class DirectoryDownloader implements Consumer<PolarEntry> {
 
         try {
             Files.createDirectory(destination);
-            logger.trace("created " + destination);
+            System.out.println("[+] created " + destination);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

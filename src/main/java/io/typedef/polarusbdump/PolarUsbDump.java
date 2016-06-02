@@ -10,8 +10,6 @@ import io.typedef.polarusbdump.downloader.DirectoryDownloader;
 import io.typedef.polarusbdump.downloader.DirectoryFilter;
 import io.typedef.polarusbdump.downloader.FileDownloader;
 import io.typedef.polarusbdump.downloader.FileFilter;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -23,29 +21,32 @@ public class PolarUsbDump {
     private final static int POLAR_VENDOR_ID = 0x0da4;
     private final static int POLAR_PRODUCT_ID = 0x0008;
 
-    private final static Logger logger = LogManager.getLogger(PolarUsbDump.class);
-
     public static void main(String[] args) throws IOException {
+        System.out.println("[+] polarusbdump started");
+
         ClassPathLibraryLoader.loadNativeHIDLibrary();
         HIDDevice hid = HIDManager.getInstance().openById(POLAR_VENDOR_ID, POLAR_PRODUCT_ID, null);
-        logger.trace("device " + hid.getProductString() + " " + hid.getSerialNumberString() + " found");
+        System.out.println("[+] found " + hid.getProductString() + ":" + hid.getSerialNumberString());
 
         PolarService service = new PolarService(hid);
         PolarFileSystem filesystem = new PolarFileSystem(service);
 
-        Path backupDirectory = Paths.get(System.getProperty("user.home"), ".polar/backup/", hid.getSerialNumberString());
-        logger.trace("backup directory set to " + backupDirectory);
+        Path target = Paths.get(System.getProperty("user.home"), ".polar/backup/", hid.getSerialNumberString());
+        System.out.println("[+] dumping into " + target);
 
-        if (!Files.exists(backupDirectory)) {
-            Files.createDirectories(backupDirectory);
+        if (!Files.exists(target)) {
+            Files.createDirectories(target);
         }
 
-        long fileCount = PolarStream.stream(filesystem)
-            .filter(new DirectoryFilter(backupDirectory))
-            .filter(new FileFilter(backupDirectory))
-            .peek(new DirectoryDownloader(backupDirectory))
-            .peek(new FileDownloader(backupDirectory, filesystem))
+        long count = PolarStream.stream(filesystem)
+            .filter(new DirectoryFilter(target))
+            .filter(new FileFilter(target))
+            .peek(new DirectoryDownloader(target))
+            .peek(new FileDownloader(target, filesystem))
             .count();
+
+        System.out.println("[+] dump completed");
+        System.out.println("[+] " + count + " entries");
 
         hid.close();
         System.exit(0);

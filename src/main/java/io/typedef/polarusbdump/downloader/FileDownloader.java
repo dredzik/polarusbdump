@@ -1,7 +1,5 @@
 package io.typedef.polarusbdump.downloader;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import io.typedef.polar.io.PolarEntry;
 import io.typedef.polar.io.PolarFileSystem;
 
@@ -15,7 +13,6 @@ import java.util.function.Consumer;
 
 public class FileDownloader implements Consumer<PolarEntry> {
 
-    private final static Logger logger = LogManager.getLogger(FileDownloader.class);
     private final Path backupDirectory;
     private final PolarFileSystem filesystem;
 
@@ -37,7 +34,7 @@ public class FileDownloader implements Consumer<PolarEntry> {
             Files.deleteIfExists(destination);
             Files.copy(source, destination);
             Files.setLastModifiedTime(destination, FileTime.from(entry.getModified()));
-            logger.trace("downloaded " + destination);
+            System.out.println("[+] downloaded " + destination);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

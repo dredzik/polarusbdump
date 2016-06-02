@@ -1,7 +1,5 @@
 package io.typedef.polarusbdump.downloader;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import io.typedef.polar.io.PolarEntry;
 
 import java.io.IOException;
@@ -13,7 +11,6 @@ import java.util.function.Predicate;
 
 public class FileFilter implements Predicate<PolarEntry> {
 
-    private final static Logger logger = LogManager.getLogger(FileFilter.class);
     private final Path backupDirectory;
 
     public FileFilter(Path backupDirectory) {
@@ -29,7 +26,6 @@ public class FileFilter implements Predicate<PolarEntry> {
         Path file = Paths.get(backupDirectory.toString(), entry.getPath());
 
         if (Files.notExists(file)) {
-            logger.trace("nonexistent file " + file);
             return true;
         }
 
@@ -42,7 +38,6 @@ public class FileFilter implements Predicate<PolarEntry> {
         }
 
         if (!entry.getModified().equals(modified)) {
-            logger.trace("outdated file " + file);
             return true;
         }
 
