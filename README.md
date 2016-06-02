@@ -12,7 +12,7 @@ how to dump data over Bluetooth and will focus on that project.
 
 #### Run
 
-`java -jar target/polarusbdump-1.0-SNAPSHOT.jar`
+`java -jar target/polarusbdump.jar`
 
 #### Data
 
