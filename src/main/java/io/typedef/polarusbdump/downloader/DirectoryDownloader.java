@@ -22,11 +22,11 @@ public class DirectoryDownloader implements Consumer<PolarEntry> {
             return;
         }
 
+        System.out.println("[+] visiting " + entry.getPath());
         Path destination = Paths.get(backupDirectory.toString(), entry.getPath());
 
         try {
             Files.createDirectory(destination);
-            System.out.println("[+] created " + destination);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -21,14 +21,18 @@ public class PolarEntry {
     }
 
     PolarEntry(String rootPath, ListEntry entry) {
-        Date date = entry.getModified().getDate();
-        Time time = entry.getModified().getTime();
+        if (entry.hasModified()) {
+            Date date = entry.getModified().getDate();
+            Time time = entry.getModified().getTime();
 
-        ZonedDateTime modified = ZonedDateTime.of(date.getYear(), date.getMonth(), date.getDay(),
-            time.getHour(), time.getMinute(), time.getSecond(),
-            0, ZoneId.systemDefault());
+            ZonedDateTime modified = ZonedDateTime.of(date.getYear(), date.getMonth(), date.getDay(),
+                time.getHour(), time.getMinute(), time.getSecond(), 0, ZoneId.systemDefault());
 
-        this.modified = modified.toInstant();
+            this.modified = modified.toInstant();
+        } else {
+            this.modified = null;
+        }
+
         this.path = rootPath + entry.getPath();
         this.size = entry.getSize();
     }

@@ -29,15 +29,20 @@ public class FileFilter implements Predicate<PolarEntry> {
             return true;
         }
 
-        Instant modified;
+        Instant local;
+        Instant remote = entry.getModified();
+
+        if (remote == null) {
+            return true;
+        }
 
         try {
-            modified = Files.getLastModifiedTime(file).toInstant();
+            local = Files.getLastModifiedTime(file).toInstant();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
-        if (!entry.getModified().equals(modified)) {
+        if (!remote.equals(local)) {
             return true;
         }
 

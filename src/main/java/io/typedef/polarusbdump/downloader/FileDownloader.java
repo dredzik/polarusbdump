@@ -26,13 +26,15 @@ public class FileDownloader implements Consumer<PolarEntry> {
             return;
         }
 
+        System.out.println("[+] downloading " + entry.getPath());
         Path target = backupDirectory.resolve(entry.getPath().substring(1));
 
         try (InputStream source = filesystem.get(entry)) {
             Files.deleteIfExists(target);
             Files.copy(source, target);
-            Files.setLastModifiedTime(target, FileTime.from(entry.getModified()));
-            System.out.println("[+] downloaded " + target);
+            if (entry.getModified() != null) {
+                Files.setLastModifiedTime(target, FileTime.from(entry.getModified()));
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
